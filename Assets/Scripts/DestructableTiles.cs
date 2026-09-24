@@ -3,37 +3,50 @@ using UnityEngine.Tilemaps;
 
 public class DestructableTiles : MonoBehaviour
 {
-    private Tilemap destructableTilemap;
+    public Tilemap destructableTilemap;
 
     private void Awake()
     {
         destructableTilemap = GetComponent<Tilemap>();
     }
 
-
-    // Erases goo tiles within a given radius around a world position.
-    public void EraseTilesAt(Vector3 worldPosition, float radius)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (destructableTilemap == null) return;
-
-        Vector3 localPos = destructableTilemap.transform.InverseTransformPoint(worldPosition);
-        Vector3Int centerCell = destructableTilemap.WorldToCell(localPos);
-        int cellRange = Mathf.CeilToInt(radius);
-
-        for (int x = -cellRange; x <= cellRange; x++)
+        if (other.CompareTag("Player"))
         {
-            for (int y = -cellRange; y <= cellRange; y++)
-            {
-                Vector3Int targetCell = centerCell + new Vector3Int(x, y, 0);
-                targetCell.z = 0;
+            // 1. Get the player's feet bounds in World Space
+            Bounds playerBounds = other.bounds;
+            Vector3 feetWorldPos = new Vector3(playerBounds.center.x, playerBounds.min.y + 0.1f, 0f);
 
-                // CRITICAL PERF FIX: Check HasTile FIRST so SetTile is only called 
-                // when there is actually a tile to destroy!
-                if (destructableTilemap.HasTile(targetCell))
-                {
-                    destructableTilemap.SetTile(targetCell, null);
-                }
+            // 2. Convert World Space -> Tilemap Local Space (handles Grid parent offsets)
+            Vector3 localPos = destructableTilemap.transform.InverseTransformPoint(feetWorldPos);
+
+            // 3. Convert Local Space -> Tilemap Cell Coordinate
+            Vector3Int cellPosition = destructableTilemap.WorldToCell(localPos);
+
+            // Force Z to 0 (2D Tilemaps strictly use Z = 0)
+            cellPosition.z = 0;
+
+            // 4. Erase primary tile under feet
+            if (destructableTilemap.HasTile(cellPosition))
+            {
+                destructableTilemap.SetTile(cellPosition, null);
             }
+
+            // 5. Secondary check: Sample slight left/right offsets to ensure continuous cleaning
+            CheckAndErase(localPos + new Vector3(-0.2f, 0f, 0f));
+            CheckAndErase(localPos + new Vector3(0.2f, 0f, 0f));
+        }
+    }
+
+    private void CheckAndErase(Vector3 localPos)
+    {
+        Vector3Int cell = destructableTilemap.WorldToCell(localPos);
+        cell.z = 0;
+
+        if (destructableTilemap.HasTile(cell))
+        {
+            destructableTilemap.SetTile(cell, null);
         }
     }
 }
