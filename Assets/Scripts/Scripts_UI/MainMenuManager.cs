@@ -1,63 +1,39 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class UIManager : MonoBehaviour
+public class MainMenuManager : MonoBehaviour
 {
-
-    [Header("UI Panels")]
-    [SerializeField] private GameObject pausePanel;
+    [Header("Main Menu UI Panels")]
     [SerializeField] private GameObject controlsPanel;
     [SerializeField] private GameObject settingsPanel;
-    //[SerializeField] private GameObject losePanel;
 
     private void Start()
     {
 
         // Set panels to off on game start
-        pausePanel.SetActive(false);
-        controlsPanel.SetActive(false); 
+        controlsPanel.SetActive(false);
         settingsPanel.SetActive(false);
-        //losePanel.SetActive(false);
 
     }
 
-
-    private void Update()
-    {
-
-        // Pauses the game and turns on pause panel
-        if (Keyboard.current.escapeKey.wasReleasedThisFrame)
-        {
-
-            pausePanel.SetActive(true);
-
-            Time.timeScale = 0f;
-
-        }
-
-
-    }
 
     // BUTTONS FOR MENUS & PANEL INTERACTIONS
     // ---------------------------------------
 
-    // Unpauses game and turns off pause panel
-    public void Unpause()
+    // On button click, starts the game
+    public void StartGame()
     {
 
-        pausePanel.SetActive(false);
-
-        Time.timeScale = 1f;
+       // SceneManager.LoadScene();
 
     }
 
-    // On button click, sends player back to main menu
-    public void MainMenu()
+    // On button click, quick starts the game - sends directly into a run with previously selected weapon
+    public void QuickStartGame()
     {
 
-        SceneManager.LoadScene("Main Menu");
+       // SceneManager.LoadScene();
 
     }
 
@@ -73,8 +49,6 @@ public class UIManager : MonoBehaviour
     public void Settings()
     {
 
-        pausePanel.SetActive(false);
-
         settingsPanel.SetActive(true);
 
     }
@@ -83,13 +57,11 @@ public class UIManager : MonoBehaviour
     public void Controls()
     {
 
-        pausePanel.SetActive(false);
-
         controlsPanel.SetActive(true);
 
     }
 
-    // On button click, returns to pause panel
+    // On button click, returns back from panel to the main menu
     public void Back()
     {
 
@@ -98,16 +70,12 @@ public class UIManager : MonoBehaviour
 
             controlsPanel.SetActive(false);
 
-            pausePanel.SetActive(true);
-
         }
 
         if (settingsPanel == true)
         {
 
             settingsPanel.SetActive(false);
-
-            pausePanel.SetActive(true);
 
         }
 

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.Rendering;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,17 +20,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI objectOneDesc;
     [SerializeField] private TextMeshProUGUI objectTwoDesc;
     [SerializeField] private TextMeshProUGUI objectThreeDesc;
-    [SerializeField] private Image objectOneImage;
-    [SerializeField] private Image objectTwoImage;
-    [SerializeField] private Image objectThreeImage;
-    [SerializeField] private GameObject ItemOne;
-    [SerializeField] private GameObject ItemTwo;
-    [SerializeField] private GameObject ItemThree;
-    private string[] itemsName = {"option 1", "option 2", "option 3", "option 4", "option 5", "option 6"};
-    private string[] itemsDescription = {"option 1 description", "option 2 description", "option 3 description", "option 4 description", "option 5 description", "option 6 description"};
+    [SerializeField] private Image objectOneSprite;
+    [SerializeField] private Image objectTwoSprite;
+    [SerializeField] private Image objectThreeSprite;
     private int randomNumberOne;
     private int randomNumberTwo;
     private int randomNumberThree;
+
+
+    [Header("Sprites for upgrades")]
+    [SerializeField] private Sprite[] itemSprites;
+
+
+    // Genuinely every single item in the game, sorry but also not sorry really. just ignore it or something
+    private string[] itemsName = { "option 1", "option 2", "option 3", "option 4", "option 5", "option 6" };
+    private string[] itemsDescription = { "option 1 description", "option 2 description", "option 3 description", "option 4 description", "option 5 description", "option 6 description" };
 
 
 
@@ -63,7 +68,17 @@ public class GameManager : MonoBehaviour
         }
 
 
+        // TESTING BUTTON TO TEST THE WORK ... :)
+        if (Keyboard.current.kKey.wasPressedThisFrame)
+        {
 
+            // Randomizes item selection
+            RandomItemPicker();
+
+            // Turns on panel
+            upgradePanel.SetActive(true);
+
+        }
 
     }
 
@@ -71,59 +86,51 @@ public class GameManager : MonoBehaviour
     private void RandomItemPicker()
     {
 
-        // Sends three variables to become unique random numbers
-        RandomizeMyNumbers(randomNumberOne, randomNumberTwo, randomNumberThree);
+        // Randomizes three variables into unique numbers for random item selection
+        randomNumberOne = UnityEngine.Random.Range(0, (itemsName.Length + 1));
+        randomNumberTwo = UnityEngine.Random.Range(0, (itemsName.Length + 1));
+        randomNumberThree = UnityEngine.Random.Range(0, (itemsName.Length + 1));
 
 
+        // Creates item on UI Panel. Name, Image & Description
+        // Name
+        objectOneName.SetText(itemsName[randomNumberOne]);
+        objectTwoName.SetText(itemsName[randomNumberTwo]);
+        objectThreeName.SetText(itemsName[randomNumberThree]);
 
-        upgradePanel.SetActive(true);
+        // Image
+        objectOneSprite.sprite = itemSprites[randomNumberOne];
+        objectTwoSprite.sprite = itemSprites[randomNumberTwo];
+        objectThreeSprite.sprite = itemSprites[randomNumberThree];
 
-
-
-
-
-
-    }
-
-    // Randomizes numbers for item selection
-    private void RandomizeMyNumbers(int x, int y, int z)
-    {
-
-        // Randomizes the three optinons from 0 to the length of the array of items +1
-        x = UnityEngine.Random.Range(0, (itemsName.Length + 1));
-        y = UnityEngine.Random.Range(0, (itemsName.Length + 1));
-        z = UnityEngine.Random.Range(0, (itemsName.Length + 1));
-
-        return;
-        // Checks to make sure none of the numbers are the same, then returns the values to RandomItemPicker
-        /*
-        if (x == y || x == z)
-        {
-
-
-
-
-        }
-        else if (y == z)
-        {
-             
-
-
-        }
-        else
-        {
-
-            return;
-
-        }
-
-        */
+        // Description
+        objectOneDesc.SetText(itemsDescription[randomNumberOne]);
+        objectTwoDesc.SetText(itemsDescription[randomNumberTwo]);
+        objectThreeDesc.SetText(itemsDescription[randomNumberTwo]);
 
     }
 
     // Sends the picked item from above and sends the information to the player items panel
     private void ItemSelected(int x)
     {
+
+        // int x is the upgrade item the player selected
+        
+
+        // Send item to player inventory
+
+
+
+
+
+
+
+
+        // Make gameplay modification from item happen
+
+
+
+
 
 
 
@@ -136,15 +143,21 @@ public class GameManager : MonoBehaviour
 
         upgradePanel.SetActive(false);
 
-
     }
 
     // Sends item one to inventory & closes menu
     public void ItemOneSelected()
     {
 
+        // Sends item to inventory
         ItemSelected(randomNumberOne);
 
+        // Removes item from total array item pool
+        Remove(itemsName, randomNumberOne);
+        Remove(itemSprites, randomNumberOne);
+        Remove(itemsDescription, randomNumberOne);
+
+        // Turns off panel
         upgradePanel.SetActive(false);
 
     }
@@ -153,8 +166,15 @@ public class GameManager : MonoBehaviour
     public void ItemTwoSelected()
     {
 
+        // Sends item to inventory
         ItemSelected(randomNumberTwo);
 
+        // Removes item from total array item pool
+        Remove(itemsName, randomNumberTwo);
+        Remove(itemSprites, randomNumberTwo);
+        Remove(itemsDescription, randomNumberTwo);
+
+        // Turns off panel
         upgradePanel.SetActive(false);
 
     }
@@ -163,14 +183,33 @@ public class GameManager : MonoBehaviour
     public void ItemThreeSelected()
     {
 
+        // Sends item to inventory
         ItemSelected(randomNumberThree);
 
+        // Removes item from total array item pool
+        Remove(itemsName, randomNumberThree);
+        Remove(itemSprites, randomNumberThree);
+        Remove(itemsDescription, randomNumberThree);
+
+        // Turns off panel
         upgradePanel.SetActive(false);
 
     }
 
+    private static void Remove(string[] array, int index)
+    {
 
 
 
+
+    }
+
+    private static void Remove(Sprite[] array, int index)
+    {
+
+
+
+
+    }
 
 }
