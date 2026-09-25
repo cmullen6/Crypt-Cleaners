@@ -136,11 +136,38 @@ public class GameManager : MonoBehaviour
 
         upgradePanel.SetActive(false);
 
+
     }
 
+    // Sends item one to inventory & closes menu
+    public void ItemOneSelected()
+    {
 
+        ItemSelected(randomNumberOne);
 
+        upgradePanel.SetActive(false);
 
+    }
+
+    // Sends item two to inventory & closes menu
+    public void ItemTwoSelected()
+    {
+
+        ItemSelected(randomNumberTwo);
+
+        upgradePanel.SetActive(false);
+
+    }
+
+    // Sends item three to inventory & closes menu
+    public void ItemThreeSelected()
+    {
+
+        ItemSelected(randomNumberThree);
+
+        upgradePanel.SetActive(false);
+
+    }
 
 
 
