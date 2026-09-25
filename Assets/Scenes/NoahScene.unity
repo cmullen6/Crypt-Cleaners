@@ -3580,9 +3580,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1078067474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2d341193e879904195d4b93dbdd67ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 546a2ae1027b4dd47a44af3697cd2003, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CleaningTool
+  m_EditorClassIdentifier: Assembly-CSharp::Mop
   cleaningRange: 2.5
   cleaningRadius: 1.2
   cleaningSpeed: 30
@@ -4475,7 +4475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0116d3d1d1d233444a1d88e688c4380c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTool: {fileID: 1367038106}
+  activeTool: {fileID: 0}
   cleaningMoveMultiplier: 0.35
   cleanInterval: 0.05
 --- !u!1 &1345867046
@@ -4792,9 +4792,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1367038101}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2d341193e879904195d4b93dbdd67ad, type: 3}
+  m_Script: {fileID: 11500000, guid: d8d18e60f1ae2394ea6db58a9358f65c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CleaningTool
+  m_EditorClassIdentifier: Assembly-CSharp::Sponge
   cleaningRange: 2.5
   cleaningRadius: 1.2
   cleaningSpeed: 30
@@ -6689,9 +6689,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2141181704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2d341193e879904195d4b93dbdd67ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 40db3a48a8c9e1d42babdf39e9d6a2fa, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CleaningTool
+  m_EditorClassIdentifier: Assembly-CSharp::Broom
   cleaningRange: 2.5
   cleaningRadius: 1.2
   cleaningSpeed: 30
