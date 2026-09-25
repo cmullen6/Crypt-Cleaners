@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class Sponge : CleaningTool
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Sponge Settings")]
+    [SerializeField] private Vector3 closeOffset = new Vector3(0f, 0.4f, 0f);
+
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         

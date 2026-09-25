@@ -2,13 +2,17 @@ using UnityEngine;
 
 public class Broom : CleaningTool
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Broom Burst Settings")]
+    [SerializeField] private int burstCount = 3;
+    [SerializeField] private float timeBetweenBursts = 0.8f;
+
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         

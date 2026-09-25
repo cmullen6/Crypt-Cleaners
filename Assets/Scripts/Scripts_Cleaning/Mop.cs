@@ -2,13 +2,17 @@ using UnityEngine;
 
 public class Mop : CleaningTool
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Mop Arc Settings")]
+    [SerializeField] private float arcWidth;
+    [SerializeField] private int sweepPoints;
+
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
