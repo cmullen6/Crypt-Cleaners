@@ -3415,13 +3415,14 @@ GameObject:
   - component: {fileID: 1078067478}
   - component: {fileID: 1078067477}
   - component: {fileID: 1078067476}
+  - component: {fileID: 1078067479}
   m_Layer: 0
   m_Name: Mop
   m_TagString: CleaningTool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1078067475
 Transform:
   m_ObjectHideFlags: 0
@@ -3570,6 +3571,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1078067479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078067474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d341193e879904195d4b93dbdd67ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CleaningTool
+  cleaningRange: 2.5
+  cleaningRadius: 1.2
+  cleaningSpeed: 30
 --- !u!1 &1083589216
 GameObject:
   m_ObjectHideFlags: 0
@@ -4459,7 +4475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0116d3d1d1d233444a1d88e688c4380c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTool: {fileID: 0}
+  activeTool: {fileID: 1367038106}
   cleaningMoveMultiplier: 0.35
   cleanInterval: 0.05
 --- !u!1 &1345867046
@@ -4611,6 +4627,7 @@ GameObject:
   - component: {fileID: 1367038105}
   - component: {fileID: 1367038104}
   - component: {fileID: 1367038103}
+  - component: {fileID: 1367038106}
   m_Layer: 0
   m_Name: Sponge
   m_TagString: CleaningTool
@@ -4766,6 +4783,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1367038106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367038101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d341193e879904195d4b93dbdd67ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CleaningTool
+  cleaningRange: 2.5
+  cleaningRadius: 1.2
+  cleaningSpeed: 30
 --- !u!1 &1404513393
 GameObject:
   m_ObjectHideFlags: 0
@@ -6492,13 +6524,14 @@ GameObject:
   - component: {fileID: 2141181708}
   - component: {fileID: 2141181707}
   - component: {fileID: 2141181706}
+  - component: {fileID: 2141181709}
   m_Layer: 0
   m_Name: Broom
   m_TagString: CleaningTool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2141181705
 Transform:
   m_ObjectHideFlags: 0
@@ -6647,6 +6680,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &2141181709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141181704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d341193e879904195d4b93dbdd67ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CleaningTool
+  cleaningRange: 2.5
+  cleaningRadius: 1.2
+  cleaningSpeed: 30
 --- !u!1 &2146922620
 GameObject:
   m_ObjectHideFlags: 0
