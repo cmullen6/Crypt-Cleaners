@@ -16,12 +16,15 @@ public class PlayerCleaner : MonoBehaviour
     private float cleanTimer;
 
     public bool IsCleaning => isCleaning;
+    public CleaningTool ActiveTool => activeTool;
 
     private void Update()
     {
+        // Safety check for active input and assigned tool
         if (Mouse.current == null || activeTool == null)
             return;
 
+        // Track left mouse click / hold
         isCleaning = Mouse.current.leftButton.isPressed;
 
         if (!isCleaning)
@@ -30,42 +33,31 @@ public class PlayerCleaner : MonoBehaviour
             return;
         }
 
-        // Throttle cleaning execution to avoid per-frame physics & tilemap lag
+        // Throttle execution to avoid per-frame physics & tilemap mesh rebuilds
         cleanTimer += Time.deltaTime;
         if (cleanTimer < cleanInterval)
             return;
 
         cleanTimer = 0f; // Reset timer
 
-        // 1. Get the tool's valid cleaning position in world space
-        Vector3 cleanOrigin = activeTool.GetCleanOrigin(transform.position);
-
-        // 2. Perform the overlap sweep using the active tool's radius
-        Collider2D[] hits = Physics2D.OverlapCircleAll(cleanOrigin, activeTool.CleaningRadius);
-
-        // 3. Process every object caught in the sweep
-        foreach (Collider2D hit in hits)
-        {
-            // Case A: Individual cleaning spot
-            CleaningSpot spot = hit.GetComponent<CleaningSpot>();
-            if (spot != null)
-            {
-                // Scale cleaning rate by cleanInterval since it runs on a tick timer
-                spot.Clean(activeTool.CleaningSpeed * cleanInterval);
-            }
-
-            // Case B: Destructible tilemap
-            DestructableTiles tiles = hit.GetComponent<DestructableTiles>();
-            if (tiles != null)
-            {
-                tiles.EraseTilesAt(cleanOrigin, activeTool.CleaningRadius);
-            }
-        }
+        // Trigger the active tool's unique spatial cleaning pattern (Broom, Mop, or Sponge)
+        activeTool.ExecuteClean(transform.position, cleanInterval);
     }
 
+    
     public float GetMovementMultiplier()
     {
         return isCleaning ? cleaningMoveMultiplier : 1f;
+    }
+
+    
+    // Allows runtime tool switching
+    public void SetActiveTool(CleaningTool newTool)
+    {
+        if (newTool != null)
+        {
+            activeTool = newTool;
+        }
     }
 
     private void OnDrawGizmosSelected()
@@ -78,6 +70,5 @@ public class PlayerCleaner : MonoBehaviour
         }
     }
 }
-
 
 

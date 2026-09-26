@@ -3583,9 +3583,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546a2ae1027b4dd47a44af3697cd2003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mop
-  cleaningRange: 2.5
   cleaningRadius: 1.2
   cleaningSpeed: 30
+  arcWidth: 0
+  sweepPoints: 0
 --- !u!1 &1083589216
 GameObject:
   m_ObjectHideFlags: 0
@@ -4795,9 +4796,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d18e60f1ae2394ea6db58a9358f65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sponge
-  cleaningRange: 2.5
   cleaningRadius: 1.2
   cleaningSpeed: 30
+  closeOffset: {x: 0, y: 0.4, z: 0}
 --- !u!1 &1404513393
 GameObject:
   m_ObjectHideFlags: 0
@@ -5379,7 +5380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962dd731f0761944bb9eab6585deff0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  filler: {fileID: 0}
+  pausePanel: {fileID: 0}
+  controlsPanel: {fileID: 0}
+  settingsPanel: {fileID: 0}
 --- !u!1001 &1558857062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6506,12 +6509,10 @@ MonoBehaviour:
   objectOneDesc: {fileID: 894402012}
   objectTwoDesc: {fileID: 1986085763}
   objectThreeDesc: {fileID: 620105705}
-  objectOneImage: {fileID: 1677667522}
-  objectTwoImage: {fileID: 602233003}
-  objectThreeImage: {fileID: 1211375381}
-  ItemOne: {fileID: 2101354619}
-  ItemTwo: {fileID: 1483361961}
-  ItemThree: {fileID: 1262959761}
+  objectOneSprite: {fileID: 0}
+  objectTwoSprite: {fileID: 0}
+  objectThreeSprite: {fileID: 0}
+  itemSprites: []
 --- !u!1 &2141181704
 GameObject:
   m_ObjectHideFlags: 0
@@ -6692,9 +6693,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40db3a48a8c9e1d42babdf39e9d6a2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Broom
-  cleaningRange: 2.5
   cleaningRadius: 1.2
   cleaningSpeed: 30
+  burstCount: 3
+  timeBetweenBursts: 0.8
 --- !u!1 &2146922620
 GameObject:
   m_ObjectHideFlags: 0

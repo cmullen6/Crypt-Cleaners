@@ -1,20 +1,32 @@
+using System.Collections;
 using UnityEngine;
 
 public class Broom : CleaningTool
 {
     [Header("Broom Burst Settings")]
     [SerializeField] private int burstCount = 3;
-    [SerializeField] private float timeBetweenBursts = 0.8f;
+    [SerializeField] private float timeBetweenBursts = 0.08f;
 
-    
-    void Start()
+    private bool isBursting;
+
+    public override void ExecuteClean(Vector3 playerPos, float interval)
     {
-        
+        if (!isBursting)
+        {
+            StartCoroutine(BurstRoutine(interval));
+        }
     }
 
-    
-    void Update()
+    private IEnumerator BurstRoutine(float interval)
     {
-        
+        isBursting = true;
+
+        for (int i = 0; i < burstCount; i++)
+        {
+            PerformCircleSweep(transform.position, cleaningRadius, interval);
+            yield return new WaitForSeconds(timeBetweenBursts);
+        }
+
+        isBursting = false;
     }
 }
