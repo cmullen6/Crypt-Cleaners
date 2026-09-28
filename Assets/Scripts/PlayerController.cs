@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 moveInput;
     private Vector2 dodgeDirection;
-    private Vector2 lastFacingDirection = Vector2.right; // Default facing right
+    private Vector2 lastFacingDirection = Vector2.up; // Default facing up
 
     private bool isDodging;
     private float dodgeTimer;
@@ -100,19 +100,16 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateFacingAndToolHolder()
     {
-        // Only update facing direction when the player is providing movement input
+        // Only update rotation when receiving active movement input
         if (moveInput != Vector2.zero)
         {
             lastFacingDirection = moveInput;
 
-            if (toolHolder != null)
-            {
-                // Calculate angle in degrees from movement vector
-                float angle = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg;
+            // Calculate angle and subtract 90 degrees to align Up-facing sprites with input
+            float angle = (Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg) - 90f;
 
-                // Rotate ToolHolder around the player
-                toolHolder.rotation = Quaternion.Euler(0f, 0f, angle);
-            }
+            // Rotate main transform (Player + ToolHolder rotate together)
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
     }
 
@@ -123,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
         dodgeDirection = moveInput;
 
-        // If not pressing keys, dodge in the direction the player was last facing
+        // Default to last facing direction if pressing space while standing still
         if (dodgeDirection == Vector2.zero)
         {
             dodgeDirection = lastFacingDirection;
