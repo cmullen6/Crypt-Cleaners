@@ -590,72 +590,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252786934}
   m_CullTransparentMesh: 1
---- !u!1001 &297628512
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1415425072}
-    m_Modifications:
-    - target: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_Name
-      value: Trash
-      objectReference: {fileID: 0}
-    - target: {fileID: 6478501298784041932, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.1892824
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.923991
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
---- !u!4 &297628513 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
-  m_PrefabInstance: {fileID: 297628512}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &327542442
 GameObject:
   m_ObjectHideFlags: 0
@@ -3488,7 +3422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1078067475
 Transform:
   m_ObjectHideFlags: 0
@@ -3649,10 +3583,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546a2ae1027b4dd47a44af3697cd2003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mop
-  cleaningRadius: 1
+  cleaningRadius: 0.78
   cleaningSpeed: 22
   arcWidth: 3
-  sweepPoints: 8
+  sweepPoints: 3
 --- !u!1 &1083589216
 GameObject:
   m_ObjectHideFlags: 0
@@ -4344,6 +4278,7 @@ GameObject:
   - component: {fileID: 1310614686}
   - component: {fileID: 1310614684}
   - component: {fileID: 1310614685}
+  - component: {fileID: 1310614687}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4380,6 +4315,7 @@ MonoBehaviour:
   moveSpeed: 5
   dodgeSpeed: 12
   dodgeDuration: 0.2
+  iFramesDuration: 0.9
   dodgeCooldown: 0.75
 --- !u!212 &1310614682
 SpriteRenderer:
@@ -4542,9 +4478,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0116d3d1d1d233444a1d88e688c4380c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTool: {fileID: 2141181709}
+  activeTool: {fileID: 1078067479}
   cleaningMoveMultiplier: 0.35
   cleanInterval: 0.05
+--- !u!114 &1310614687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310614679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8aad5d3f9ca564eb5b7de3ce6a20f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteFlasher
+  flashMaterial: {fileID: 2100000, guid: b0cfc8cbc3272c54fae4c357a898ee73, type: 2}
 --- !u!1 &1345867046
 GameObject:
   m_ObjectHideFlags: 0
@@ -4970,7 +4919,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1558857063}
-  - {fileID: 297628513}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1436985930
@@ -5379,6 +5327,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1415425072}
     m_Modifications:
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: cleaningRequired
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_Name
       value: Trash (1)
@@ -6520,7 +6472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2141181705
 Transform:
   m_ObjectHideFlags: 0
@@ -6681,11 +6633,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40db3a48a8c9e1d42babdf39e9d6a2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Broom
-  cleaningRadius: 0.65
+  cleaningRadius: 0.76
   cleaningSpeed: 22
   burstCount: 3
-  burstRange: 3
-  timeBetweenBursts: 0.61
+  burstRange: 8
+  timeBetweenBursts: 0.33
 --- !u!1 &2146922620
 GameObject:
   m_ObjectHideFlags: 0

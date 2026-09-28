@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Health")]
-    [SerializeField] private int maxHealth = 3;
+    [SerializeField] private int maxHealth = 15;
 
     [Header("Respawn")]
     [SerializeField] private float respawnDelay = 1f;
@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     private bool isDead;
 
     private Vector3 startingPosition;
+    private PlayerController playerController;
 
     public int CurrentHealth => currentHealth;
     public int MaxHealth => maxHealth;
@@ -21,6 +22,9 @@ public class PlayerHealth : MonoBehaviour
     {
         startingPosition = transform.position;
         currentHealth = maxHealth;
+
+        // Cache reference to avoid GetComponent allocations on hit
+        playerController = GetComponent<PlayerController>();
     }
 
     public void TakeDamage(int damage)
@@ -28,10 +32,8 @@ public class PlayerHealth : MonoBehaviour
         if (isDead)
             return;
 
-        PlayerController controller = GetComponent<PlayerController>();
-
-        // Dodge gives temporary invulnerability.
-        if (controller != null && controller.IsDodging)
+        // Checks the independent iFrames timer on PlayerController
+        if (playerController != null && playerController.IsInvincible)
             return;
 
         currentHealth -= damage;
