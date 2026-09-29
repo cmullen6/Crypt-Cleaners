@@ -1,55 +1,100 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
-
 public class SpriteFlasher : MonoBehaviour
 {
-    [Header("Flash Materials")]
+    [Header("Flash Settings")]
     [SerializeField] private Material flashMaterial;
+    [SerializeField] private SpriteRenderer targetSpriteRenderer;
 
-    private SpriteRenderer spriteRenderer;
-    private Material defaultMaterial;
+    [Header("Flicker Settings")]
+    [Range(0.1f, 1f)]
+    [SerializeField] private float flashOpacity = 0.5f; // Alpha opacity of the flash
+    [SerializeField] private float flickerInterval = 0.08f; // Speed of blinking in seconds
+
+    private Material originalMaterial;
+    private MaterialPropertyBlock propertyBlock;
     private Coroutine flashCoroutine;
+
+    // Property IDs for standard URP shader tint colors
+    private static readonly int BaseColorID = Shader.PropertyToID("_BaseColor");
+    private static readonly int ColorID = Shader.PropertyToID("_Color");
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        defaultMaterial = spriteRenderer.material;
+        if (targetSpriteRenderer == null)
+        {
+            targetSpriteRenderer = GetComponent<SpriteRenderer>();
+            if (targetSpriteRenderer == null)
+            {
+                targetSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            }
+        }
+
+        if (targetSpriteRenderer != null)
+        {
+            originalMaterial = targetSpriteRenderer.sharedMaterial;
+        }
+
+        propertyBlock = new MaterialPropertyBlock();
     }
 
-    
-    // Flashes the sprite solid white for a specific duration.
     public void FlashWhite(float duration)
     {
-        if (flashMaterial == null)
+        if (flashMaterial == null || targetSpriteRenderer == null)
             return;
 
         if (flashCoroutine != null)
             StopCoroutine(flashCoroutine);
 
-        flashCoroutine = StartCoroutine(FlashRoutine(duration));
+        flashCoroutine = StartCoroutine(FlickerRoutine(duration));
     }
 
-    private IEnumerator FlashRoutine(float duration)
+    private IEnumerator FlickerRoutine(float duration)
     {
-        // Swap to white material
-        spriteRenderer.material = flashMaterial;
+        // Swap to the white flash material
+        targetSpriteRenderer.material = flashMaterial;
 
-        yield return new WaitForSeconds(duration);
+        float elapsedTime = 0f;
+        bool isFlashed = true;
 
-        // Reset to original sprite material
-        spriteRenderer.material = defaultMaterial;
-        flashCoroutine = null;
+        while (elapsedTime < duration)
+        {
+            // Toggle alpha between semi-transparent white and low visibility
+            float alpha = isFlashed ? flashOpacity : 0.15f;
+            Color flashColor = new Color(1f, 1f, 1f, alpha);
+
+            // Apply color tint directly to shader via MaterialPropertyBlock
+            targetSpriteRenderer.GetPropertyBlock(propertyBlock);
+            propertyBlock.SetColor(BaseColorID, flashColor);
+            propertyBlock.SetColor(ColorID, flashColor);
+            targetSpriteRenderer.SetPropertyBlock(propertyBlock);
+
+            isFlashed = !isFlashed;
+
+            yield return new WaitForSeconds(flickerInterval);
+            elapsedTime += flickerInterval;
+        }
+
+        ResetMaterial();
     }
 
-    
-    // Instantly restores default material if dodge gets canceled.
     public void ResetMaterial()
     {
         if (flashCoroutine != null)
             StopCoroutine(flashCoroutine);
 
-        spriteRenderer.material = defaultMaterial;
+        if (targetSpriteRenderer != null)
+        {
+            // Reset property block color and revert to original material
+            targetSpriteRenderer.GetPropertyBlock(propertyBlock);
+            propertyBlock.Clear();
+            targetSpriteRenderer.SetPropertyBlock(propertyBlock);
+
+            if (originalMaterial != null)
+                targetSpriteRenderer.material = originalMaterial;
+        }
+
+        flashCoroutine = null;
     }
 }
