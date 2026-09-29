@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc8cdf8176d5ec341af2b288c0a5ab66, type: 3}
+  m_Name: Barbarian_AxeCircle
+  m_EditorClassIdentifier: Assembly-CSharp::BulletPatternData
+  patternType: 3
+  duration: 3
+  delayAfterPattern: 1
+  projectileCount: 8
+  projectileSpeed: 4
+  damage: 1
+  burstCount: 1
+  fireInterval: 0.5
+  spiralRotation: 30
+  telegraphDuration: 1.25
+  telegraphWidth: 0.08
+  telegraphLength: 20
+  areaAttackPrefab: {fileID: 0}
+  areaAttackDuration: 0.35
+  axeRadius: 2
+  swordWidth: 2
+  swordLength: 4
+  swordForwardOffset: 2
+  areaTelegraphDuration: 1
+  areaTelegraphWidth: 0.08
+  areaTelegraphColor: {r: 1, g: 0, b: 0, a: 1}
