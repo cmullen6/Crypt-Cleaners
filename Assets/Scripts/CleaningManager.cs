@@ -25,8 +25,7 @@ public class CleaningManager : MonoBehaviour
         }
     }
 
-    public bool RoomComplete =>
-        CleaningPercentage >= requiredCleanPercentage;
+    public bool RoomComplete => CleaningPercentage >= requiredCleanPercentage;
 
     private void Awake()
     {
@@ -39,32 +38,34 @@ public class CleaningManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        totalSpots = cleaningSpots.Count;
-    }
-
+    // Registers individual interactable cleaning objects (trash, spills, spots).
     public void RegisterCleaningSpot(CleaningSpot spot)
     {
         if (!cleaningSpots.Contains(spot))
         {
             cleaningSpots.Add(spot);
-            totalSpots = cleaningSpots.Count;
+            totalSpots++;
         }
     }
 
+    // Registers total initial goo tiles into the room quota.
+    public void RegisterTileCount(int count)
+    {
+        totalSpots += count;
+    }
+
+    // Called when an interactable CleaningSpot is fully completed.
     public void SpotCleaned(CleaningSpot spot)
     {
         cleanedSpots++;
     }
 
-    public int GetCleanedCount()
+    // Called when a single tilemap goo cell is fully erased.
+    public void TileCleaned()
     {
-        return cleanedSpots;
+        cleanedSpots++;
     }
 
-    public int GetTotalCount()
-    {
-        return totalSpots;
-    }
+    public int GetCleanedCount() => cleanedSpots;
+    public int GetTotalCount() => totalSpots;
 }

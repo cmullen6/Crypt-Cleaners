@@ -2667,6 +2667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893c846f9e01d50459613381d7b16bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestructableTiles
+  minHitsToClean: 8
+  maxHitsToClean: 15
 --- !u!19719996 &756127906
 TilemapCollider2D:
   m_ObjectHideFlags: 0
