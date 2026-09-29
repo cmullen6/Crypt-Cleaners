@@ -10,7 +10,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject controlsPanel;
     [SerializeField] private GameObject settingsPanel;
-    //[SerializeField] private GameObject losePanel;
+    [SerializeField] private GameObject losePanel;
+
+    [Header("Player Death")]
+    [SerializeField] private int resurrectMe = 3;
+    [SerializeField] private int zoomTimer;
+    [SerializeField] private Camera camera;
+
+    private PlayerHealth isDead;
+   
 
     private void Start()
     {
@@ -19,7 +27,7 @@ public class UIManager : MonoBehaviour
         pausePanel.SetActive(false);
         controlsPanel.SetActive(false); 
         settingsPanel.SetActive(false);
-        //losePanel.SetActive(false);
+        losePanel.SetActive(false);
 
     }
 
@@ -34,6 +42,19 @@ public class UIManager : MonoBehaviour
             pausePanel.SetActive(true);
 
             Time.timeScale = 0f;
+
+        }
+
+
+        // Checks if player has died
+        if (isDead == true)
+        {
+
+            // Zooms in on player to show death animation
+
+
+            // Turns on lose panel
+            losePanel.SetActive(true);
 
         }
 
@@ -57,7 +78,7 @@ public class UIManager : MonoBehaviour
     public void MainMenu()
     {
 
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene(0);
 
     }
 
@@ -110,6 +131,30 @@ public class UIManager : MonoBehaviour
             pausePanel.SetActive(true);
 
         }
+
+    }
+
+    // This respawns the player, only allowed 3
+    public void Resurrect()
+    {
+
+        resurrectMe -= 1;
+
+        if (resurrectMe < 0)
+        {
+
+
+
+
+        }
+        else
+        {
+
+
+
+
+        }
+
 
     }
 

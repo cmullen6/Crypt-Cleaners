@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
         // Description
         objectOneDesc.SetText(itemsDescription[randomNumberOne]);
         objectTwoDesc.SetText(itemsDescription[randomNumberTwo]);
-        objectThreeDesc.SetText(itemsDescription[randomNumberTwo]);
+        objectThreeDesc.SetText(itemsDescription[randomNumberThree]);
 
     }
 
@@ -201,12 +201,11 @@ public class GameManager : MonoBehaviour
 
 
 
-
     }
+
 
     private static void Remove(Sprite[] array, int index)
     {
-
 
 
 
