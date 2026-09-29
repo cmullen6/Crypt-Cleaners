@@ -3328,52 +3328,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5264812385710550943, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
   startDelay: 2
-  loopSequence: 1
+  repeatSequence: 1
+  sequenceRepeats: 3
   patternSequence:
-  - patternType: 0
-    duration: 3
-    delayAfterPattern: 1
-    projectileCount: 8
-    projectileSpeed: 4
-    damage: 1
-    burstCount: 3
-    fireInterval: 0.5
-    spiralRotation: 0
-    telegraphDuration: 0
-    telegraphWidth: 0
-  - patternType: 1
-    duration: 4
-    delayAfterPattern: 1
-    projectileCount: 8
-    projectileSpeed: 4
-    damage: 1
-    burstCount: 1
-    fireInterval: 0.15
-    spiralRotation: 30
-    telegraphDuration: 0
-    telegraphWidth: 0
-  - patternType: 2
-    duration: 1
-    delayAfterPattern: 1
-    projectileCount: 1
-    projectileSpeed: 10
-    damage: 1
-    burstCount: 2
-    fireInterval: 1
-    spiralRotation: 0
-    telegraphDuration: 1
-    telegraphWidth: 0.65
-  - patternType: 1
-    duration: 4
-    delayAfterPattern: 1
-    projectileCount: 8
-    projectileSpeed: 4
-    damage: 1
-    burstCount: 2
-    fireInterval: 0.15
-    spiralRotation: 25
-    telegraphDuration: 0
-    telegraphWidth: 0
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   telegraphColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!4 &916906922
 Transform:
@@ -4610,7 +4571,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1310614685
 BoxCollider2D:
   m_ObjectHideFlags: 0
