@@ -7140,6 +7140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   respawnDelay: 1
+  isDead: 0
 --- !u!114 &1310614681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8728,6 +8729,7 @@ MonoBehaviour:
   resurrectMe: 3
   zoomTimer: 0
   camera: {fileID: 519420031}
+  resurrectText: {fileID: 351532589}
 --- !u!1001 &1558857062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9623,7 +9625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1835662196
 RectTransform:
   m_ObjectHideFlags: 0

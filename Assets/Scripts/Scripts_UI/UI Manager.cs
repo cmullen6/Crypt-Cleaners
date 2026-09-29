@@ -1,7 +1,9 @@
 using System.Runtime.CompilerServices;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -14,10 +16,12 @@ public class UIManager : MonoBehaviour
 
     [Header("Player Death")]
     [SerializeField] private int resurrectMe = 3;
-    [SerializeField] private int zoomTimer;
+    [SerializeField] private float zoomTimer = 5f;
     [SerializeField] private Camera camera;
+    [SerializeField] private TextMeshProUGUI resurrectText;
 
-    private PlayerHealth isDead;
+    private PlayerHealth playerHealth;
+
    
 
     private void Start()
@@ -28,6 +32,9 @@ public class UIManager : MonoBehaviour
         controlsPanel.SetActive(false); 
         settingsPanel.SetActive(false);
         losePanel.SetActive(false);
+
+        // Grabs needed variables & functions from PlayerHealth script
+        playerHealth = GetComponent<PlayerHealth>();
 
     }
 
@@ -47,19 +54,32 @@ public class UIManager : MonoBehaviour
 
 
         // Checks if player has died
-        if (isDead == true)
+        if (playerHealth.isDead == true)
         {
 
             // Zooms in on player to show death animation
 
 
-            // Turns on lose panel
-            losePanel.SetActive(true);
+
+
+
+            zoomTimer -= Time.deltaTime;
+
+            // Turns on lose panel once zoom is over
+            if (zoomTimer < 0f)
+            {
+
+                resurrectText.text = "resurrections Left: " + resurrectMe;
+
+                losePanel.SetActive(true);
+
+            }
 
         }
 
 
     }
+
 
     // BUTTONS FOR MENUS & PANEL INTERACTIONS
     // ---------------------------------------
@@ -139,19 +159,23 @@ public class UIManager : MonoBehaviour
     {
 
         resurrectMe -= 1;
+        zoomTimer = 5;
 
-        if (resurrectMe < 0)
+        // If respawnable, this will zoom out the camera and respawn the player
+        if (resurrectMe >= 0)
         {
 
 
 
+
+
+           playerHealth.Respawn();
 
         }
         else
         {
 
-
-
+            return;
 
         }
 

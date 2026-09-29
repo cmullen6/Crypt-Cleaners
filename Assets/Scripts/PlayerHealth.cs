@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float respawnDelay = 1f;
 
     private int currentHealth;
-    private bool isDead;
+    public bool isDead;
 
     private Vector3 startingPosition;
     private PlayerController playerController;
@@ -56,7 +56,7 @@ public class PlayerHealth : MonoBehaviour
         Invoke(nameof(Respawn), respawnDelay);
     }
 
-    private void Respawn()
+    public void Respawn()
     {
         transform.position = startingPosition;
 
