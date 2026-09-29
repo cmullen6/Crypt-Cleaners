@@ -832,7 +832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &357935781
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3477,7 +3477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1078067475
 Transform:
   m_ObjectHideFlags: 0
@@ -3613,7 +3613,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 935445293
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.509434, g: 0.5027056, b: 0.5027056, a: 1}
@@ -3638,10 +3638,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 546a2ae1027b4dd47a44af3697cd2003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mop
-  cleaningRadius: 0.78
-  cleaningSpeed: 22
-  arcWidth: 3
-  sweepPoints: 3
+  cleaningRadius: 0.55
+  cleaningSpeed: 4.5
+  arcWidth: 1
+  sweepPoints: 2
 --- !u!1 &1083589216
 GameObject:
   m_ObjectHideFlags: 0
@@ -4512,7 +4512,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 935445293
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.34276712, g: 0.43699533, b: 1, a: 1}
@@ -4630,7 +4630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0116d3d1d1d233444a1d88e688c4380c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTool: {fileID: 1078067479}
+  activeTool: {fileID: 1367038106}
   cleaningMoveMultiplier: 0.35
   cleanInterval: 0.05
 --- !u!114 &1310614687
@@ -4805,7 +4805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1367038102
 Transform:
   m_ObjectHideFlags: 0
@@ -4941,10 +4941,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 935445293
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.509434, g: 0.5027056, b: 0.5027056, a: 1}
+  m_Color: {r: 0.7509433, g: 0.6840982, b: 0.28195786, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4967,7 +4967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sponge
   cleaningRadius: 1
-  cleaningSpeed: 22
+  cleaningSpeed: 3
   closeOffset: {x: 0, y: 0.4, z: 0}
 --- !u!1 &1404513393
 GameObject:
@@ -6752,7 +6752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2116950753
 Transform:
   m_ObjectHideFlags: 0
@@ -6947,10 +6947,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 935445293
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.509434, g: 0.5027056, b: 0.5027056, a: 1}
+  m_Color: {r: 0.3584906, g: 0.28882167, b: 0.28882167, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6972,11 +6972,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40db3a48a8c9e1d42babdf39e9d6a2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Broom
-  cleaningRadius: 0.76
-  cleaningSpeed: 22
-  burstCount: 3
-  burstRange: 8
-  timeBetweenBursts: 0.33
+  cleaningRadius: 1
+  cleaningSpeed: 10
+  burstCount: 5
+  burstRange: 20
+  timeBetweenBursts: 0.02
 --- !u!1 &2146922620
 GameObject:
   m_ObjectHideFlags: 0
