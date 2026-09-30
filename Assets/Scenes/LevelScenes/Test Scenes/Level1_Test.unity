@@ -309,6 +309,7 @@ MonoBehaviour:
   resurrectMe: 3
   zoomTimer: 0
   camera: {fileID: 626404718}
+  resurrectText: {fileID: 0}
 --- !u!1 &38850517
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +518,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5579532090078159365, guid: 7ebea71dfcf8788409f12f580b1d0093, type: 3}
-  m_Color: {r: 0.3584906, g: 0.28882167, b: 0.28882167, a: 1}
+  m_Color: {r: 0.8805031, g: 0.8805031, b: 0.8805031, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -721,7 +722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &89977900
 Transform:
   m_ObjectHideFlags: 0
@@ -875,7 +876,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5409007135062248325, guid: 0122952f0bb52284fb4e32d6cb7e3cff, type: 3}
-  m_Color: {r: 0.7509433, g: 0.6840982, b: 0.28195786, a: 1}
+  m_Color: {r: 1, g: 0.94923633, b: 0.64465404, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2659,6 +2660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 15
   respawnDelay: 1
+  isDead: 0
 --- !u!114 &424860396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5977,7 +5979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &881811677
 Transform:
   m_ObjectHideFlags: 0
@@ -6132,7 +6134,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6708447446598066700, guid: 915d20510d8a8944c9cb51ff5d4468e2, type: 3}
-  m_Color: {r: 0.509434, g: 0.5027056, b: 0.5027056, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10925,7 +10927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.95977783, y: -3.5990295}
+  m_AnchoredPosition: {x: 0.95977783, y: -3.598999}
   m_SizeDelta: {x: 69.10095, y: 38.8692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805097345
