@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a271c0044505b7b4998657fbd0f6d73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeroAttackHazard
-  hazardShape: 0
   circleCollider: {fileID: 0}
   boxCollider: {fileID: 383760585691138729}
   spriteRenderer: {fileID: 0}
