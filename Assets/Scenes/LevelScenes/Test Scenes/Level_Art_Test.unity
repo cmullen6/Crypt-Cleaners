@@ -4065,7 +4065,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5264812385710550943, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
   startDelay: 2
   repeatSequence: 1
-  sequenceRepeats: 3
+  sequenceRepeats: 100
   patternSequence:
   - {fileID: 0}
   - {fileID: 0}
@@ -9537,6 +9537,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1604417501}
     m_Modifications:
+    - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
+      propertyPath: startDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
+      propertyPath: sequenceRepeats
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: patternSequence.Array.size
       value: 2
