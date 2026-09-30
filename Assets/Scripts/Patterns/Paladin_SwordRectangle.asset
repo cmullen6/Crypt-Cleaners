@@ -24,7 +24,7 @@ MonoBehaviour:
   telegraphDuration: 1.25
   telegraphWidth: 0.08
   telegraphLength: 20
-  areaAttackPrefab: {fileID: 0}
+  areaAttackPrefab: {fileID: 5008233748471332405, guid: 305b3ce45583c9e4d8ba624e02535933, type: 3}
   areaAttackDuration: 0.35
   axeRadius: 2
   swordWidth: 2
