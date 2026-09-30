@@ -12,15 +12,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject controlsPanel;
     [SerializeField] private GameObject settingsPanel;
-    [SerializeField] private GameObject losePanel;
-
-    [Header("Player Death")]
-    [SerializeField] private int resurrectMe = 3;
-    [SerializeField] private float zoomTimer = 5f;
-    [SerializeField] private Camera camera;
-    [SerializeField] private TextMeshProUGUI resurrectText;
-
-    private PlayerHealth playerHealth;
 
    
 
@@ -31,10 +22,7 @@ public class UIManager : MonoBehaviour
         pausePanel.SetActive(false);
         controlsPanel.SetActive(false); 
         settingsPanel.SetActive(false);
-        losePanel.SetActive(false);
-
-        // Grabs needed variables & functions from PlayerHealth script
-        playerHealth = GetComponent<PlayerHealth>();
+    
 
     }
 
@@ -51,32 +39,6 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 0f;
 
         }
-
-
-        // Checks if player has died
-        if (playerHealth.isDead == true)
-        {
-
-            // Zooms in on player to show death animation
-
-
-
-
-
-            zoomTimer -= Time.deltaTime;
-
-            // Turns on lose panel once zoom is over
-            if (zoomTimer < 0f)
-            {
-
-                resurrectText.text = "resurrections Left: " + resurrectMe;
-
-                losePanel.SetActive(true);
-
-            }
-
-        }
-
 
     }
 
@@ -151,34 +113,6 @@ public class UIManager : MonoBehaviour
             pausePanel.SetActive(true);
 
         }
-
-    }
-
-    // This respawns the player, only allowed 3
-    public void Resurrect()
-    {
-
-        resurrectMe -= 1;
-        zoomTimer = 5;
-
-        // If respawnable, this will zoom out the camera and respawn the player
-        if (resurrectMe >= 0)
-        {
-
-
-
-
-
-           playerHealth.Respawn();
-
-        }
-        else
-        {
-
-            return;
-
-        }
-
 
     }
 

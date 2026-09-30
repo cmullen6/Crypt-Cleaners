@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -7,9 +8,14 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Respawn")]
     [SerializeField] private float respawnDelay = 1f;
+    [SerializeField] private int resurrectMe = 3;
+    [SerializeField] private float zoomTimer = 5f;
+    [SerializeField] private Camera camera;
+    [SerializeField] private TextMeshProUGUI resurrectText;
+    [SerializeField] private GameObject losePanel;
 
     private int currentHealth;
-    public bool isDead;
+    private bool isDead;
 
     private Vector3 startingPosition;
     private PlayerController playerController;
@@ -22,6 +28,9 @@ public class PlayerHealth : MonoBehaviour
     {
         startingPosition = transform.position;
         currentHealth = maxHealth;
+
+        // Sets panel to off on start
+        losePanel.SetActive(false);
 
         // Cache reference to avoid GetComponent allocations on hit
         playerController = GetComponent<PlayerController>();
@@ -40,8 +49,54 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+
+            // Zooms in on player to show death animation
+
+
+
+
+
+            zoomTimer -= Time.deltaTime;
+
+            // Turns on lose panel once zoom is over
+            if (zoomTimer < 0f)
+            {
+
+                resurrectText.text = "resurrections Left: " + resurrectMe;
+
+                losePanel.SetActive(true);
+
+            }
+
         }
+    }
+
+    // This respawns the player, only allowed 3
+    public void Resurrect()
+    {
+
+        resurrectMe -= 1;
+        zoomTimer = 5;
+
+        // If respawnable, this will zoom out the camera and respawn the player
+        if (resurrectMe >= 0)
+        {
+
+
+
+
+
+            Die();
+
+        }
+        else
+        {
+
+            return;
+
+        }
+
+
     }
 
     private void Die()
@@ -56,7 +111,7 @@ public class PlayerHealth : MonoBehaviour
         Invoke(nameof(Respawn), respawnDelay);
     }
 
-    public void Respawn()
+    private void Respawn()
     {
         transform.position = startingPosition;
 

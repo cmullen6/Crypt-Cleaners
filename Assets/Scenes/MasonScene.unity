@@ -4053,8 +4053,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1558641897}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 1310614680}
+        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
         m_MethodName: Resurrect
         m_Mode: 1
         m_Arguments:
@@ -4995,25 +4995,7 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 756127906}
-    m_ColliderPaths:
-    - - X: -15000000
-        Y: -35000000
-      - X: 15000000
-        Y: -35000000
-      - X: 15000000
-        Y: -45000000
-      - X: 95000000
-        Y: -45000000
-      - X: 95000000
-        Y: 45000000
-      - X: -95000000
-        Y: 45000000
-      - X: -95000000
-        Y: -45000000
-      - X: -15000000
-        Y: -45000000
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: -1.5000293, y: -4.5}
@@ -6999,7 +6981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1267467645
 Grid:
   m_ObjectHideFlags: 0
@@ -7140,7 +7122,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   respawnDelay: 1
-  isDead: 0
+  resurrectMe: 3
+  zoomTimer: 5
+  camera: {fileID: 519420031}
+  resurrectText: {fileID: 351532589}
+  losePanel: {fileID: 1835662195}
 --- !u!114 &1310614681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8725,11 +8711,6 @@ MonoBehaviour:
   pausePanel: {fileID: 463943490}
   controlsPanel: {fileID: 850714467}
   settingsPanel: {fileID: 668922443}
-  losePanel: {fileID: 1835662195}
-  resurrectMe: 3
-  zoomTimer: 0
-  camera: {fileID: 519420031}
-  resurrectText: {fileID: 351532589}
 --- !u!1001 &1558857062
 PrefabInstance:
   m_ObjectHideFlags: 0
