@@ -1165,11 +1165,6 @@ MonoBehaviour:
   pausePanel: {fileID: 430190447}
   controlsPanel: {fileID: 1191896246}
   settingsPanel: {fileID: 950260650}
-  losePanel: {fileID: 100469409}
-  resurrectMe: 3
-  zoomTimer: 0
-  camera: {fileID: 2061521036}
-  resurrectText: {fileID: 0}
 --- !u!4 &262573878
 Transform:
   m_ObjectHideFlags: 0
@@ -9576,7 +9571,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 15
   respawnDelay: 1
-  isDead: 0
+  resurrectMe: 3
+  zoomTimer: 5
+  camera: {fileID: 0}
+  resurrectText: {fileID: 0}
+  losePanel: {fileID: 0}
 --- !u!114 &1474631285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10222,7 +10221,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -10255,7 +10254,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 060e119585f4f7e48b2df4d85c9e080c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10283,7 +10282,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
