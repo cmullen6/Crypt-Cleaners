@@ -3645,8 +3645,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 188110131}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 1120340616}
+        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
         m_MethodName: Resurrect
         m_Mode: 1
         m_Arguments:
@@ -14910,7 +14910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1066371241
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15275,9 +15275,9 @@ MonoBehaviour:
   respawnDelay: 1
   resurrectMe: 3
   zoomTimer: 5
-  camera: {fileID: 0}
-  resurrectText: {fileID: 0}
-  losePanel: {fileID: 0}
+  camera: {fileID: 282009496}
+  resurrectText: {fileID: 526988887}
+  losePanel: {fileID: 1066371240}
 --- !u!114 &1120340617
 MonoBehaviour:
   m_ObjectHideFlags: 0
