@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mage_Spiral
   m_EditorClassIdentifier: Assembly-CSharp::BulletPatternData
   patternType: 1
-  duration: 10
+  duration: 5
   delayAfterPattern: 1
   projectileCount: 8
   projectileSpeed: 4
