@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1dd7eec4b63ae34199144dc14ec1e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cleaningRequired: 100
+  cleaningRequired: 18
   progressBar: {fileID: 6766178570927141441}
 --- !u!1 &4555637624256618939
 GameObject:
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.46003264, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -391,8 +391,8 @@ Canvas:
   m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 935445293
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &81587770746767488
 MonoBehaviour:
