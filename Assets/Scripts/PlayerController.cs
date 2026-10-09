@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float dodgeDuration = 0.2f;
     [SerializeField] private float iFramesDuration = 1.5f;
     [SerializeField] private float dodgeCooldown = 0.75f;
+    [SerializeField] private Image cooldownImage;
 
     [Header("Tool Pivot")]
     [SerializeField] private Transform toolHolder; // Drag ToolHolder child GameObject here
@@ -23,6 +26,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastFacingDirection = Vector2.up; // Default facing up
 
     private bool isDodging;
+    private bool cooldown = false;
     private float dodgeTimer;
     private float iFramesTimer;
     private float dodgeCooldownTimer;
@@ -52,9 +56,13 @@ public class PlayerController : MonoBehaviour
         {
             dodgeTimer -= Time.deltaTime;
 
-            if (dodgeTimer <= 0f)
+            if (dodgeTimer <= 0f && !cooldown)
             {
+
                 isDodging = false;
+
+                StartCoroutine(DodgeCooldown());
+
             }
         }
     }
@@ -136,4 +144,28 @@ public class PlayerController : MonoBehaviour
             spriteFlasher.FlashWhite(iFramesDuration);
         }
     }
+
+
+    IEnumerator DodgeCooldown()
+    {
+
+        cooldown = true;
+        float timer = 0f;
+        cooldownImage.CrossFadeColor(Color.black, 0, true, true);
+        
+
+        while (timer < dodgeCooldownTimer)
+        {
+
+            timer += Time.deltaTime;
+            yield return null;
+
+        }
+
+        cooldownImage.CrossFadeColor(Color.white, dodgeCooldownTimer, true, true);
+        cooldown = false;
+
+    }
+
+
 }
