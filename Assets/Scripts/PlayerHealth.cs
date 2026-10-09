@@ -18,6 +18,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameObject trash;
 
 
+    private int zoomInRange = 3;
+
+
     private int currentHealth;
     private bool isDead;
 
@@ -128,7 +131,7 @@ public class PlayerHealth : MonoBehaviour
     private void ZoomCameraIn()
     {
 
-        camera.orthographicSize = 3;
+        camera.orthographicSize = zoomInRange;
 
     }
 
@@ -136,7 +139,7 @@ public class PlayerHealth : MonoBehaviour
     private void ZoomCameraOut()
     {
 
-        camera.orthographicSize = 10;
+        camera.orthographicSize = 7;
 
     }
 
