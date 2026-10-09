@@ -2,23 +2,12 @@ using UnityEngine;
 
 public class DestroyProjectileOnHit : MonoBehaviour
 {
-    void Start()
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
-    }
-
-
-    void Update()
-    {
-
-    }
-
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.CompareTag("Projectile"))
+        if(collision.gameObject.CompareTag("Projectile"))
         {
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
