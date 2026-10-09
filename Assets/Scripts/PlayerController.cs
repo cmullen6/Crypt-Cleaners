@@ -145,7 +145,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    // Sets the color of the on screen cooldown to black
+    // Over the time of dodgeCooldownTimer it will fade back to white
     IEnumerator DodgeCooldown()
     {
 

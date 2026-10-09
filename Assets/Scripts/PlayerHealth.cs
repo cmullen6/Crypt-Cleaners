@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -14,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Camera camera;
     [SerializeField] private TextMeshProUGUI resurrectText;
     [SerializeField] private GameObject losePanel;
+    [SerializeField] private GameObject trash;
 
 
     private int currentHealth;
@@ -148,8 +150,12 @@ public class PlayerHealth : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
 
         Invoke(nameof(Respawn), respawnDelay);
+
+        SpawnTrash();
+
     }
 
+    // Respawns player
     private void Respawn()
     {
 
@@ -160,5 +166,15 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth = maxHealth;
         isDead = false;
+    }
+
+    // Spawns a trash pile where the player died
+    private void SpawnTrash()
+    {
+
+        Vector2 spawnPostion = transform.position;
+
+        Instantiate(trash, spawnPostion, Quaternion.identity);
+
     }
 }

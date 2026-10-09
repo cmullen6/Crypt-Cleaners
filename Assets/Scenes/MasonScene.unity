@@ -3783,13 +3783,13 @@ RectTransform:
   - {fileID: 2106348283}
   - {fileID: 788262774}
   - {fileID: 68594645}
+  - {fileID: 188518821}
   - {fileID: 1144251614}
   - {fileID: 357935781}
   - {fileID: 463943491}
   - {fileID: 850714468}
   - {fileID: 668922446}
   - {fileID: 1835662196}
-  - {fileID: 188518821}
   m_Father: {fileID: 467401190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7348,6 +7348,7 @@ MonoBehaviour:
   camera: {fileID: 519420031}
   resurrectText: {fileID: 351532589}
   losePanel: {fileID: 1835662195}
+  trash: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
 --- !u!114 &1310614681
 MonoBehaviour:
   m_ObjectHideFlags: 0
