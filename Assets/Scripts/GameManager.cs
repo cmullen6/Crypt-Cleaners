@@ -1,41 +1,28 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 using TMPro;
-using UnityEditor.Rendering;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
 
+    [Header("Resources")]
+    [SerializeField] private TextMeshProUGUI goldText;
+    [SerializeField] private TextMeshProUGUI recAText;
+    [SerializeField] private TextMeshProUGUI recBText;
+    [SerializeField] private TextMeshProUGUI recCText;
+    [SerializeField] private TextMeshProUGUI recDText;
+    [SerializeField] private Button testButton;
+
+    private int playerGold;
+    private int playerRecA;
+    private int playerRecB;
+    private int playerRecC;
+    private int playerRecD;
+
     [Header("Item Panel")]
     [SerializeField] private GameObject itemsPanel;
-
-
-    [Header("Random Items & Upgrades")]
-    [SerializeField] private GameObject upgradePanel;
-    [SerializeField] private TextMeshProUGUI objectOneName;
-    [SerializeField] private TextMeshProUGUI objectTwoName;
-    [SerializeField] private TextMeshProUGUI objectThreeName;
-    [SerializeField] private TextMeshProUGUI objectOneDesc;
-    [SerializeField] private TextMeshProUGUI objectTwoDesc;
-    [SerializeField] private TextMeshProUGUI objectThreeDesc;
-    [SerializeField] private Image objectOneSprite;
-    [SerializeField] private Image objectTwoSprite;
-    [SerializeField] private Image objectThreeSprite;
-    private int randomNumberOne;
-    private int randomNumberTwo;
-    private int randomNumberThree;
-
-
-    [Header("Sprites for upgrades")]
-    [SerializeField] private Sprite[] itemSprites;
-
-
-    // Genuinely every single item in the game, sorry but also not sorry really. just ignore it or something
-    private string[] itemsName = { "option 1", "option 2", "option 3", "option 4", "option 5", "option 6" };
-    private string[] itemsDescription = { "option 1 description", "option 2 description", "option 3 description", "option 4 description", "option 5 description", "option 6 description" };
-
 
 
 
@@ -45,16 +32,28 @@ public class GameManager : MonoBehaviour
 
         // Turns off panel on game start
         itemsPanel.SetActive(false);
-        upgradePanel.SetActive(false);
-        
+
     }
 
     void Update()
     {
 
+        // Updates variables with the instance version
+        playerGold = ResourceManager.instance.gold;
+        playerRecA = ResourceManager.instance.recA;
+        playerRecB = ResourceManager.instance.recB;
+        playerRecC = ResourceManager.instance.recC;
+        playerRecD = ResourceManager.instance.recD;
+
         // Toggles player item inventory on tab hold
         if (Keyboard.current.tabKey.wasPressedThisFrame)
         {
+
+            goldText.text = "Gold: " + playerGold;
+            recAText.text = "Resource A: " + playerRecA;
+            recBText.text = "Resource B: " + playerRecB;
+            recCText.text = "Resource C: " + playerRecC;
+            recDText.text = "Resource D: " + playerRecD;
 
             itemsPanel.SetActive(true);
 
@@ -67,148 +66,43 @@ public class GameManager : MonoBehaviour
 
         }
 
-
-        // TESTING BUTTON TO TEST THE WORK ... :)
+        // Test to make sure item tracking works
         if (Keyboard.current.kKey.wasPressedThisFrame)
         {
 
-            // Randomizes item selection
-            RandomItemPicker();
-
-            // Turns on panel
-            upgradePanel.SetActive(true);
+            ResourceManager.instance.gold += 1;
+            ResourceManager.instance.recA += 1;
 
         }
 
+
+        // Test to make sure you can remove value from the instance
+        // Also test to make sure you can "lock" things behind a set value
+        if (playerGold < 5)
+        {
+
+            testButton.interactable = false;
+
+        }
+        else
+        {
+
+            testButton.interactable = true;
+
+        }
+
+
     }
 
-    // Function to pick three random upgrades and fill them into the appropriate spot on the upgrade panel 
-    private void RandomItemPicker()
+
+    // Test button to make sure instance resource changing is working
+    public void BuyButton()
     {
 
-        // Randomizes three variables into unique numbers for random item selection
-        randomNumberOne = UnityEngine.Random.Range(0, (itemsName.Length + 1));
-        randomNumberTwo = UnityEngine.Random.Range(0, (itemsName.Length + 1));
-        randomNumberThree = UnityEngine.Random.Range(0, (itemsName.Length + 1));
-
-
-        // Creates item on UI Panel. Name, Image & Description
-        // Name
-        objectOneName.SetText(itemsName[randomNumberOne]);
-        objectTwoName.SetText(itemsName[randomNumberTwo]);
-        objectThreeName.SetText(itemsName[randomNumberThree]);
-
-        // Image
-        objectOneSprite.sprite = itemSprites[randomNumberOne];
-        objectTwoSprite.sprite = itemSprites[randomNumberTwo];
-        objectThreeSprite.sprite = itemSprites[randomNumberThree];
-
-        // Description
-        objectOneDesc.SetText(itemsDescription[randomNumberOne]);
-        objectTwoDesc.SetText(itemsDescription[randomNumberTwo]);
-        objectThreeDesc.SetText(itemsDescription[randomNumberThree]);
+        ResourceManager.instance.recC += 10;
+        ResourceManager.instance.gold -= 5;
 
     }
 
-    // Sends the picked item from above and sends the information to the player items panel
-    private void ItemSelected(int x)
-    {
-
-        // int x is the upgrade item the player selected
-        
-
-        // Send item to player inventory
-
-
-
-
-
-
-
-
-        // Make gameplay modification from item happen
-
-
-
-
-
-
-
-
-    }
-
-    // Skips items selection
-    public void ItemSkip()
-    {
-
-        upgradePanel.SetActive(false);
-
-    }
-
-    // Sends item one to inventory & closes menu
-    public void ItemOneSelected()
-    {
-
-        // Sends item to inventory
-        ItemSelected(randomNumberOne);
-
-        // Removes item from total array item pool
-        Remove(itemsName, randomNumberOne);
-        Remove(itemSprites, randomNumberOne);
-        Remove(itemsDescription, randomNumberOne);
-
-        // Turns off panel
-        upgradePanel.SetActive(false);
-
-    }
-
-    // Sends item two to inventory & closes menu
-    public void ItemTwoSelected()
-    {
-
-        // Sends item to inventory
-        ItemSelected(randomNumberTwo);
-
-        // Removes item from total array item pool
-        Remove(itemsName, randomNumberTwo);
-        Remove(itemSprites, randomNumberTwo);
-        Remove(itemsDescription, randomNumberTwo);
-
-        // Turns off panel
-        upgradePanel.SetActive(false);
-
-    }
-
-    // Sends item three to inventory & closes menu
-    public void ItemThreeSelected()
-    {
-
-        // Sends item to inventory
-        ItemSelected(randomNumberThree);
-
-        // Removes item from total array item pool
-        Remove(itemsName, randomNumberThree);
-        Remove(itemSprites, randomNumberThree);
-        Remove(itemsDescription, randomNumberThree);
-
-        // Turns off panel
-        upgradePanel.SetActive(false);
-
-    }
-
-    private static void Remove(string[] array, int index)
-    {
-
-
-
-    }
-
-
-    private static void Remove(Sprite[] array, int index)
-    {
-
-
-
-    }
 
 }
