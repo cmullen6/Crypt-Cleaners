@@ -8743,7 +8743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c285e2e5fdc5b14e880083404531c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: NextScene
+  nextSceneName: L1_R3
 --- !u!212 &1591153459
 SpriteRenderer:
   serializedVersion: 3
@@ -8813,7 +8813,7 @@ Transform:
   m_GameObject: {fileID: 1591153456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 18.16, z: 0}
+  m_LocalPosition: {x: 1.22, y: 18.16, z: 0}
   m_LocalScale: {x: 1, y: 2.0333, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

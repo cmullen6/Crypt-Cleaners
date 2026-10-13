@@ -8707,7 +8707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c285e2e5fdc5b14e880083404531c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: NextScene
+  nextSceneName: Boss_Room
 --- !u!212 &868036908
 SpriteRenderer:
   serializedVersion: 3
@@ -12801,6 +12801,7 @@ MonoBehaviour:
   camera: {fileID: 0}
   resurrectText: {fileID: 0}
   losePanel: {fileID: 0}
+  trash: {fileID: 0}
 --- !u!114 &1548223462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12818,6 +12819,7 @@ MonoBehaviour:
   dodgeDuration: 0.2
   iFramesDuration: 0.9
   dodgeCooldown: 0.75
+  cooldownImage: {fileID: 0}
   toolHolder: {fileID: 92105458}
 --- !u!212 &1548223463
 SpriteRenderer:
