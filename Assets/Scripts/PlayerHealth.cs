@@ -98,6 +98,9 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth -= damage;
 
+
+        
+
         
     }
 
