@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1fcb5c66fc500143ba06dd82dca739c, type: 3}
+  m_Name: Upgrade_Health
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeDefinition
+  upgradeID: health_capacity
+  displayName: New Upgrade
+  description: Describe what this upgrade does.
+  maxRank: 3
+  rankCosts:
+  - costs:
+    - resource: 0
+      amount: 0
+    - resource: 1
+      amount: 0
+  requiredUpgradeIDs: []
+  requiredRepairIDs: []
+  valuePerRank: 1

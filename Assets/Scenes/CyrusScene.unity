@@ -2575,6 +2575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 893c846f9e01d50459613381d7b16bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestructableTiles
+  minHitsToClean: 3
+  maxHitsToClean: 5
 --- !u!19719996 &756127906
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -4042,6 +4044,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   respawnDelay: 1
+  resurrectMe: 3
+  zoomTimer: 3
+  camera: {fileID: 0}
+  resurrectText: {fileID: 0}
+  losePanel: {fileID: 0}
+  trash: {fileID: 0}
 --- !u!114 &1310614681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4059,6 +4067,7 @@ MonoBehaviour:
   dodgeDuration: 0.2
   iFramesDuration: 1.5
   dodgeCooldown: 0.75
+  cooldownImage: {fileID: 0}
   toolHolder: {fileID: 0}
 --- !u!212 &1310614682
 SpriteRenderer:
@@ -4724,6 +4733,56 @@ RectTransform:
   m_AnchoredPosition: {x: -33.501, y: 5.4455}
   m_SizeDelta: {x: 139.21, y: 232.51}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1492906074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492906076}
+  - component: {fileID: 1492906075}
+  m_Layer: 0
+  m_Name: GameProgression
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1492906075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492906074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0df048c9b414ad542843e0ee35eed04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameProgression
+  startingGold: 0
+  startingResourceA: 0
+  startingResourceB: 0
+  startingResourceC: 0
+  startingResourceD: 0
+  loadSavedData: 1
+--- !u!4 &1492906076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492906074}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.62825, y: -0.36957, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1545153369
 GameObject:
   m_ObjectHideFlags: 0
@@ -6062,18 +6121,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb729f08f2d5fdc4db6fda8b6c7bbf6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  goldText: {fileID: 0}
+  recAText: {fileID: 0}
+  recBText: {fileID: 0}
+  recCText: {fileID: 0}
+  recDText: {fileID: 0}
+  testButton: {fileID: 0}
   itemsPanel: {fileID: 1144251613}
-  upgradePanel: {fileID: 357935780}
-  objectOneName: {fileID: 455881238}
-  objectTwoName: {fileID: 1345867048}
-  objectThreeName: {fileID: 1545153371}
-  objectOneDesc: {fileID: 894402012}
-  objectTwoDesc: {fileID: 1986085763}
-  objectThreeDesc: {fileID: 620105705}
-  objectOneSprite: {fileID: 0}
-  objectTwoSprite: {fileID: 0}
-  objectThreeSprite: {fileID: 0}
-  itemSprites: []
 --- !u!1 &2146922620
 GameObject:
   m_ObjectHideFlags: 0
@@ -6353,3 +6407,4 @@ SceneRoots:
   - {fileID: 4751462922060333144}
   - {fileID: 7953562048029850556}
   - {fileID: 1982958306336338439}
+  - {fileID: 1492906076}
