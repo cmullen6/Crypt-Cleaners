@@ -142,7 +142,7 @@ public class PlayerHealth : MonoBehaviour
     private void ZoomCameraOut()
     {
 
-        camera.orthographicSize = 7;
+        camera.orthographicSize = 10;
 
     }
 
