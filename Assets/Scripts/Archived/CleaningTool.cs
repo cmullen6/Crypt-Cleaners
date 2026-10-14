@@ -21,6 +21,7 @@ public class CleaningTool : MonoBehaviour
 
     protected void PerformCircleSweep(Vector3 origin, float radius, float interval)
     {
+        Debug.Log("Sweep origin: " + origin); // Add this line
         Collider2D[] hits = Physics2D.OverlapCircleAll(origin, radius);
 
         foreach (Collider2D hit in hits)

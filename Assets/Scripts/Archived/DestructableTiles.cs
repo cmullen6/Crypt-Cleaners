@@ -54,8 +54,8 @@ public class DestructableTiles : MonoBehaviour
     {
         if (destructableTilemap == null) return;
 
-        Vector3 localPos = destructableTilemap.transform.InverseTransformPoint(worldPosition);
-        Vector3Int centerCell = destructableTilemap.WorldToCell(localPos);
+        Vector3Int centerCell = destructableTilemap.WorldToCell(worldPosition);
+        Debug.Log("Cleaning cell at: " + centerCell);
         int cellRange = Mathf.CeilToInt(radius);
 
         for (int x = -cellRange; x <= cellRange; x++)

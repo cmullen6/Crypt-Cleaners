@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class GooHealth : MonoBehaviour
+public class GooHealth : CleaningSpot
 {
     public int maxHealth = 24;
     public int currentHealth;
