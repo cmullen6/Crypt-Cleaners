@@ -14793,10 +14793,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa234afb980e06d4c84394954262db84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
-  respawnDelay: 1
+  maxHealth: 3
+  respawnDelay: 0.5
   resurrectMe: 3
-  zoomTimer: 5
+  zoomTimer: 3
   camera: {fileID: 517659920}
   resurrectText: {fileID: 77860108}
   losePanel: {fileID: 1904553710}
