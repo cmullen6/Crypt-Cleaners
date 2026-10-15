@@ -106,20 +106,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Called every frame in update. Grabs the mouse position in game and makes the player sprite face it.
     private void UpdateFacingAndToolHolder()
     {
-        // Only update rotation when receiving active movement input
-        if (moveInput != Vector2.zero)
-        {
-            lastFacingDirection = moveInput;
 
-            // Calculate angle and subtract 90 degrees to align Up-facing sprites with input
-            float angle = (Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg) - 90f;
+        Vector3 mousePos = Input.mousePosition;
 
-            // Rotate main transform (Player + ToolHolder rotate together)
-            transform.rotation = Quaternion.Euler(0f, 0f, angle);
-        }
+        mousePos.z = Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
+
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        Vector2 direction = (mousePos - transform.position);
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
+
     }
+
 
     private void TryDodge()
     {

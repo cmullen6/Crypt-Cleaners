@@ -35,6 +35,7 @@ public class UIManager : MonoBehaviour
         {
 
             pausePanel.SetActive(true);
+            Cursor.visible = true;
 
             Time.timeScale = 0f;
 
@@ -51,6 +52,7 @@ public class UIManager : MonoBehaviour
     {
 
         pausePanel.SetActive(false);
+        Cursor.visible = false;
 
         Time.timeScale = 1f;
 

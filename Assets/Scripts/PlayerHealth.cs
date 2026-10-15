@@ -70,6 +70,7 @@ public class PlayerHealth : MonoBehaviour
             resurrectText.text = "resurrections Left: " + resurrectMe;
 
             losePanel.SetActive(true);
+            UnityEngine.Cursor.visible = true;
 
         }
 
@@ -166,6 +167,7 @@ public class PlayerHealth : MonoBehaviour
     {
 
         losePanel.SetActive(false);
+        UnityEngine.Cursor.visible = false;
         zoomTimer = 3f;
 
         transform.position = startingPosition;
