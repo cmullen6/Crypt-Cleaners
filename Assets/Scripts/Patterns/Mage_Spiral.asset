@@ -20,7 +20,7 @@ MonoBehaviour:
   damage: 1
   burstCount: 1
   fireInterval: 0.5
-  spiralRotation: 30
+  spiralRotation: 240
   telegraphDuration: 1.25
   telegraphWidth: 0.08
   telegraphLength: 20
