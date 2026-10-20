@@ -6,7 +6,6 @@ public class AttackArea : MonoBehaviour
     [SerializeField] private int damage = 3;
     private bool hasDealtDamage = false;
 
-
     private void OnTriggerStay2D(Collider2D collider)
     {
         if(hasDealtDamage == true)
@@ -20,6 +19,8 @@ public class AttackArea : MonoBehaviour
             health.TakeDamage(damage);
             hasDealtDamage = true;
         }
+
+  
 
     }
 

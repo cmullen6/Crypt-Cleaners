@@ -52,7 +52,7 @@ public class CleaningSpot : MonoBehaviour
         }
     }
 
-    private void UpdateProgressBar()
+    public void UpdateProgressBar()
     {
         if (progressBar != null)
         {
