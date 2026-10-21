@@ -27,9 +27,9 @@ MonoBehaviour:
   areaAttackPrefab: {fileID: 5008233748471332405, guid: 305b3ce45583c9e4d8ba624e02535933, type: 3}
   areaAttackDuration: 0.35
   axeRadius: 2
-  swordWidth: 7
-  swordLength: 19
-  swordForwardOffset: 9.5
+  swordWidth: 4
+  swordLength: 9
+  swordForwardOffset: 7
   areaTelegraphDuration: 2
   areaTelegraphWidth: 0.08
   areaTelegraphColor: {r: 1, g: 0, b: 0, a: 1}
