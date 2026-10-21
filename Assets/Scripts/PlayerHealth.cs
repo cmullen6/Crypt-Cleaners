@@ -1,7 +1,5 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,172 +15,162 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private GameObject losePanel;
     [SerializeField] private GameObject trash;
 
+    [Header("Hitstop")]
+    [SerializeField] private float hurtHitstop = 0.08f;
 
-    private int zoomInRange = 3;
-
+    [Header("Death Camera")]
+    [SerializeField] private float deathZoomSize = 3f;
+    [SerializeField] private float normalZoomSize = 10f;
 
     private int currentHealth;
     private bool isDead;
+    private bool deathSequenceStarted;
 
     private Vector3 startingPosition;
     private PlayerController playerController;
+    private Rigidbody2D rb;
 
     public int CurrentHealth => currentHealth;
     public int MaxHealth => maxHealth;
     public bool IsDead => isDead;
 
-    private void Start()
+    private void Awake()
     {
+        playerController = GetComponent<PlayerController>();
+        rb = GetComponent<Rigidbody2D>();
+
+        if (camera == null)
+            camera = Camera.main;
+
         startingPosition = transform.position;
         currentHealth = maxHealth;
+    }
 
-        // Sets panel to off on start
-        losePanel.SetActive(false);
+    private void Start()
+    {
+        if (losePanel != null)
+            losePanel.SetActive(false);
 
-        // Cache reference to avoid GetComponent allocations on hit
-        playerController = GetComponent<PlayerController>();
+        Cursor.visible = false;
     }
 
     private void Update()
     {
+        if (!deathSequenceStarted)
+            return;
 
-        // Counts down the timer until the lose panel shows up
-        // This only starts on death
-        // Sets back to zero just to make sure the timer stops, and all numbers go back to how they should be
-        if (currentHealth <= 0)
-        {
+        // Unscaled time continues while the death zoom is paused.
+        zoomTimer -= Time.unscaledDeltaTime;
 
-            zoomTimer -= Time.unscaledDeltaTime;
-
-            if (zoomTimer <= 0f)
-            {
-
-                zoomTimer = 0f;
-
-            }
-
-        }
-
-        // Turns on lose panel once zoom is over & updates amount of resurrects left
         if (zoomTimer <= 0f)
         {
+            zoomTimer = 0f;
 
-            resurrectText.text = "resurrections Left: " + resurrectMe;
+            if (resurrectText != null)
+                resurrectText.text = "Resurrections Left: " + resurrectMe;
 
-            losePanel.SetActive(true);
-            UnityEngine.Cursor.visible = true;
+            if (losePanel != null)
+                losePanel.SetActive(true);
 
+            Cursor.visible = true;
         }
-
     }
 
     public void TakeDamage(int damage)
     {
-        if (isDead)
+        if (isDead || damage <= 0)
             return;
 
-        // If player dies, this starts the lose zoom in
-        if (currentHealth <= 1)
-        {
-
-           Time.timeScale = 0f;
-
-            // Zooms in on player to show death animation
-            ZoomCameraIn();
-         
-
-        }
-
-        // Checks the independent iFrames timer on PlayerController
         if (playerController != null && playerController.IsInvincible)
             return;
 
-        currentHealth -= damage;
+        currentHealth = Mathf.Max(0, currentHealth - damage);
 
+        if (currentHealth <= 0)
+        {
+            BeginDeathSequence();
+            return;
+        }
 
-        
-
-        
+        if (HitStopManager.Instance != null)
+            HitStopManager.Instance.StopTime(hurtHitstop);
     }
 
-    // This respawns the player, only allowed 3
-    public void Resurrect()
+    private void BeginDeathSequence()
     {
-
-        resurrectMe -= 1;
-
-        // If respawnable, this will zoom out the camera and respawn the player
-        if (resurrectMe >= 0)
-        {
-
-            Time.timeScale = 1f;
-
-            Die();
-
-            ZoomCameraOut();
-
-        }
-        else
-        {
-
+        if (deathSequenceStarted)
             return;
 
-        }
-
-    }
-
-    // Zooms the camera in on the player on death
-    private void ZoomCameraIn()
-    {
-
-        camera.orthographicSize = zoomInRange;
-
-    }
-
-    // Zooms the camera back out
-    private void ZoomCameraOut()
-    {
-
-        camera.orthographicSize = 10;
-
-    }
-
-    private void Die()
-    {
+        deathSequenceStarted = true;
         isDead = true;
-
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        zoomTimer = 3f;
 
         if (rb != null)
             rb.linearVelocity = Vector2.zero;
 
-        Invoke(nameof(Respawn), respawnDelay);
+        if (camera != null)
+            camera.orthographicSize = deathZoomSize;
 
-        SpawnTrash();
-
+        // Death pause is managed separately from hitstop.
+        Time.timeScale = 0f;
     }
 
-    // Respawns player
+    public void Resurrect()
+    {
+        if (!deathSequenceStarted || resurrectMe <= 0)
+            return;
+
+        resurrectMe--;
+
+        Time.timeScale = 1f;
+
+        if (losePanel != null)
+            losePanel.SetActive(false);
+
+        if (camera != null)
+            camera.orthographicSize = normalZoomSize;
+
+        Cursor.visible = false;
+
+        isDead = true;
+
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
+
+        SpawnTrash();
+        CancelInvoke(nameof(Respawn));
+        Invoke(nameof(Respawn), respawnDelay);
+    }
+
     private void Respawn()
     {
-
-        losePanel.SetActive(false);
-        UnityEngine.Cursor.visible = false;
-        zoomTimer = 3f;
-
         transform.position = startingPosition;
+
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
 
         currentHealth = maxHealth;
         isDead = false;
+        deathSequenceStarted = false;
+        zoomTimer = 3f;
+
+        if (losePanel != null)
+            losePanel.SetActive(false);
+
+        if (camera != null)
+            camera.orthographicSize = normalZoomSize;
+
+        Cursor.visible = false;
     }
 
-    // Spawns a trash pile where the player died
     private void SpawnTrash()
     {
+        if (trash != null)
+            Instantiate(trash, transform.position, Quaternion.identity);
+    }
 
-        Vector2 spawnPostion = transform.position;
-
-        Instantiate(trash, spawnPostion, Quaternion.identity);
-
+    private void OnDisable()
+    {
+        CancelInvoke(nameof(Respawn));
     }
 }

@@ -17,7 +17,9 @@ MonoBehaviour:
   description: Describe what this repair restores.
   maxLevel: 3
   levelCosts:
-  - costs: []
+  - costs:
+    - resource: 0
+      amount: 25
   - costs: []
   - costs: []
   unlockDescription: Describe the upgrade paths this repair unlocks.

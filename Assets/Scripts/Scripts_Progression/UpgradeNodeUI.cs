@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UpgradeNodeUI : MonoBehaviour
 {
-    [Header("Upgrade")]
+    [Header("Upgrade Definition")]
     public UpgradeDefinition definition;
 
     [Header("UI References")]
@@ -13,18 +13,24 @@ public class UpgradeNodeUI : MonoBehaviour
     public TMP_Text nodeLabel;
     public UpgradeTreeUI tree;
 
-    private void Start()
+    private void OnEnable()
     {
         if (button != null)
             button.onClick.AddListener(OnClicked);
 
+        if (GameProgression.Instance != null)
+            GameProgression.Instance.OnProgressionChanged += Refresh;
+
         Refresh();
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         if (button != null)
             button.onClick.RemoveListener(OnClicked);
+
+        if (GameProgression.Instance != null)
+            GameProgression.Instance.OnProgressionChanged -= Refresh;
     }
 
     private void OnClicked()
@@ -33,12 +39,12 @@ public class UpgradeNodeUI : MonoBehaviour
             return;
 
         tree.SelectUpgrade(definition);
-        tree.TryPurchase(definition);
     }
 
     public void Refresh()
     {
-        if (definition == null || GameProgression.Instance == null)
+        if (definition == null ||
+            GameProgression.Instance == null)
             return;
 
         int rank = GameProgression.Instance.GetUpgradeRank(
@@ -46,8 +52,9 @@ public class UpgradeNodeUI : MonoBehaviour
 
         if (nodeLabel != null)
         {
-            nodeLabel.text = definition.displayName +
-                "\n" + rank + " / " + definition.maxRank;
+            nodeLabel.text =
+                definition.displayName + "\n" +
+                rank + " / " + definition.maxRank;
         }
 
         if (button != null)
