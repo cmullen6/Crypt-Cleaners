@@ -1705,7 +1705,7 @@ Transform:
   m_GameObject: {fileID: 420592738}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6127, y: 1.0194, z: 0}
+  m_LocalPosition: {x: -1.6127, y: 3.87, z: 0}
   m_LocalScale: {x: 2.2079363, y: 2.5896235, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9889,6 +9889,9 @@ MonoBehaviour:
   resurrectText: {fileID: 0}
   losePanel: {fileID: 0}
   trash: {fileID: 0}
+  hurtHitstop: 0.08
+  deathZoomSize: 3
+  normalZoomSize: 10
 --- !u!114 &1474631285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9902,12 +9905,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  mainCamera: {fileID: 0}
+  crosshair: {fileID: 0}
+  aimRadius: 5.5
+  limitAimRadius: 1
+  animator: {fileID: 0}
+  spriteFlasher: {fileID: 0}
   dodgeSpeed: 12
   dodgeDuration: 0.2
   iFramesDuration: 0.9
   dodgeCooldown: 0.75
   cooldownImage: {fileID: 0}
-  toolHolder: {fileID: 1439760432}
 --- !u!212 &1474631286
 SpriteRenderer:
   serializedVersion: 3
