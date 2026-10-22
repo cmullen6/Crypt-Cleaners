@@ -13,15 +13,23 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject controlsPanel;
     [SerializeField] private GameObject settingsPanel;
 
+    private bool paused = false;
+
+    SnapshotManager snapshotManager;
+    private float lowpassOn = 1f;
+    private float lowpassOff = 10f;
    
 
     private void Start()
     {
 
+        snapshotManager = GetComponent<SnapshotManager>();
+
         // Set panels to off on game start
         pausePanel.SetActive(false);
         controlsPanel.SetActive(false); 
         settingsPanel.SetActive(false);
+        paused = false;
     
 
     }
@@ -31,15 +39,43 @@ public class UIManager : MonoBehaviour
     {
 
         // Pauses the game and turns on pause panel
+        // If game is paused then acts as a quick unpause by hitting espace again
         if (Keyboard.current.escapeKey.wasReleasedThisFrame)
         {
 
-            pausePanel.SetActive(true);
-            Cursor.visible = true;
+            if (!paused)
+            {
 
-            Time.timeScale = 0f;
+                pausePanel.SetActive(true);
+                Cursor.visible = true;
+                paused = true;
+
+               // snapshotManager.LowPassPause(lowpassOn);
+
+                Time.timeScale = 0f;
+
+
+            }
+            else if (paused)
+            {
+
+                pausePanel.SetActive(false);
+                controlsPanel.SetActive(false);
+                settingsPanel.SetActive(false);
+                Cursor.visible = false;
+                paused = false;
+
+                //snapshotManager.LowPassUnPause(lowpassOff);
+
+                Time.timeScale = 1f;
+
+
+            }
+
 
         }
+
+       
 
     }
 
@@ -53,6 +89,9 @@ public class UIManager : MonoBehaviour
 
         pausePanel.SetActive(false);
         Cursor.visible = false;
+        paused = false;
+
+        //snapshotManager.LowPassUnPause(lowpassOff);
 
         Time.timeScale = 1f;
 
