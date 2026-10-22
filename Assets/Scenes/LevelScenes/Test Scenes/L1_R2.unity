@@ -2493,7 +2493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: patternSequence.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[0]'
@@ -2502,7 +2502,7 @@ PrefabInstance:
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: ff86482601686774ca3d103a74127fe1, type: 2}
+      objectReference: {fileID: 11400000, guid: 3873db06554713e4e955a0eca6c4045d, type: 2}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: patternSequence.Array.data[0].damage
       value: 1
@@ -7962,6 +7962,9 @@ MonoBehaviour:
   resurrectText: {fileID: 676669014}
   losePanel: {fileID: 690473516}
   trash: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+  hurtHitstop: 0.08
+  deathZoomSize: 3
+  normalZoomSize: 10
 --- !u!114 &1368059309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7974,8 +7977,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bed281b0372fa243b40f32aa8197285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
-  timeToAttack: 0.25
-  timer: 0
+  attackDamage: 1
+  attackDuration: 0.16
+  hitboxDistance: 0.8
+  hitboxSize: {x: 1, y: 1}
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  enableCombo: 1
+  comboSteps: 3
+  comboWindow: 0.65
+  trashHitstop: 0.06
+  otherHitstop: 0.04
+  animator: {fileID: 0}
 --- !u!114 &1368059310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8093,12 +8107,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  mainCamera: {fileID: 0}
+  crosshair: {fileID: 0}
+  aimRadius: 5.5
+  limitAimRadius: 1
+  animator: {fileID: 0}
+  spriteFlasher: {fileID: 0}
   dodgeSpeed: 12
   dodgeDuration: 0.2
   iFramesDuration: 0.9
   dodgeCooldown: 0.75
   cooldownImage: {fileID: 2020663463}
-  toolHolder: {fileID: 1760253047}
 --- !u!212 &1368059315
 SpriteRenderer:
   serializedVersion: 3
