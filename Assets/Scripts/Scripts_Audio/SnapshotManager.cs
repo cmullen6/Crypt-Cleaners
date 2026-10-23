@@ -16,8 +16,6 @@ public class SnapshotManager : MonoBehaviour
     private void Start()
     {
         
-        // Turns off lowpass when game starts
-       // mainMixer.SetFloat("Lowpass", -80f);
 
     }
 

@@ -14,16 +14,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject settingsPanel;
 
     private bool paused = false;
-
-    SnapshotManager snapshotManager;
-    private float lowpassOn = 1f;
-    private float lowpassOff = 10f;
    
 
     private void Start()
     {
-
-        snapshotManager = GetComponent<SnapshotManager>();
 
         // Set panels to off on game start
         pausePanel.SetActive(false);
@@ -50,7 +44,6 @@ public class UIManager : MonoBehaviour
                 Cursor.visible = true;
                 paused = true;
 
-               // snapshotManager.LowPassPause(lowpassOn);
 
                 Time.timeScale = 0f;
 
@@ -65,7 +58,6 @@ public class UIManager : MonoBehaviour
                 Cursor.visible = false;
                 paused = false;
 
-                //snapshotManager.LowPassUnPause(lowpassOff);
 
                 Time.timeScale = 1f;
 
@@ -91,7 +83,6 @@ public class UIManager : MonoBehaviour
         Cursor.visible = false;
         paused = false;
 
-        //snapshotManager.LowPassUnPause(lowpassOff);
 
         Time.timeScale = 1f;
 
