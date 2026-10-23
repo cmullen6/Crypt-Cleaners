@@ -13,10 +13,10 @@ EditorBuildSettings:
     guid: 37cb30a26dffdf843bc5ec88ba481698
   - enabled: 1
     path: Assets/Scenes/LevelScenes/Test Scenes/L1_R2.unity
-    guid: fb51d47b2a54d89489869847866ffaf2
+    guid: 012bcafe14ce174418d3a3e9e19b5527
   - enabled: 1
     path: Assets/Scenes/LevelScenes/Test Scenes/L1_R3.unity
-    guid: 012bcafe14ce174418d3a3e9e19b5527
+    guid: d81f334b1308ad94e807ee7a53be650e
   - enabled: 1
     path: Assets/Scenes/LevelScenes/Test Scenes/Boss_Room.unity
     guid: 3f29fcef68c16584b876be1323e255c5

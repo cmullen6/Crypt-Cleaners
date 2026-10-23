@@ -16,7 +16,7 @@ MonoBehaviour:
   duration: 10
   delayAfterPattern: 1
   projectileCount: 35
-  projectileSpeed: 15
+  projectileSpeed: 10
   damage: 1
   burstCount: 1
   fireInterval: 0.2
