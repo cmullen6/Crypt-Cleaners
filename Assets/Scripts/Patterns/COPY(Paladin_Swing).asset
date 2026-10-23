@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletPatternData
   patternType: 4
   duration: 3
-  delayAfterPattern: 5
+  delayAfterPattern: 4
   projectileCount: 8
   projectileSpeed: 4
-  damage: 1
+  damage: 5
   burstCount: 1
   fireInterval: 0.5
   spiralRotation: 30

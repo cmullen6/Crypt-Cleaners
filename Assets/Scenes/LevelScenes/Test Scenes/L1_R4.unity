@@ -5817,6 +5817,14 @@ PrefabInstance:
       propertyPath: sequenceRepeats
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8603552261783672891, guid: 9e8bc5f3d182621448e20223fc71d664, type: 3}
+      propertyPath: 'patternSequence.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3873db06554713e4e955a0eca6c4045d, type: 2}
+    - target: {fileID: 8603552261783672891, guid: 9e8bc5f3d182621448e20223fc71d664, type: 3}
+      propertyPath: 'patternSequence.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 199476d1f513020429d8385a3435e230, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5969,7 +5977,7 @@ Transform:
   m_GameObject: {fileID: 226515729}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 45.23, y: -12.2, z: 0}
+  m_LocalPosition: {x: 39.8, y: -12.2, z: 0}
   m_LocalScale: {x: 1, y: 2.0333, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9414,8 +9422,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bed281b0372fa243b40f32aa8197285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
-  timeToAttack: 0.25
-  timer: 0
+  attackDamage: 1
+  attackDuration: 0.16
+  hitboxDistance: 0.8
+  hitboxSize: {x: 1, y: 1}
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  enableCombo: 1
+  comboSteps: 3
+  comboWindow: 0.65
+  trashHitstop: 0.06
+  otherHitstop: 0.04
+  animator: {fileID: 0}
 --- !u!114 &685441404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9540,6 +9559,9 @@ MonoBehaviour:
   resurrectText: {fileID: 1635416405}
   losePanel: {fileID: 1865564499}
   trash: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+  hurtHitstop: 0.08
+  deathZoomSize: 3
+  normalZoomSize: 10
 --- !u!114 &685441409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9553,12 +9575,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  mainCamera: {fileID: 0}
+  crosshair: {fileID: 0}
+  aimRadius: 5.5
+  limitAimRadius: 1
+  animator: {fileID: 0}
+  spriteFlasher: {fileID: 0}
   dodgeSpeed: 12
   dodgeDuration: 0.2
   iFramesDuration: 0.9
   dodgeCooldown: 0.75
   cooldownImage: {fileID: 15148079}
-  toolHolder: {fileID: 1222207380}
 --- !u!212 &685441410
 SpriteRenderer:
   serializedVersion: 3
@@ -13363,6 +13390,14 @@ PrefabInstance:
       propertyPath: sequenceRepeats
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8603552261783672891, guid: 9e8bc5f3d182621448e20223fc71d664, type: 3}
+      propertyPath: 'patternSequence.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3873db06554713e4e955a0eca6c4045d, type: 2}
+    - target: {fileID: 8603552261783672891, guid: 9e8bc5f3d182621448e20223fc71d664, type: 3}
+      propertyPath: 'patternSequence.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 199476d1f513020429d8385a3435e230, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17571,6 +17606,14 @@ PrefabInstance:
       propertyPath: sequenceRepeats
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8603552261783672891, guid: 9e8bc5f3d182621448e20223fc71d664, type: 3}
+      propertyPath: 'patternSequence.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3873db06554713e4e955a0eca6c4045d, type: 2}
+    - target: {fileID: 8603552261783672891, guid: 9e8bc5f3d182621448e20223fc71d664, type: 3}
+      propertyPath: 'patternSequence.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 199476d1f513020429d8385a3435e230, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

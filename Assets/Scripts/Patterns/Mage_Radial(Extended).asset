@@ -18,8 +18,8 @@ MonoBehaviour:
   projectileCount: 8
   projectileSpeed: 4
   damage: 1
-  burstCount: 1
-  fireInterval: 0.5
+  burstCount: 3
+  fireInterval: 1
   spiralRotation: 30
   telegraphDuration: 1.25
   telegraphWidth: 0.08
