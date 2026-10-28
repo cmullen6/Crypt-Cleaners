@@ -317,6 +317,7 @@ public class UpgradeTreeUI : MonoBehaviour
 
     private void RefreshAll()
     {
+        Debug.Log("UpgradeTreeUI: RefreshAll called.", this);
         RefreshAllNodes();
         RefreshResourceBalances();
         RefreshSelectedUpgrade();

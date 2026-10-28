@@ -15,9 +15,6 @@ public class UpgradeNodeUI : MonoBehaviour
 
     private void OnEnable()
     {
-        if (button != null)
-            button.onClick.AddListener(OnClicked);
-
         if (GameProgression.Instance != null)
             GameProgression.Instance.OnProgressionChanged += Refresh;
 
@@ -26,17 +23,26 @@ public class UpgradeNodeUI : MonoBehaviour
 
     private void OnDisable()
     {
-        if (button != null)
-            button.onClick.RemoveListener(OnClicked);
-
         if (GameProgression.Instance != null)
             GameProgression.Instance.OnProgressionChanged -= Refresh;
     }
 
-    private void OnClicked()
+    // This public method can be assigned directly in the Button Inspector.
+    public void SelectThisUpgrade()
     {
-        if (tree == null || definition == null)
+        Debug.Log("UpgradeNodeUI: SelectThisUpgrade called.", this);
+
+        if (tree == null)
+        {
+            Debug.LogError("UpgradeNodeUI: Tree reference is missing.", this);
             return;
+        }
+
+        if (definition == null)
+        {
+            Debug.LogError("UpgradeNodeUI: Upgrade Definition is missing.", this);
+            return;
+        }
 
         tree.SelectUpgrade(definition);
     }

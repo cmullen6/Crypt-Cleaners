@@ -21,7 +21,7 @@ public class CleaningTool : MonoBehaviour
 
     protected void PerformCircleSweep(Vector3 origin, float radius, float interval)
     {
-        Debug.Log("Sweep origin: " + origin); // Add this line
+        //Debug.Log("Sweep origin: " + origin); // Add this line //Holy fuck this debug was annoying as fuck so I turned it off - Cyrus
         Collider2D[] hits = Physics2D.OverlapCircleAll(origin, radius);
 
         foreach (Collider2D hit in hits)
