@@ -5533,6 +5533,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredCleanPercentage: 0.8
+  rewardPrefab: {fileID: 0}
+  possibleRewards: 0000000001000000020000000300000004000000i
+  minimumRewardAmount: 1
+  maximumRewardAmount: 5
+  rewardDestination: 1
+  rewardSpawnOffset: {x: 1, y: 0.25}
+  playerTag: Player
 --- !u!1 &297223333
 GameObject:
   m_ObjectHideFlags: 0
@@ -11373,7 +11380,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4529558180666231467, guid: 7a5ad1d81a1a70b49b3af1553e614ddb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8050314, g: 0.8050314, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17079,7 +17086,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4529558180666231467, guid: 7a5ad1d81a1a70b49b3af1553e614ddb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8050314, g: 0.8050314, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17912,7 +17919,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4529558180666231467, guid: 7a5ad1d81a1a70b49b3af1553e614ddb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8050314, g: 0.8050314, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21963,7 +21970,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4529558180666231467, guid: 7a5ad1d81a1a70b49b3af1553e614ddb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8050314, g: 0.8050314, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -24519,7 +24526,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4529558180666231467, guid: 7a5ad1d81a1a70b49b3af1553e614ddb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8050314, g: 0.8050314, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -26643,6 +26650,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: L1_R2
+  rewardPreviewText: {fileID: 0}
+  rewardResource: 0
+  rewardAmount: 1
+  randomizeReward: 1
+  lockedVisual: {fileID: 0}
+  unlockedVisual: {fileID: 0}
 --- !u!212 &1089316093
 SpriteRenderer:
   serializedVersion: 3
@@ -41936,7 +41949,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4529558180666231467, guid: 7a5ad1d81a1a70b49b3af1553e614ddb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8050314, g: 0.8050314, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -45900,7 +45913,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4529558180666231467, guid: 7a5ad1d81a1a70b49b3af1553e614ddb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8050314, g: 0.8050314, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -46221,7 +46234,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4529558180666231467, guid: 7a5ad1d81a1a70b49b3af1553e614ddb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8050314, g: 0.8050314, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -55569,7 +55582,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4529558180666231467, guid: 7a5ad1d81a1a70b49b3af1553e614ddb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8050314, g: 0.8050314, b: 0.65882355, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
