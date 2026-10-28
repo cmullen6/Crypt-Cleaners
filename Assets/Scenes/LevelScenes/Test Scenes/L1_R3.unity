@@ -444,6 +444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60897307}
   - component: {fileID: 60897306}
+  - component: {fileID: 60897308}
   m_Layer: 0
   m_Name: Wall Collider (7)
   m_TagString: Untagged
@@ -512,6 +513,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &60897308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60897305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &62769234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,6 +2735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154324718}
   - component: {fileID: 154324717}
+  - component: {fileID: 154324719}
   m_Layer: 0
   m_Name: Wall Collider (1)
   m_TagString: Untagged
@@ -2790,6 +2804,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &154324719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154324716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1001 &155385310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8317,6 +8343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 389255036}
   - component: {fileID: 389255035}
+  - component: {fileID: 389255037}
   m_Layer: 0
   m_Name: Wall Collider (5)
   m_TagString: Untagged
@@ -8385,6 +8412,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &389255037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389255034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &389469554
 GameObject:
   m_ObjectHideFlags: 0
@@ -12000,6 +12039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614956864}
   - component: {fileID: 614956863}
+  - component: {fileID: 614956865}
   m_Layer: 0
   m_Name: Wall Collider (9)
   m_TagString: Untagged
@@ -12068,6 +12108,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &614956865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614956862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &615882284
 GameObject:
   m_ObjectHideFlags: 0
@@ -18131,6 +18183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 766666798}
   - component: {fileID: 766666797}
+  - component: {fileID: 766666799}
   m_Layer: 0
   m_Name: Wall Collider (4)
   m_TagString: Untagged
@@ -18199,6 +18252,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &766666799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766666796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &767124602
 GameObject:
   m_ObjectHideFlags: 0
@@ -18888,6 +18953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802841699}
   - component: {fileID: 802841698}
+  - component: {fileID: 802841700}
   m_Layer: 0
   m_Name: Wall Collider
   m_TagString: Untagged
@@ -18956,6 +19022,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &802841700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802841697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &804708524
 GameObject:
   m_ObjectHideFlags: 0
@@ -21974,6 +22052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 939468016}
   - component: {fileID: 939468015}
+  - component: {fileID: 939468017}
   m_Layer: 0
   m_Name: Wall Collider (3)
   m_TagString: Untagged
@@ -22042,6 +22121,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &939468017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939468014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &939815382
 GameObject:
   m_ObjectHideFlags: 0
@@ -24058,6 +24149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033151482}
   - component: {fileID: 1033151481}
+  - component: {fileID: 1033151483}
   m_Layer: 0
   m_Name: Wall Collider (2)
   m_TagString: Untagged
@@ -24126,6 +24218,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1033151483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033151480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &1038037068
 GameObject:
   m_ObjectHideFlags: 0
@@ -26250,6 +26354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1111295496}
   - component: {fileID: 1111295495}
+  - component: {fileID: 1111295497}
   m_Layer: 0
   m_Name: Wall Collider (6)
   m_TagString: Untagged
@@ -26318,6 +26423,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1111295497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111295494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &1112401246
 GameObject:
   m_ObjectHideFlags: 0
@@ -38773,6 +38890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1682428214}
   - component: {fileID: 1682428213}
+  - component: {fileID: 1682428215}
   m_Layer: 0
   m_Name: Wall Collider (8)
   m_TagString: Untagged
@@ -38841,6 +38959,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682428215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682428212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &1689755306
 GameObject:
   m_ObjectHideFlags: 0

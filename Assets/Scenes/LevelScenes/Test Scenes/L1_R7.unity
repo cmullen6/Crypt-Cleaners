@@ -1608,6 +1608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104823145}
   - component: {fileID: 104823144}
+  - component: {fileID: 104823146}
   m_Layer: 0
   m_Name: Wall Box Collider(5)
   m_TagString: Untagged
@@ -1676,6 +1677,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &104823146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104823143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &113344162
 GameObject:
   m_ObjectHideFlags: 0
@@ -6722,6 +6735,7 @@ GameObject:
   - component: {fileID: 354752154}
   - component: {fileID: 354752153}
   - component: {fileID: 354752155}
+  - component: {fileID: 354752156}
   m_Layer: 0
   m_Name: JailCellDoorTop_0 (2)
   m_TagString: Untagged
@@ -6850,6 +6864,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.19, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &354752156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354752152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &358116875
 GameObject:
   m_ObjectHideFlags: 0
@@ -12504,6 +12530,7 @@ GameObject:
   - component: {fileID: 575335242}
   - component: {fileID: 575335241}
   - component: {fileID: 575335243}
+  - component: {fileID: 575335244}
   m_Layer: 0
   m_Name: JailCellDoorTop_0
   m_TagString: Untagged
@@ -12632,6 +12659,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.19, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &575335244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575335240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &582344223
 GameObject:
   m_ObjectHideFlags: 0
@@ -19519,6 +19558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 807163930}
   - component: {fileID: 807163929}
+  - component: {fileID: 807163931}
   m_Layer: 0
   m_Name: Wall Box Collider (4)
   m_TagString: Untagged
@@ -19587,6 +19627,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &807163931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807163928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &811474230
 GameObject:
   m_ObjectHideFlags: 0
@@ -21946,6 +21998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 897218208}
   - component: {fileID: 897218207}
+  - component: {fileID: 897218209}
   m_Layer: 0
   m_Name: Wall Box Collider (2)
   m_TagString: Untagged
@@ -22014,6 +22067,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &897218209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897218206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &897668109
 GameObject:
   m_ObjectHideFlags: 0
@@ -22715,6 +22780,7 @@ GameObject:
   - component: {fileID: 912623503}
   - component: {fileID: 912623502}
   - component: {fileID: 912623504}
+  - component: {fileID: 912623505}
   m_Layer: 0
   m_Name: JailCellDoorBottom_0 (1)
   m_TagString: Untagged
@@ -22843,6 +22909,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.19, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &912623505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912623501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &915350995
 GameObject:
   m_ObjectHideFlags: 0
@@ -22945,6 +23023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 917454678}
   - component: {fileID: 917454677}
+  - component: {fileID: 917454679}
   m_Layer: 0
   m_Name: Wall Box Collider (1)
   m_TagString: Untagged
@@ -23013,6 +23092,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &917454679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917454676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &922819328
 GameObject:
   m_ObjectHideFlags: 0
@@ -23364,6 +23455,7 @@ GameObject:
   - component: {fileID: 940137005}
   - component: {fileID: 940137004}
   - component: {fileID: 940137006}
+  - component: {fileID: 940137007}
   m_Layer: 0
   m_Name: JailCellDoorTop_0 (1)
   m_TagString: Untagged
@@ -23492,6 +23584,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.19, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &940137007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940137003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1001 &947877135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29575,6 +29679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1177875397}
   - component: {fileID: 1177875396}
+  - component: {fileID: 1177875398}
   m_Layer: 0
   m_Name: Wall Box Collider (7)
   m_TagString: Untagged
@@ -29643,6 +29748,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1177875398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177875395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &1188854017
 GameObject:
   m_ObjectHideFlags: 0
@@ -30115,6 +30232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1209629182}
   - component: {fileID: 1209629181}
+  - component: {fileID: 1209629183}
   m_Layer: 0
   m_Name: Wall Box Collider (6)
   m_TagString: Untagged
@@ -30183,6 +30301,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1209629183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209629180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &1215796637
 GameObject:
   m_ObjectHideFlags: 0
@@ -32011,6 +32141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269206185}
   - component: {fileID: 1269206184}
+  - component: {fileID: 1269206186}
   m_Layer: 0
   m_Name: Wall Box Collider
   m_TagString: Untagged
@@ -32079,6 +32210,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1269206186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269206183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1001 &1269896992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34540,6 +34683,7 @@ GameObject:
   - component: {fileID: 1367318474}
   - component: {fileID: 1367318473}
   - component: {fileID: 1367318475}
+  - component: {fileID: 1367318476}
   m_Layer: 0
   m_Name: JailCellDoorBottom_0 (2)
   m_TagString: Untagged
@@ -34668,6 +34812,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.19, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &1367318476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367318472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &1368665279
 GameObject:
   m_ObjectHideFlags: 0
@@ -36296,6 +36452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1420901666}
   - component: {fileID: 1420901665}
+  - component: {fileID: 1420901667}
   m_Layer: 0
   m_Name: Wall Box Collider (3)
   m_TagString: Untagged
@@ -36364,6 +36521,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1420901667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420901664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &1422669600
 GameObject:
   m_ObjectHideFlags: 0
@@ -47290,6 +47459,7 @@ GameObject:
   - component: {fileID: 1740773084}
   - component: {fileID: 1740773083}
   - component: {fileID: 1740773085}
+  - component: {fileID: 1740773086}
   m_Layer: 0
   m_Name: JailCellDoorBottom_0
   m_TagString: Untagged
@@ -47418,6 +47588,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.19, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &1740773086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740773082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ac7f21dd55ce41b3eb54842b987fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyProjectileOnHit
 --- !u!1 &1756854259
 GameObject:
   m_ObjectHideFlags: 0
