@@ -2,14 +2,17 @@ using UnityEngine;
 
 public class FloorPit : MonoBehaviour
 {
-    [SerializeField] int fallDamage;
-    [SerializeField] PlayerHealth playerHealth;
+    [SerializeField] private int fallDamage = 1; // Default value just in case
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            playerHealth.TakeDamage(fallDamage);
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(fallDamage);
+            }
         }
     }
 }
