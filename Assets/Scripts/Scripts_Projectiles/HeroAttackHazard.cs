@@ -10,7 +10,6 @@ public class HeroAttackHazard : MonoBehaviour
 
     [Header("Colliders")]
     [SerializeField] private CircleCollider2D circleCollider;
-
     [SerializeField] private BoxCollider2D boxCollider;
 
     [Header("Visual")]
@@ -46,15 +45,13 @@ public class HeroAttackHazard : MonoBehaviour
 
         if (spriteRenderer != null)
         {
-            spriteRenderer.transform.localScale =
-                new Vector3(
-                    radius * 2f,
-                    radius * 2f,
-                    1f
-                );
+            spriteRenderer.transform.localScale = new Vector3(
+                radius * 2f,
+                radius * 2f,
+                1f
+            );
 
-            spriteRenderer.transform.localPosition =
-                Vector3.zero;
+            spriteRenderer.transform.localPosition = Vector3.zero;
         }
 
         Destroy(gameObject, lifetime);
@@ -84,34 +81,30 @@ public class HeroAttackHazard : MonoBehaviour
         {
             boxCollider.enabled = true;
 
-            boxCollider.size =
-                new Vector2(
-                    width,
-                    length
-                );
+            boxCollider.size = new Vector2(
+                width,
+                length
+            );
 
-            boxCollider.offset =
-                new Vector2(
-                    0f,
-                    forwardOffset
-                );
+            boxCollider.offset = new Vector2(
+                0f,
+                forwardOffset
+            );
         }
 
         if (spriteRenderer != null)
         {
-            spriteRenderer.transform.localScale =
-                new Vector3(
-                    width,
-                    length,
-                    1f
-                );
+            spriteRenderer.transform.localScale = new Vector3(
+                width,
+                length,
+                1f
+            );
 
-            spriteRenderer.transform.localPosition =
-                new Vector3(
-                    0f,
-                    forwardOffset,
-                    0f
-                );
+            spriteRenderer.transform.localPosition = new Vector3(
+                0f,
+                forwardOffset,
+                0f
+            );
         }
 
         Destroy(gameObject, lifetime);
@@ -133,13 +126,11 @@ public class HeroAttackHazard : MonoBehaviour
             return;
         }
 
-        PlayerHealth playerHealth =
-            other.GetComponent<PlayerHealth>();
+        PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
 
         if (playerHealth != null)
         {
             playerHealth.TakeDamage(damage);
-
             hasHitPlayer = true;
         }
     }

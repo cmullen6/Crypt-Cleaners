@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d57f2d67632e4554383d29ab7baf2ccf, type: 3}
+  m_Name: NebulaSpiral
+  m_EditorClassIdentifier: Assembly-CSharp::SpiralPatternData
+  delayAfterPattern: 2
+  damage: 1
+  ProjectilePrefab: {fileID: 9078788847128768678, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
+  duration: 6.5
+  fireInterval: 0.3
+  spiralRotation: 15
