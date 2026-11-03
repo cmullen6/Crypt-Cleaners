@@ -90,7 +90,7 @@ AudioMixerSnapshotController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Game Hub Music
+  m_Name: Game Title Music
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: d16225d79e30d704394004b70014a013
   m_FloatValues:
@@ -230,7 +230,7 @@ AudioMixerController:
     - c4584d4f6951b3b42b2879700b3a12fb
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: -4466156423837730870}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -373,7 +373,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hub
+  m_Name: Title
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 0b05417c8f29369488b9cee105c58fed
   m_Children: []
