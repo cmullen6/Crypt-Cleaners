@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -8,10 +9,15 @@ public class PrototypeUI : MonoBehaviour
     [SerializeField] private Slider cleaningSlider;
     [SerializeField] private TMP_Text cleaningText;
 
-    [Header("Health")]
-    [SerializeField] private TMP_Text healthText;
+    [Header("Health Icons")]
+    [SerializeField] private Transform healthContainer;
+    [SerializeField] private Image healthIconPrefab;
+    [SerializeField] private Sprite fullHeartSprite;
+    [SerializeField] private Sprite emptyHeartSprite;
 
     private PlayerHealth playerHealth;
+
+    private Image[] healthIcons;
 
     private void Start()
     {
@@ -22,6 +28,8 @@ public class PrototypeUI : MonoBehaviour
             cleaningSlider.minValue = 0f;
             cleaningSlider.maxValue = 1f;
         }
+
+        SetupHealthIcons();
     }
 
     private void Update()
@@ -45,20 +53,65 @@ public class PrototypeUI : MonoBehaviour
         {
             int percent = Mathf.RoundToInt(percentage * 100f);
 
-            cleaningText.text =
-                $"CLEAN: {percent}%";
+            cleaningText.text = $"CLEAN: {percent}%";
         }
+    }
+
+    private void SetupHealthIcons()
+    {
+        if (playerHealth == null)
+        {
+            Debug.LogWarning("PrototypeUI: PlayerHealth was not found.");
+            return;
+        }
+
+        if (healthContainer == null || healthIconPrefab == null)
+        {
+            Debug.LogWarning("PrototypeUI: Health container or icon prefab is missing.");
+            return;
+        }
+
+        // Create one icon for every maximum health point.
+        healthIcons = new Image[playerHealth.MaxHealth];
+
+        for (int i = 0; i < healthIcons.Length; i++)
+        {
+            Image icon = Instantiate(
+                healthIconPrefab,
+                healthContainer
+            );
+
+            icon.sprite = fullHeartSprite;
+            icon.gameObject.SetActive(true);
+
+            healthIcons[i] = icon;
+        }
+
+        UpdateHealthUI();
     }
 
     private void UpdateHealthUI()
     {
-        if (playerHealth == null)
+        if (playerHealth == null || healthIcons == null)
             return;
 
-        if (healthText != null)
+        int currentHealth = playerHealth.CurrentHealth;
+
+        for (int i = 0; i < healthIcons.Length; i++)
         {
-            healthText.text =
-                $"LIVES: {playerHealth.CurrentHealth}";
+            if (healthIcons[i] == null)
+                continue;
+
+            if (i < currentHealth)
+            {
+                // This health point is still available.
+                healthIcons[i].sprite = fullHeartSprite;
+            }
+            else
+            {
+                // This health point has been lost.
+                healthIcons[i].sprite = emptyHeartSprite;
+            }
         }
     }
 }
