@@ -95,9 +95,9 @@ public class ProjectileSpawner : MonoBehaviour
         return fallbackProjectilePrefab;
     }
 
-    //////////////////// 
-    /// HANDLER METHODS
-    //////////////////// 
+    //--------------------------------- 
+    // HANDLER METHODS
+    //--------------------------------- 
 
     private void HandleLinear(LinearPatternData data)
     {
@@ -167,16 +167,7 @@ public class ProjectileSpawner : MonoBehaviour
                 spawnedMelee.InitializeRectangle(
                     data.ShapeSizeRadiusOrWidth,         // Width
                     data.ShapeSizeLengthOrOffset,        // Length
-                    data.ShapeSizeLengthOrOffset * 0.5f, // Forward Offset
-                    data.AreaAttackDuration,
-                    data.Damage
-                );
-            }
-            else
-            {
-                // Axe Circle (Circle)
-                spawnedMelee.InitializeCircle(
-                    data.ShapeSizeRadiusOrWidth,         // Radius
+                    data.ShapeSizeLengthOrOffset * 0.1f, // Forward Offset
                     data.AreaAttackDuration,
                     data.Damage
                 );
@@ -204,7 +195,12 @@ public class ProjectileSpawner : MonoBehaviour
 
             if (hazard != null)
             {
-                hazard.Initialize(direction, data.ProjectileSpeed, 10);
+                hazard.Initialize(direction,
+                data.ProjectileSpeed,
+                data.Damage,
+                false,  // isPiercing
+                false,  // isReturning
+                null);  // returnTarget
             }
 
             currentAngle += angleStep;

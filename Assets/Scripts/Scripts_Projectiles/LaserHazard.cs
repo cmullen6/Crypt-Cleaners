@@ -15,7 +15,7 @@ public class LaserHazard : MonoBehaviour
     [Header("Room Coverage")]
     [SerializeField] private float roomSpanDistance = 50f;
 
-    private float hazardDamage = 15f;
+    private float hazardDamage = 2f;
 
     public void InitializeLaser(LinearPatternData data)
     {

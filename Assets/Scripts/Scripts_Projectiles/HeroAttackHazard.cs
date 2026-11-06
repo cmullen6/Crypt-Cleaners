@@ -20,44 +20,6 @@ public class HeroAttackHazard : MonoBehaviour
     private bool hasHitPlayer;
 
     // ---------------------------------------------------------
-    // BARBARIAN CIRCLE ATTACK
-    // ---------------------------------------------------------
-
-    public void InitializeCircle(
-        float radius,
-        float duration,
-        int newDamage)
-    {
-        damage = newDamage;
-        lifetime = duration;
-        hasHitPlayer = false;
-
-        if (circleCollider != null)
-        {
-            circleCollider.enabled = true;
-            circleCollider.radius = radius;
-        }
-
-        if (boxCollider != null)
-        {
-            boxCollider.enabled = false;
-        }
-
-        if (spriteRenderer != null)
-        {
-            spriteRenderer.transform.localScale = new Vector3(
-                radius * 2f,
-                radius * 2f,
-                1f
-            );
-
-            spriteRenderer.transform.localPosition = Vector3.zero;
-        }
-
-        Destroy(gameObject, lifetime);
-    }
-
-    // ---------------------------------------------------------
     // PALADIN RECTANGLE ATTACK
     // ---------------------------------------------------------
 
@@ -105,6 +67,7 @@ public class HeroAttackHazard : MonoBehaviour
                 forwardOffset,
                 0f
             );
+
         }
 
         Destroy(gameObject, lifetime);
@@ -116,15 +79,9 @@ public class HeroAttackHazard : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (hasHitPlayer)
-        {
-            return;
-        }
+        if (hasHitPlayer) return;
 
-        if (!other.CompareTag("Player"))
-        {
-            return;
-        }
+        if (!other.CompareTag("Player")) return;
 
         PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
 
