@@ -44,8 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83a070a1709c254f98e8f44c3e8cb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 5264812385710550943, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
-  startDelay: 2
-  loopSequence: 1
   patternSequence: []
-  telegraphColor: {r: 1, g: 0, b: 0, a: 1}
+  firePoint: {fileID: 0}
+  fallbackProjectilePrefab: {fileID: 0}
+  attackInterval: 2

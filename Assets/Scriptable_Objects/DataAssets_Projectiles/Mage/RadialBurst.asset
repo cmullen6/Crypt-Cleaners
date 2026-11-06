@@ -15,7 +15,7 @@ MonoBehaviour:
   delayAfterPattern: 1
   damage: 1
   ProjectilePrefab: {fileID: 9078788847128768678, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
-  projectileCount: 8
-  projectileSpeed: 2
-  burstCount: 5
-  fireInterval: 1
+  projectileCount: 7
+  projectileSpeed: 18
+  burstCount: 2
+  fireInterval: 0.5

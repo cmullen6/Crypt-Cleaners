@@ -88,6 +88,10 @@ public class HazardProjectile : MonoBehaviour
             return;
         }
 
+        // Ignore other projectiles
+        if (other.GetComponent<HazardProjectile>() != null)
+            return;
+
         if (other.CompareTag("Player"))
         {
 
