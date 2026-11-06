@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658ff40b212be9a429077716faee9c37, type: 3}
   m_Name: HighVelocity
   m_EditorClassIdentifier: Assembly-CSharp::LinearPatternData
-  delayAfterPattern: 0
-  damage: 0
-  ProjectilePrefab: {fileID: 0}
-  projectileSpeed: 0
-  projectileLifetime: 0
+  delayAfterPattern: 2
+  damage: 1
+  ProjectilePrefab: {fileID: 9078788847128768678, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
+  projectileSpeed: 100
+  projectileLifetime: 7
   lingeringDuration: 0
-  projectileScale: 0
+  projectileScale: 2
   isPiercing: 0
   isReturning: 0
   isBurst: 0
