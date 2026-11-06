@@ -13,14 +13,14 @@ public class HazardProjectile : MonoBehaviour
     private bool isReturning = false;
     private Transform returnTarget;
 
-    public void Initialize(Vector2 direction, float customSpeed, float customDamage, bool piercing = false, bool returning = false, Transform target = null)
+    public void Initialize(Vector2 direction, float customSpeed, float customDamage)
     {
         moveDirection = direction.normalized;
         speed = customSpeed;
         damage = customDamage;
-        isPiercing = piercing;
-        isReturning = returning;
-        returnTarget = target;
+        //isPiercing = piercing;
+        //isReturning = returning;
+        //returnTarget = target;
 
         Destroy(gameObject, lifetime);
         StartCoroutine(ProjectileBehaviorRoutine());

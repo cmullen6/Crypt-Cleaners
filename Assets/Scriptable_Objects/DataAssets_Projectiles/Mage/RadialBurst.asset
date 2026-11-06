@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f443ee6799fda1449a930a7e3731eaca, type: 3}
   m_Name: RadialBurst
   m_EditorClassIdentifier: Assembly-CSharp::RadialBurstPatternData
-  delayAfterPattern: 0.2
+  delayAfterPattern: 1
   damage: 1
   ProjectilePrefab: {fileID: 9078788847128768678, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
   projectileCount: 8

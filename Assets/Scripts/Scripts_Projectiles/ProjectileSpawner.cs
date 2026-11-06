@@ -130,10 +130,10 @@ public class ProjectileSpawner : MonoBehaviour
                     hazard.Initialize(
                         direction,
                         data.ProjectileSpeed,
-                        data.Damage,
-                        data.IsPiercing,
-                        data.IsReturning,
-                        this.transform
+                        data.Damage
+                        //data.IsPiercing,
+                        //data.IsReturning,
+                        //this.transform
                     );
                 }
                 else
@@ -197,10 +197,10 @@ public class ProjectileSpawner : MonoBehaviour
             {
                 hazard.Initialize(direction,
                 data.ProjectileSpeed,
-                data.Damage,
-                false,  // isPiercing
-                false,  // isReturning
-                null);  // returnTarget
+                data.Damage);
+                //false,  // isPiercing
+                //false,  // isReturning
+                //null);
             }
 
             currentAngle += angleStep;
@@ -236,10 +236,10 @@ public class ProjectileSpawner : MonoBehaviour
                 hazard.Initialize(
                     direction,
                     data.ProjectileSpeed,
-                    data.Damage,
-                    data.IsPiercing,
-                    false,
-                    null
+                    data.Damage
+                    //data.IsPiercing,
+                    //false,
+                    //null
                 );
             }
         }
