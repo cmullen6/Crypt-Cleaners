@@ -4994,16 +4994,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83a070a1709c254f98e8f44c3e8cb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 5264812385710550943, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
-  startDelay: 2
-  repeatSequence: 1
-  sequenceRepeats: 3
   patternSequence:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  telegraphColor: {r: 1, g: 0, b: 0, a: 1}
+  firePoint: {fileID: 0}
+  fallbackProjectilePrefab: {fileID: 0}
+  attackInterval: 2
 --- !u!1 &355975121
 GameObject:
   m_ObjectHideFlags: 0
@@ -6552,7 +6550,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cleaningSlider: {fileID: 1962162687}
   cleaningText: {fileID: 1186779870}
-  healthText: {fileID: 475297407}
+  healthContainer: {fileID: 0}
+  healthIconPrefab: {fileID: 0}
+  fullHeartSprite: {fileID: 0}
+  emptyHeartSprite: {fileID: 0}
 --- !u!114 &448317806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24562,9 +24563,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0116d3d1d1d233444a1d88e688c4380c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeTool: {fileID: 2093262086}
+  mopDamage: 20
+  attackRange: 1.2
+  attackRadius: 0.6
+  attackCooldown: 0.4
+  mainCamera: {fileID: 0}
   cleaningMoveMultiplier: 0.35
-  cleanInterval: 0.05
 --- !u!114 &1548223461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26376,8 +26380,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1925165739}
   - {fileID: 868036909}
