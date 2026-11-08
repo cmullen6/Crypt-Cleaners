@@ -88,7 +88,7 @@ public class HazardProjectile : MonoBehaviour
             return;
         }
 
-        // Ignore other projectile colliders
+        // Ignore other projectiles
         if (other.GetComponent<HazardProjectile>() != null)
             return;
 

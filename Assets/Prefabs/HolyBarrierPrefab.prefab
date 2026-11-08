@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5248226586772974581}
   - component: {fileID: 6378208658554366112}
-  - component: {fileID: 2280308857987339204}
-  - component: {fileID: 6705626889042349371}
-  - component: {fileID: 7761072506761088494}
+  - component: {fileID: 4021757530245345446}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -95,8 +93,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!70 &2280308857987339204
-CapsuleCollider2D:
+--- !u!61 &4021757530245345446
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -130,52 +128,17 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
-  m_Direction: 0
---- !u!50 &6705626889042349371
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7643142109656789745}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
---- !u!114 &7761072506761088494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7643142109656789745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcd75027f3482874eaf0288e323312de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LaserHazard
-  telegraphLine: {fileID: 402742529096169555}
-  laserSprite: {fileID: 6378208658554366112}
-  warningDuration: 1.5
-  activeDuration: 2
-  roomSpanDistance: 50
+  m_EdgeRadius: 0
 --- !u!1 &7651915463209193810
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 71754660997889496}
   - component: {fileID: 402742529096169555}
+  - component: {fileID: 3554072156756610308}
   m_Layer: 0
   m_Name: HolyBarrierPrefab
   m_TagString: Untagged
@@ -202,7 +166,7 @@ Transform:
   m_GameObject: {fileID: 7651915463209193810}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.8374033, y: 1.2429228, z: 0}
+  m_LocalPosition: {x: -7.67, y: -4.287533, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -319,3 +283,21 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &3554072156756610308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7651915463209193810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd75027f3482874eaf0288e323312de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaserHazard
+  telegraphLine: {fileID: 402742529096169555}
+  laserSprite: {fileID: 6378208658554366112}
+  laserCollider: {fileID: 4021757530245345446}
+  warningDuration: 1.5
+  activeDuration: 2
+  roomSpanDistance: 50

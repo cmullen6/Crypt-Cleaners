@@ -6,7 +6,7 @@ public class LaserHazard : MonoBehaviour
     [Header("Visual & Collider References")]
     [SerializeField] private LineRenderer telegraphLine;
     [SerializeField] private SpriteRenderer laserSprite;
-    private CapsuleCollider2D laserCollider;
+    [SerializeField] private BoxCollider2D laserCollider;
 
     [Header("Timing Settings")]
     [SerializeField] private float warningDuration = 1.5f;
@@ -16,8 +16,6 @@ public class LaserHazard : MonoBehaviour
     [SerializeField] private float roomSpanDistance = 50f;
 
     private float hazardDamage = 2f;
-    private bool isHazardActive = false;
-
 
     public void InitializeLaser(LinearPatternData data)
     {
@@ -25,8 +23,6 @@ public class LaserHazard : MonoBehaviour
         {
             hazardDamage = data.Damage;
         }
-
-        StretchLaserToFitRoom();
     }
 
     private void Start()
@@ -50,60 +46,50 @@ public class LaserHazard : MonoBehaviour
         if (telegraphLine != null) telegraphLine.enabled = false;
         if (laserSprite != null) laserSprite.enabled = true;
         if (laserCollider != null) laserCollider.enabled = true;
-        isHazardActive = true;  // Turn damage ON for the active beam phase
 
         yield return new WaitForSeconds(activeDuration);
 
         // Cleanup: Destroy the hazard when finished
-        isHazardActive = false; // Turn damage OFF
-        Destroy(transform.root.gameObject);
+        Destroy(gameObject);
     }
 
     private void StretchLaserToFitRoom()
     {
-        // Automatically fetch and cache the Capsule Collider 2D reference
-        if (laserCollider == null)
-        {
-            laserCollider = GetComponent<CapsuleCollider2D>();
-        }
-
-        // Configure Line Renderer (Telegraph)
+        // Configure Line Renderer (Telegraph) endpoints
         if (telegraphLine != null)
         {
             telegraphLine.useWorldSpace = false;
             telegraphLine.positionCount = 2;
             telegraphLine.SetPosition(0, Vector3.zero);
-            telegraphLine.SetPosition(1, Vector3.down * roomSpanDistance);
+            telegraphLine.SetPosition(1, Vector3.left * roomSpanDistance); // Or Vector3.right depending on your direction
         }
 
-        // Scale the Sprite Renderer vertically along room span
+        // Scale the Sprite Renderer horizontally along X
         if (laserSprite != null)
         {
             Transform spriteTransform = laserSprite.transform;
-            spriteTransform.localScale = new Vector3(spriteTransform.localScale.x, roomSpanDistance, 1f);
-            spriteTransform.localPosition = new Vector3(0f, -roomSpanDistance / 2f, 0f);
+            spriteTransform.localScale = new Vector3(roomSpanDistance, spriteTransform.localScale.y, 1f);
+
+            // Offset half the distance along X so it fires outward from the origin
+            // Use -roomSpanDistance / 2f if firing left, or positive if firing right
+            spriteTransform.localPosition = new Vector3(-roomSpanDistance / 2f, 0f, 0f);
         }
 
-        // Size and offset the Capsule Collider 2D
-        if (laserCollider != null && laserSprite != null && laserSprite.sprite != null)
+        // Configure Box Collider dimensions correctly on their proper axes
+        if (laserCollider != null && laserSprite != null)
         {
-            // Get the base unscaled sprite size (Unity's transform scale will automatically scale the collider to match)
-            Vector2 spriteSize = laserSprite.sprite.rect.size / laserSprite.sprite.pixelsPerUnit;
+            Transform spriteTransform = laserSprite.transform;
 
-            laserCollider.size = spriteSize;
-            laserCollider.offset = Vector2.zero;
-        }
-    }
+            // Define your desired visual thickness
+            float desiredWidth = 1f;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Ignore collisions if the laser is still in its warning phase
-        if (!isHazardActive) return;
+            // Calculate world-space compensated dimensions
+            float exactWidth = desiredWidth / Mathf.Max(0.001f, Mathf.Abs(spriteTransform.localScale.x));
+            float exactHeight = roomSpanDistance / Mathf.Max(0.001f, Mathf.Abs(spriteTransform.localScale.y));
 
-        // Check if the collider belongs to the player
-        if (collision.CompareTag("Player"))
-        {
-            collision.GetComponent<PlayerHealth>()?.TakeDamage(Mathf.RoundToInt(hazardDamage));
+            // Width goes to X, Height goes to Y
+            laserCollider.size = new Vector2(exactWidth, exactHeight);
+            laserCollider.offset = new Vector2(0f, 0f);
         }
     }
 }

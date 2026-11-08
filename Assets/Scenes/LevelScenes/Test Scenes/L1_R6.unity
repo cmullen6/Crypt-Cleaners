@@ -14238,10 +14238,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patternSequence:
-  - {fileID: 11400000, guid: 1cf23fec4dc5d8e44801fa1dd6a6a91d, type: 2}
+  - {fileID: 11400000, guid: 9d1a6f157730cb24e812de5d029dffb9, type: 2}
   firePoint: {fileID: 126043019}
   fallbackProjectilePrefab: {fileID: 0}
-  attackInterval: 6.5
+  attackInterval: 1
 --- !u!212 &847931209
 SpriteRenderer:
   serializedVersion: 3
