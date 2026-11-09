@@ -14,7 +14,8 @@ public class CleaningTool : MonoBehaviour
     [Header("Mop Contact Point")]
     [Tooltip("The point at the mop head that contacts the ground.")]
     [SerializeField] private Transform cleaningOrigin;
-
+    [Header("Goo Cleaning")]
+    [SerializeField] private GooSurface gooSurface;
     public float CleaningRadius => cleaningRadius;
     public float CleaningSpeed => cleaningSpeed;
 
@@ -103,6 +104,11 @@ public class CleaningTool : MonoBehaviour
 
     private void CleanAtPosition(Vector2 position, float interval)
     {
+        if (gooSurface != null)
+        {
+            gooSurface.CleanAtWorldPosition(position, cleaningRadius);
+        }
+
         Collider2D[] hits = Physics2D.OverlapCircleAll(
             position,
             cleaningRadius
