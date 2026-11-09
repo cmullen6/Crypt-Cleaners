@@ -24999,7 +24999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8603552261783672891, guid: 9e8bc5f3d182621448e20223fc71d664, type: 3}
       propertyPath: attackInterval
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25038,7 +25038,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9d1a6f157730cb24e812de5d029dffb9, type: 2}
   firePoint: {fileID: 995224406}
   fallbackProjectilePrefab: {fileID: 0}
-  attackInterval: 1
+  attackInterval: 2
 --- !u!1 &1658941833
 GameObject:
   m_ObjectHideFlags: 0
@@ -25431,11 +25431,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.56
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.5357143
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.89285713
       objectReference: {fileID: 0}
     - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25476,6 +25480,10 @@ PrefabInstance:
     - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8647860152363793372, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_Sprite
@@ -26265,11 +26273,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.56
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.5357143
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.89285713
       objectReference: {fileID: 0}
     - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26310,6 +26322,10 @@ PrefabInstance:
     - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937947795531836891, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8647860152363793372, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_Sprite

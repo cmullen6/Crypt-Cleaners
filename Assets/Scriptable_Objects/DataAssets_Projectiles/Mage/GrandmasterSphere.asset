@@ -21,3 +21,6 @@ MonoBehaviour:
   projectileScale: 5
   isPiercing: 0
   isReturning: 0
+  isBurst: 0
+  burstCount: 3
+  burstInterval: 0.1

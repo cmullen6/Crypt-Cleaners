@@ -40,7 +40,7 @@ public class HazardProjectile : MonoBehaviour
 
         // Returning projectiles
         float timer = 0f;
-        float outwardDuration = 2f; // Time spent traveling outward before returning
+        float outwardDuration = 4f; // Time spent traveling outward before returning
 
         // Phase 1: Travel outward
         while (timer < outwardDuration)
@@ -64,7 +64,7 @@ public class HazardProjectile : MonoBehaviour
                     transform.Translate(returnDir * speed * Time.deltaTime, Space.World);
 
                     // Despawn if it successfully reaches the source
-                    if (Vector2.Distance(transform.position, returnTarget.position) < 0.6f)
+                    if (Vector2.Distance(transform.position, returnTarget.position) < 3f)
                     {
                         Destroy(gameObject);
                         yield break;
@@ -89,6 +89,11 @@ public class HazardProjectile : MonoBehaviour
         }
 
         if (other.CompareTag("Trash"))
+        {
+            return;
+        }
+
+        if (other.CompareTag("FloorPit"))
         {
             return;
         }

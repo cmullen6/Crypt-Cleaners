@@ -16,8 +16,8 @@ MonoBehaviour:
   damage: 1
   ProjectilePrefab: {fileID: 9078788847128768678, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
   projectileCount: 5
-  projectileSpeed: 10
-  fireInterval: 5
+  projectileSpeed: 5
+  fireInterval: 1
   isBurst: 1
-  burstCount: 3
+  burstCount: 1
   burstInterval: 1

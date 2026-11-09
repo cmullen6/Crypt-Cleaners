@@ -16,7 +16,7 @@ MonoBehaviour:
   damage: 1
   ProjectilePrefab: {fileID: 9078788847128768678, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
   projectileCount: 5
-  spreadAngle: 80
+  spreadAngle: 30
   projectileSpeed: 6.5
   projectileScale: 1
-  isPiercing: 1
+  isPiercing: 0
