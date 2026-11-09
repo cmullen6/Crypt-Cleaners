@@ -9,8 +9,12 @@ public class RadialBurstPatternData : BulletPatternData
     [Header("Radial Burst Pattern Settings")]
     [SerializeField] private int projectileCount;
     [SerializeField] private float projectileSpeed;
-    [SerializeField] private int burstCount;
+    
     [SerializeField] private float fireInterval;
+
+    public bool isBurst = false;
+    public int burstCount = 3;          
+    public float burstInterval = 0.1f;  // Delay between each arrow in seconds
 
     [Header("Read-Only Properties")]
     public int ProjectileCount => projectileCount;

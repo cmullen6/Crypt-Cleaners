@@ -88,6 +88,11 @@ public class HazardProjectile : MonoBehaviour
             return;
         }
 
+        if (other.CompareTag("Trash"))
+        {
+            return;
+        }
+
         // Ignore other projectile colliders
         if (other.GetComponent<HazardProjectile>() != null)
             return;
