@@ -2529,6 +2529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445905271}
   - component: {fileID: 445905272}
+  - component: {fileID: 445905273}
   m_Layer: 0
   m_Name: Mop
   m_TagString: Untagged
@@ -2544,13 +2545,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445905270}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7179997, y: 0.8290004, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3706489, w: 0.9287731}
+  m_LocalPosition: {x: -0.0099983215, y: 1.5370007, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1893826871}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1893826871}
+  m_Father: {fileID: 1829223645}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -43.511}
 --- !u!212 &445905272
 SpriteRenderer:
   serializedVersion: 3
@@ -2598,7 +2600,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2044706637106662495, guid: 27f2ffc9c81fe6e4bbf4d1bda59056f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2611,6 +2613,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &445905273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445905270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2d341193e879904195d4b93dbdd67ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CleaningTool
+  cleaningRadius: 1.2
+  cleaningSpeed: 20
+  cleaningOrigin: {fileID: 1893826871}
 --- !u!1 &475831265
 GameObject:
   m_ObjectHideFlags: 0
@@ -11406,6 +11423,7 @@ GameObject:
   - component: {fileID: 1829223647}
   - component: {fileID: 1829223654}
   - component: {fileID: 1829223655}
+  - component: {fileID: 1829223656}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -11428,7 +11446,7 @@ Transform:
   m_Children:
   - {fileID: 818203423}
   - {fileID: 1807278872}
-  - {fileID: 1893826871}
+  - {fileID: 445905271}
   m_Father: {fileID: 496082207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1829223647
@@ -11679,6 +11697,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573f5b9a0b7f7834589b56ae16ca271f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RunResourceWallet
+--- !u!114 &1829223656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829223644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3fb97260f1c77b40b1a2a749e8d33da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CleaningMopController
+  mainCamera: {fileID: 1634557668}
+  mopVisual: {fileID: 445905271}
+  cleaningTool: {fileID: 445905273}
+  mopDistance: 1.5
+  rotationOffset: 180
+  mouseButton: 0
 --- !u!1 &1832432641
 GameObject:
   m_ObjectHideFlags: 0
@@ -12266,13 +12302,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893826870}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.102, y: 0.507, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.3706489, w: 0.9287731}
+  m_LocalPosition: {x: -0.16243994, y: 0.12753525, z: 0}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 445905271}
-  m_Father: {fileID: 1829223645}
+  m_Children: []
+  m_Father: {fileID: 445905271}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1906531236
 GameObject:
