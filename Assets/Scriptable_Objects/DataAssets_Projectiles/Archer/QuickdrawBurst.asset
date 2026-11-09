@@ -22,5 +22,5 @@ MonoBehaviour:
   isPiercing: 0
   isReturning: 0
   isBurst: 1
-  burstCount: 4
+  burstCount: 3
   burstInterval: 0.2

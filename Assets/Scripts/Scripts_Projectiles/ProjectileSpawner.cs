@@ -61,10 +61,7 @@ public class ProjectileSpawner : MonoBehaviour
         {
             HandleLinear(linearData);
         }
-        else if (patternData is MeleeAreaPatternData meleeData)
-        {
-            HandleMeleeArea(meleeData);
-        }
+        
         else if (patternData is RadialBurstPatternData radialData)
         {
             HandleRadialBurst(radialData);
@@ -154,30 +151,12 @@ public class ProjectileSpawner : MonoBehaviour
         }
     }
 
-    private void HandleMeleeArea(MeleeAreaPatternData data)
-    {
-        // Melee hazards use AreaAttackPrefab specifically defined on their data asset
-        if (data.AreaAttackPrefab != null)
-        {
-            HeroAttackHazard spawnedMelee = Instantiate(data.AreaAttackPrefab, firePoint.position, firePoint.rotation);
-
-            if (data.AttackShape == MeleeAreaPatternData.MeleeShape.Rectangle)
-            {
-                // Hammer Cleave (Rectangle)
-                spawnedMelee.InitializeRectangle(
-                    data.ShapeSizeRadiusOrWidth,         // Width
-                    data.ShapeSizeLengthOrOffset,        // Length
-                    data.ShapeSizeLengthOrOffset * 0.1f, // Forward Offset
-                    data.AreaAttackDuration,
-                    data.Damage
-                );
-            }
-        }
-    }
-
 
     private void HandleRadialBurst(RadialBurstPatternData data)
     {
+        int shotsToFire = data.isBurst ? Mathf.Max(1, data.burstCount) : 1;
+        float delayBetweenShots = data.isBurst ? data.burstInterval : 0f;
+
         GameObject prefabToUse = GetPrefabToSpawn(data);
         if (prefabToUse == null) return;
 

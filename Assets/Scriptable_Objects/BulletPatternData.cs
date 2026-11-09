@@ -5,7 +5,6 @@ public abstract class BulletPatternData : ScriptableObject
     public enum BulletPatternType
     {
         Linear,
-        MeleeArea,
         RadialBurst,
         Spiral,
         Spread
