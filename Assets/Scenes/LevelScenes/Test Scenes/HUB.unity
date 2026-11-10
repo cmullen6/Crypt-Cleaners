@@ -2905,7 +2905,7 @@ Transform:
   m_GameObject: {fileID: 496082206}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.73387, y: 6.9224, z: 0}
+  m_LocalPosition: {x: 7.73387, y: 7.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13854,7 +13854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3393782586800000764, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.112507
+      value: -25.12
       objectReference: {fileID: 0}
     - target: {fileID: 3393782586800000764, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13900,10 +13900,6 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1634557668}
-    - target: {fileID: 7586766725690704175, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
-      propertyPath: gooSurface
-      value: 
-      objectReference: {fileID: 2023806525}
     - target: {fileID: 7586766725690704175, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: mainCamera
       value: 
