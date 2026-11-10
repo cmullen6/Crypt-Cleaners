@@ -15,10 +15,10 @@ MonoBehaviour:
   delayAfterPattern: 2
   damage: 1
   ProjectilePrefab: {fileID: 9078788847128768678, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
-  projectileSpeed: 100
+  projectileSpeed: 45
   projectileLifetime: 7
   lingeringDuration: 0
-  projectileScale: 2
+  projectileScale: 1
   isPiercing: 0
   isReturning: 0
   isBurst: 0

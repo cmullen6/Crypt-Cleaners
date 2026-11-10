@@ -15,7 +15,7 @@ MonoBehaviour:
   delayAfterPattern: 4
   damage: 2
   ProjectilePrefab: {fileID: 9078788847128768678, guid: 85e40001de68b87448600af1f3b67c06, type: 3}
-  projectileSpeed: 4
+  projectileSpeed: 5
   projectileLifetime: 20
   lingeringDuration: 15
   projectileScale: 5
