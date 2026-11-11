@@ -14180,6 +14180,14 @@ PrefabInstance:
       propertyPath: gooSurface
       value: 
       objectReference: {fileID: 2023806525}
+    - target: {fileID: 3736398936348669313, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
+      propertyPath: gooSurfaces.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736398936348669313, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
+      propertyPath: 'gooSurfaces.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2023806525}
     - target: {fileID: 3916632240326318327, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: m_Name
       value: Player
