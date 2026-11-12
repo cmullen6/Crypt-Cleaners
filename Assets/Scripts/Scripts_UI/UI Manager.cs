@@ -104,6 +104,14 @@ public class UIManager : MonoBehaviour
 
     }
 
+    // On button click, returns to hub
+    public void ReturnToHub()
+    {
+
+        SceneManager.LoadScene(1);
+
+    }
+
     // On button click, opens settings panel
     public void Settings()
     {

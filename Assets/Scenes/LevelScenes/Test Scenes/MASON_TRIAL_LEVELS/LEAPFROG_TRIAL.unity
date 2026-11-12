@@ -3536,11 +3536,11 @@ PrefabInstance:
       objectReference: {fileID: 958125655}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: attackInterval
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: patternSequence.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[0]'
@@ -3549,7 +3549,7 @@ PrefabInstance:
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: c207070201c75c3438ae1618e690cf45, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[2]'
       value: 
@@ -3620,19 +3620,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3644,7 +3644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3741,28 +3741,28 @@ PrefabInstance:
       objectReference: {fileID: 1429942284}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: attackInterval
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: patternSequence.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: aad9672b41294c74fb670d054cdb50a0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: c207070201c75c3438ae1618e690cf45, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4948bb58ac066904fa3fd4ecd58109ed, type: 2}
+      objectReference: {fileID: 11400000, guid: aad9672b41294c74fb670d054cdb50a0, type: 2}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 573d1fa25d749664a9488806f6cb291a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[4]'
       value: 
@@ -3825,19 +3825,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3849,7 +3849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9199,28 +9199,28 @@ PrefabInstance:
       objectReference: {fileID: 1384561406}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: attackInterval
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: patternSequence.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: aad9672b41294c74fb670d054cdb50a0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: c207070201c75c3438ae1618e690cf45, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4948bb58ac066904fa3fd4ecd58109ed, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 573d1fa25d749664a9488806f6cb291a, type: 2}
+      objectReference: {fileID: 11400000, guid: aad9672b41294c74fb670d054cdb50a0, type: 2}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[4]'
       value: 
@@ -9283,19 +9283,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9307,7 +9307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14104,20 +14104,20 @@ PrefabInstance:
       objectReference: {fileID: 197605856}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: attackInterval
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: patternSequence.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: aad9672b41294c74fb670d054cdb50a0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: c207070201c75c3438ae1618e690cf45, type: 2}
+      objectReference: {fileID: 11400000, guid: aad9672b41294c74fb670d054cdb50a0, type: 2}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[2]'
       value: 
@@ -14188,19 +14188,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14212,7 +14212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22657,11 +22657,11 @@ PrefabInstance:
       objectReference: {fileID: 1655495122}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: attackInterval
-      value: 2
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: patternSequence.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[0]'
@@ -22670,15 +22670,15 @@ PrefabInstance:
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: c207070201c75c3438ae1618e690cf45, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4948bb58ac066904fa3fd4ecd58109ed, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 573d1fa25d749664a9488806f6cb291a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[4]'
       value: 
@@ -22741,19 +22741,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -22765,7 +22765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24714,28 +24714,28 @@ PrefabInstance:
       objectReference: {fileID: 1736499891}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: attackInterval
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: patternSequence.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: aad9672b41294c74fb670d054cdb50a0, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: c207070201c75c3438ae1618e690cf45, type: 2}
+      objectReference: {fileID: 11400000, guid: aad9672b41294c74fb670d054cdb50a0, type: 2}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 4948bb58ac066904fa3fd4ecd58109ed, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: 573d1fa25d749664a9488806f6cb291a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: 'patternSequence.Array.data[4]'
       value: 
@@ -24798,19 +24798,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -24822,7 +24822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31708,7 +31708,7 @@ PrefabInstance:
       objectReference: {fileID: 458999625}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: attackInterval
-      value: 2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 618777772408107107, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: patternSequence.Array.size
@@ -31792,19 +31792,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -31816,7 +31816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3310531391000059979, guid: 31ebfa7c924ee504c894e29ff98a5d1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

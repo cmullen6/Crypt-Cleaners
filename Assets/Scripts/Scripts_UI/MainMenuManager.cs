@@ -29,14 +29,6 @@ public class MainMenuManager : MonoBehaviour
 
     }
 
-    // On button click, quick starts the game - sends directly into a run with previously selected weapon
-    public void QuickStartGame()
-    {
-
-       // SceneManager.LoadScene();
-
-    }
-
     // On button click, closes application
     public void Quit()
     {
