@@ -279,7 +279,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2129109539}
         m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
         m_MethodName: Resurrect
         m_Mode: 1
@@ -15268,7 +15268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1904553711
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17076,6 +17076,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103463135}
   m_CullTransparentMesh: 1
+--- !u!114 &2129109539 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2884992726650465142, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
+  m_PrefabInstance: {fileID: 644721188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa234afb980e06d4c84394954262db84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
