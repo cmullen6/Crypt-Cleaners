@@ -9,6 +9,7 @@ TagManager:
   - FloorPit
   - Projectile
   - Trash
+  - PlayerFeet
   layers:
   - Default
   - TransparentFX

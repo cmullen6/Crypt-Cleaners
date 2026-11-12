@@ -36,7 +36,7 @@ public class LaserHazard : MonoBehaviour
 
     private IEnumerator HazardSequence()
     {
-        // 1. Setup the scaling for both telegraph line and beam
+        // Setup the scaling for both telegraph line and beam
         StretchLaserToFitRoom();
 
         // Phase 1: Telegraph Line ON, Active Beam & Collider OFF

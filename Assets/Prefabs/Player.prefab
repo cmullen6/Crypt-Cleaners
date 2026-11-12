@@ -74,6 +74,7 @@ Transform:
   - {fileID: 2892095906819479334}
   - {fileID: 846415259420276237}
   - {fileID: 9140357128669638683}
+  - {fileID: 4814850911693472148}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8702486505399285521
@@ -342,6 +343,75 @@ MonoBehaviour:
   mopDistance: 1.5
   rotationOffset: 180
   mouseButton: 0
+--- !u!1 &5618628496300127127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4814850911693472148}
+  - component: {fileID: 5252352488004931951}
+  m_Layer: 0
+  m_Name: FeetCollider
+  m_TagString: PlayerFeet
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4814850911693472148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618628496300127127}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.59000015, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3393782586800000764}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!70 &5252352488004931951
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618628496300127127}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.0034627854, y: 0.088581815}
+  m_Size: {x: 0.06213186, y: 0.62795144}
+  m_Direction: 0
 --- !u!1 &5890473359742589821
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +625,7 @@ MonoBehaviour:
   cleaningRadius: 1.2
   cleaningSpeed: 50
   cleaningOrigin: {fileID: 4917647319429993109}
-  gooSurface: {fileID: 0}
+  gooSurfaces: []
 --- !u!1 &9056995790737240752
 GameObject:
   m_ObjectHideFlags: 0
