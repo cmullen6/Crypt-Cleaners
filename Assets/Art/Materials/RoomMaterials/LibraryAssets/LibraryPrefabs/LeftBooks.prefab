@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1dd7eec4b63ae34199144dc14ec1e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CleaningSpot
-  cleaningRequired: 100
+  cleaningRequired: 50
   spriteRenderer: {fileID: 6135691614295363893}
   dirtySprite: {fileID: 7813432339415957146, guid: ca0f207a533d2a44b8f90ed7e2229376, type: 3}
   cleanSprite: {fileID: 8129540724952249189, guid: 060a5c4153284c24ca6c5d8c2add5a1f, type: 3}
