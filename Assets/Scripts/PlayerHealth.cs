@@ -1,10 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Health")]
-    [SerializeField] private int maxHealth = 15;
+    [SerializeField] private int maxHealth = 3;
 
     [Header("Respawn")]
     [SerializeField] private float respawnDelay = 1f;
@@ -14,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private TextMeshProUGUI resurrectText;
     [SerializeField] private GameObject losePanel;
     [SerializeField] private GameObject trash;
+    [SerializeField] private Button respawnButton;
 
     [Header("Hitstop")]
     [SerializeField] private float hurtHitstop = 0.08f;
@@ -65,6 +67,9 @@ public class PlayerHealth : MonoBehaviour
         if (zoomTimer <= 0f)
         {
             zoomTimer = 0f;
+
+            if (resurrectMe <= 0f)
+                respawnButton.interactable = false;
 
             if (resurrectText != null)
                 resurrectText.text = "Resurrections Left: " + resurrectMe;
@@ -120,6 +125,8 @@ public class PlayerHealth : MonoBehaviour
         if (!deathSequenceStarted || resurrectMe <= 0)
             return;
 
+        respawnButton.interactable = false;
+
         resurrectMe--;
 
         Time.timeScale = 1f;
@@ -153,6 +160,7 @@ public class PlayerHealth : MonoBehaviour
         isDead = false;
         deathSequenceStarted = false;
         zoomTimer = 3f;
+        respawnButton.interactable = true;
 
         if (losePanel != null)
             losePanel.SetActive(false);

@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
         }
 
         UpdateAnimation();
-        UpdateCooldownUI();
+
     }
 
     private void FixedUpdate()
@@ -216,17 +216,27 @@ public class PlayerController : MonoBehaviour
         iFramesTimer = iFramesDuration;
         dodgeCooldownTimer = dodgeCooldown;
 
+        UpdateCooldownUI();
+
         if (spriteFlasher != null)
             spriteFlasher.FlashWhite(iFramesDuration);
     }
 
+    // Very simple and is now working... again... if you want to make it less simple then you can fix it if it breaks... again :)
     private void UpdateCooldownUI()
     {
         if (cooldownImage == null)
             return;
 
-        cooldownImage.fillAmount = dodgeCooldown <= 0f
-            ? 1f
-            : 1f - Mathf.Clamp01(dodgeCooldownTimer / dodgeCooldown);
+
+        cooldownImage.CrossFadeColor(Color.black, 0f, false, true);
+
+        cooldownImage.CrossFadeColor(Color.white, dodgeCooldownTimer, false, true);
+
+        
+        // Old code
+        //cooldownImage.fillAmount = dodgeCooldown <= 0f
+         //   ? 1f
+          //  : 1f - Mathf.Clamp01(dodgeCooldownTimer / dodgeCooldown);
     }
 }

@@ -14,7 +14,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject settingsPanel;
 
     private bool paused = false;
-   
+
+    PlayerHealth playerHealth;
+
+    private bool DeadCheck => playerHealth.IsDead;
 
     private void Start()
     {
@@ -24,7 +27,6 @@ public class UIManager : MonoBehaviour
         controlsPanel.SetActive(false); 
         settingsPanel.SetActive(false);
         paused = false;
-    
 
     }
 
@@ -64,10 +66,7 @@ public class UIManager : MonoBehaviour
 
             }
 
-
         }
-
-       
 
     }
 
