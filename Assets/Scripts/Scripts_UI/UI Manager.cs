@@ -1,9 +1,6 @@
-using System.Runtime.CompilerServices;
-using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -15,10 +12,6 @@ public class UIManager : MonoBehaviour
 
     private bool paused = false;
 
-    PlayerHealth playerHealth;
-
-    private bool DeadCheck => playerHealth.IsDead;
-
     private void Start()
     {
 
@@ -29,7 +22,7 @@ public class UIManager : MonoBehaviour
         paused = false;
 
     }
-
+ 
 
     private void Update()
     {
