@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject controlsPanel;
     [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject itemsPanel;
+
 
     private bool paused = false;
 
@@ -19,6 +21,7 @@ public class UIManager : MonoBehaviour
         pausePanel.SetActive(false);
         controlsPanel.SetActive(false); 
         settingsPanel.SetActive(false);
+        itemsPanel.SetActive(false);
         paused = false;
 
     }
@@ -58,6 +61,22 @@ public class UIManager : MonoBehaviour
 
 
             }
+
+        }
+
+        // turns on inventory on tab down
+        if (Keyboard.current.tabKey.wasPressedThisFrame)
+        {
+
+            itemsPanel.SetActive(true);
+
+        }
+
+        // turns off inventory on tab release
+        if (Keyboard.current.tabKey.wasReleasedThisFrame)
+        {
+
+            itemsPanel.SetActive(false);
 
         }
 

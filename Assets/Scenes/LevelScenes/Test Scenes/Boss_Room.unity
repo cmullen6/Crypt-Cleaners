@@ -6719,57 +6719,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
---- !u!1 &412057075
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 412057076}
-  - component: {fileID: 412057077}
-  m_Layer: 0
-  m_Name: Game Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &412057076
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412057075}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2098179118}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &412057077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412057075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb729f08f2d5fdc4db6fda8b6c7bbf6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  goldText: {fileID: 468396746}
-  recAText: {fileID: 1500585650}
-  recBText: {fileID: 1652426201}
-  recCText: {fileID: 461330422}
-  recDText: {fileID: 1500585650}
-  testButton: {fileID: 0}
-  itemsPanel: {fileID: 1044115526}
 --- !u!1 &413160440
 GameObject:
   m_ObjectHideFlags: 0
@@ -27105,6 +27054,7 @@ MonoBehaviour:
   pausePanel: {fileID: 165711895}
   controlsPanel: {fileID: 28430487}
   settingsPanel: {fileID: 974952624}
+  itemsPanel: {fileID: 1044115526}
 --- !u!4 &1183360140
 Transform:
   m_ObjectHideFlags: 0
@@ -48055,7 +48005,6 @@ Transform:
   m_Children:
   - {fileID: 815126433}
   - {fileID: 2072835908}
-  - {fileID: 412057076}
   - {fileID: 1183360140}
   - {fileID: 1493321297}
   - {fileID: 587476423}
