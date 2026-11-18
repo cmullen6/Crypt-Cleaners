@@ -28055,9 +28055,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 883947509}
     m_Modifications:
     - target: {fileID: 1590079787921394740, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590079787921394740, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: moveSpeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1590079787921394740, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
+      propertyPath: cooldownImage
+      value: 
+      objectReference: {fileID: 1955250902}
     - target: {fileID: 2884992726650465142, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: resurrectMe
       value: 0
@@ -47696,6 +47704,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4617067799915196299, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
   m_PrefabInstance: {fileID: 1955250900}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1955250902 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5172339884198886070, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
+  m_PrefabInstance: {fileID: 1955250900}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1955751541
 GameObject:
   m_ObjectHideFlags: 0

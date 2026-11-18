@@ -41224,9 +41224,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 946491029}
     m_Modifications:
     - target: {fileID: 1590079787921394740, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590079787921394740, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: moveSpeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1590079787921394740, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
+      propertyPath: cooldownImage
+      value: 
+      objectReference: {fileID: 2076556810}
     - target: {fileID: 2884992726650465142, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: resurrectMe
       value: 0
