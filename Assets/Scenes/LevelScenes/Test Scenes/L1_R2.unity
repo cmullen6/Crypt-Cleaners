@@ -12069,17 +12069,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2858497004227725808, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
   m_PrefabInstance: {fileID: 745342616}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &745342621 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4481844746426225274, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
-  m_PrefabInstance: {fileID: 745342616}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &745342622 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3456579664206310273, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
@@ -25557,7 +25546,6 @@ MonoBehaviour:
   recBText: {fileID: 0}
   recCText: {fileID: 0}
   recDText: {fileID: 0}
-  testButton: {fileID: 745342621}
   itemsPanel: {fileID: 745342622}
 --- !u!4 &1972500538
 Transform:

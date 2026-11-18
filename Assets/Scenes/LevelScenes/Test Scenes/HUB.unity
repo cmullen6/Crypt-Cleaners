@@ -1268,17 +1268,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &651151406 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4481844746426225274, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
-  m_PrefabInstance: {fileID: 5926871776627769827}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &699883737
 GameObject:
   m_ObjectHideFlags: 0
@@ -4573,7 +4562,6 @@ MonoBehaviour:
   recBText: {fileID: 1911044701}
   recCText: {fileID: 778750817}
   recDText: {fileID: 1364465718}
-  testButton: {fileID: 651151406}
   itemsPanel: {fileID: 1950599386}
 --- !u!1 &1779205450
 GameObject:
@@ -5677,6 +5665,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
+--- !u!114 &5926871776627769828 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7994392794564486771, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
+  m_PrefabInstance: {fileID: 5926871776627769827}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &5926871776627769829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8556819446828322709, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
+  m_PrefabInstance: {fileID: 5926871776627769827}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5926871776627769830 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1890700835584793490, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
+  m_PrefabInstance: {fileID: 5926871776627769827}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &6394526501972327230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5757,15 +5772,19 @@ PrefabInstance:
     - target: {fileID: 2884992726650465142, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: losePanel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5926871776627769829}
     - target: {fileID: 2884992726650465142, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: resurrectMe
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2884992726650465142, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
+      propertyPath: respawnButton
+      value: 
+      objectReference: {fileID: 5926871776627769828}
+    - target: {fileID: 2884992726650465142, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: resurrectText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5926871776627769830}
     - target: {fileID: 3393782586800000764, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -41.472504

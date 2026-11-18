@@ -10,8 +10,6 @@ public class PlayerHealth : MonoBehaviour
     [Header("Respawn")]
     [SerializeField] private float respawnDelay = 1f;
     [SerializeField] private int resurrectMe = 3;
-    [SerializeField] private float zoomTimer = 3f;
-    [SerializeField] private Camera camera;
     [SerializeField] private TextMeshProUGUI resurrectText;
     [SerializeField] private GameObject losePanel;
     [SerializeField] private GameObject trash;
@@ -19,10 +17,6 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Hitstop")]
     [SerializeField] private float hurtHitstop = 0.08f;
-
-    [Header("Death Camera")]
-    [SerializeField] private float deathZoomSize = 3f;
-    [SerializeField] private float normalZoomSize = 10f;
 
     private int currentHealth;
     private bool isDead;
@@ -41,9 +35,6 @@ public class PlayerHealth : MonoBehaviour
         playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
 
-        if (camera == null)
-            camera = Camera.main;
-
         startingPosition = transform.position;
         currentHealth = maxHealth;
     }
@@ -61,12 +52,9 @@ public class PlayerHealth : MonoBehaviour
         if (!deathSequenceStarted)
             return;
 
-        // Unscaled time continues while the death zoom is paused.
-        zoomTimer -= Time.unscaledDeltaTime;
-
-        if (zoomTimer <= 0f)
+        
+        if (currentHealth <= 0f)
         {
-            zoomTimer = 0f;
 
             if (resurrectMe <= 0f)
                 respawnButton.interactable = false;
@@ -108,13 +96,9 @@ public class PlayerHealth : MonoBehaviour
 
         deathSequenceStarted = true;
         isDead = true;
-        zoomTimer = 3f;
 
         if (rb != null)
             rb.linearVelocity = Vector2.zero;
-
-        if (camera != null)
-            camera.orthographicSize = deathZoomSize;
 
         // Death pause is managed separately from hitstop.
         Time.timeScale = 0f;
@@ -133,9 +117,6 @@ public class PlayerHealth : MonoBehaviour
 
         if (losePanel != null)
             losePanel.SetActive(false);
-
-        if (camera != null)
-            camera.orthographicSize = normalZoomSize;
 
         Cursor.visible = false;
 
@@ -159,14 +140,10 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         isDead = false;
         deathSequenceStarted = false;
-        zoomTimer = 3f;
         respawnButton.interactable = true;
 
         if (losePanel != null)
             losePanel.SetActive(false);
-
-        if (camera != null)
-            camera.orthographicSize = normalZoomSize;
 
         Cursor.visible = false;
     }
