@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI recBText;
     [SerializeField] private TextMeshProUGUI recCText;
     [SerializeField] private TextMeshProUGUI recDText;
-    [SerializeField] private Button testButton;
+
 
     private int playerGold;
     private int playerRecA;
@@ -72,22 +72,6 @@ public class GameManager : MonoBehaviour
 
             ResourceManager.instance.gold += 1;
             ResourceManager.instance.recA += 1;
-
-        }
-
-
-        // Test to make sure you can remove value from the instance
-        // Also test to make sure you can "lock" things behind a set value
-        if (playerGold < 5)
-        {
-
-            testButton.interactable = false;
-
-        }
-        else
-        {
-
-            testButton.interactable = true;
 
         }
 
