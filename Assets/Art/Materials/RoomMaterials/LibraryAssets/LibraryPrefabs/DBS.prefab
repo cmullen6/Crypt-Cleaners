@@ -392,15 +392,19 @@ PrefabInstance:
       objectReference: {fileID: 7825051543757100361}
     - target: {fileID: 6939928316386285340, guid: 0b2c41e8bd642524f970f7980a2f0df5, type: 3}
       propertyPath: m_Name
-      value: DirtyBookShelf2_0 (4) Variant (6) Variant
+      value: DBS
       objectReference: {fileID: 0}
+    - target: {fileID: 7124610871414872292, guid: 0b2c41e8bd642524f970f7980a2f0df5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5854490855299045021, guid: 8d74ee2a27276164b86032db66c66f70, type: 3}
     - target: {fileID: 7507711882835323782, guid: 0b2c41e8bd642524f970f7980a2f0df5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.038458
+      value: -18.592491
       objectReference: {fileID: 0}
     - target: {fileID: 7507711882835323782, guid: 0b2c41e8bd642524f970f7980a2f0df5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.629549
+      value: 19.20896
       objectReference: {fileID: 0}
     - target: {fileID: 7507711882835323782, guid: 0b2c41e8bd642524f970f7980a2f0df5, type: 3}
       propertyPath: m_LocalPosition.z
