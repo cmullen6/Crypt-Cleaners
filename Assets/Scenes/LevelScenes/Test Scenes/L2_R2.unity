@@ -3298,7 +3298,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 13
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -17635,6 +17635,7 @@ MonoBehaviour:
   pausePanel: {fileID: 0}
   controlsPanel: {fileID: 0}
   settingsPanel: {fileID: 0}
+  itemsPanel: {fileID: 0}
 --- !u!1 &1162094619
 GameObject:
   m_ObjectHideFlags: 0
@@ -22428,15 +22429,11 @@ MonoBehaviour:
   maxHealth: 3
   respawnDelay: 1
   resurrectMe: 3
-  zoomTimer: 3
-  camera: {fileID: 324141394}
   resurrectText: {fileID: 0}
   losePanel: {fileID: 0}
   trash: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
   respawnButton: {fileID: 0}
   hurtHitstop: 0.08
-  deathZoomSize: 3
-  normalZoomSize: 10
 --- !u!114 &1548223462
 MonoBehaviour:
   m_ObjectHideFlags: 0

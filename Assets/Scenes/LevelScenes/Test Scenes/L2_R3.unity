@@ -3053,15 +3053,11 @@ MonoBehaviour:
   maxHealth: 3
   respawnDelay: 1
   resurrectMe: 3
-  zoomTimer: 3
-  camera: {fileID: 1022611168}
   resurrectText: {fileID: 0}
   losePanel: {fileID: 0}
   trash: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
   respawnButton: {fileID: 0}
   hurtHitstop: 0.08
-  deathZoomSize: 3
-  normalZoomSize: 10
 --- !u!4 &194265233
 Transform:
   m_ObjectHideFlags: 0
@@ -3765,6 +3761,7 @@ MonoBehaviour:
   pausePanel: {fileID: 0}
   controlsPanel: {fileID: 0}
   settingsPanel: {fileID: 0}
+  itemsPanel: {fileID: 0}
 --- !u!4 &227830821
 Transform:
   m_ObjectHideFlags: 0
@@ -21300,7 +21297,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 13
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
