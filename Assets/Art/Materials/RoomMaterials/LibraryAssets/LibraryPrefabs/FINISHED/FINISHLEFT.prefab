@@ -67,7 +67,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.091261074, y: -0.07363629}
+  m_Offset: {x: -0.24810654, y: -0.022892676}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -77,7 +77,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.1825217, y: 1.086185}
+  m_Size: {x: 0.8688308, y: 0.53261405}
   m_EdgeRadius: 0
 --- !u!114 &3964627348715144770
 MonoBehaviour:
@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CleaningZone
   cleaningCanvas: {fileID: 4082439290803837903}
   cleaningSlider: {fileID: 5558707917961276308}
+  assetSprite: {fileID: 0}
 --- !u!1001 &8025747142811420637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115,11 +116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4406668346434876955, guid: e5291b5d0aa32dc42964ac3a7a82cdf5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.322075
+      value: -27.009998
       objectReference: {fileID: 0}
     - target: {fileID: 4406668346434876955, guid: e5291b5d0aa32dc42964ac3a7a82cdf5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.709068
+      value: 1.5700016
       objectReference: {fileID: 0}
     - target: {fileID: 4406668346434876955, guid: e5291b5d0aa32dc42964ac3a7a82cdf5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -159,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5156929537789987602, guid: e5291b5d0aa32dc42964ac3a7a82cdf5, type: 3}
       propertyPath: m_Name
-      value: BookSliderR (4) Variant 1
+      value: BookLeftFin
       objectReference: {fileID: 0}
     - target: {fileID: 6072090652048221221, guid: e5291b5d0aa32dc42964ac3a7a82cdf5, type: 3}
       propertyPath: m_SizeDelta.x
