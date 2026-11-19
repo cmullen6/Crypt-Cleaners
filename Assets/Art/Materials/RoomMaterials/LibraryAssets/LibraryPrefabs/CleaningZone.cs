@@ -18,7 +18,7 @@ public class CleaningZone : MonoBehaviour
     {
         dirtyParticles = gameObject.AddComponent<ParticleSystem>();
         var dirtMain = dirtyParticles.main;
-        dirtMain.startColor = new Color(0.45f, 0.35f, 0.2f, 0.8f);
+        dirtMain.startColor = new Color(0.8f, 0.55f, 1f, 0.85f);
         dirtMain.startSize = new ParticleSystem.MinMaxCurve(0.08f, 0.18f);
         dirtMain.startSpeed = new ParticleSystem.MinMaxCurve(0.05f, 0.15f);
         dirtMain.startLifetime = new ParticleSystem.MinMaxCurve(1f, 2f);
@@ -49,7 +49,7 @@ public class CleaningZone : MonoBehaviour
         bubbleParticles = bubbleObj.AddComponent<ParticleSystem>();
         var bubbleMain = bubbleParticles.main;
         bubbleMain.startColor = new Color(0.75f, 0.92f, 1f, 0.75f);
-        bubbleMain.startSize = new ParticleSystem.MinMaxCurve(0.1f, 0.25f);
+        bubbleMain.startSize = new ParticleSystem.MinMaxCurve(0.35f, 0.7f);
         bubbleMain.startSpeed = new ParticleSystem.MinMaxCurve(0.2f, 0.5f);
         bubbleMain.startLifetime = new ParticleSystem.MinMaxCurve(0.6f, 1.2f);
         bubbleMain.gravityModifier = -0.15f;
