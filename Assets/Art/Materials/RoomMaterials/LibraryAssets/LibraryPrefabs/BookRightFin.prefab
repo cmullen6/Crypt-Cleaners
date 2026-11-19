@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 6495093870388802142}
   - component: {fileID: 7364542828186896502}
   m_Layer: 0
-  m_Name: FINISHRIGHT
+  m_Name: BookRightFin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4877760215289572368}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: -0.16, y: -7.5107727, z: 0}
   m_LocalScale: {x: 0.91, y: 0.91, z: 0.91}
   m_ConstrainProportionsScale: 1
@@ -492,7 +492,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.00006189942, y: -0.04479736}
+  m_Offset: {x: -0.091261074, y: -0.07363629}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -502,7 +502,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9998745, y: 0.528633}
+  m_Size: {x: 1.1825217, y: 1.086185}
   m_EdgeRadius: 0
 --- !u!114 &1290652389418463255
 MonoBehaviour:
@@ -518,7 +518,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CleaningZone
   cleaningCanvas: {fileID: 6045734383476505360}
   cleaningSlider: {fileID: 2766618518634171211}
-  assetSprite: {fileID: 0}
 --- !u!1 &6045734383476505360
 GameObject:
   m_ObjectHideFlags: 0
