@@ -772,6 +772,38 @@ PrefabInstance:
       propertyPath: cleaningRequired
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.data[0].enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.data[1].enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.data[0].pickupPrefab
+      value: 
+      objectReference: {fileID: 3926332826228217143, guid: ecdb356c36a123b48913e71bc4806933, type: 3}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.data[0].resourceType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.data[1].pickupPrefab
+      value: 
+      objectReference: {fileID: 3926332826228217143, guid: ecdb356c36a123b48913e71bc4806933, type: 3}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.data[1].resourceType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620162154669855037, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_Name
       value: Trash (2)
@@ -1534,6 +1566,11 @@ MonoBehaviour:
   recB: 0
   recC: 0
   recD: 0
+--- !u!1 &810460910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+  m_PrefabInstance: {fileID: 1366699148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &854435138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,6 +3259,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 110730236}
     m_Modifications:
     - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: dropRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: cleanSprite
       value: 
       objectReference: {fileID: -6691107337901997502, guid: 039ebca036c2b2c41a1e5b9185b1bfd0, type: 3}
@@ -3240,6 +3281,30 @@ PrefabInstance:
     - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: cleaningRequired
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.data[0].enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.data[0].pickupPrefab
+      value: 
+      objectReference: {fileID: 3926332826228217143, guid: ecdb356c36a123b48913e71bc4806933, type: 3}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.data[0].maximumAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266229571411999779, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: possibleDrops.Array.data[0].minimumAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620162154669855037, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
       propertyPath: m_Name
@@ -3352,7 +3417,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1768519610}
   m_SourcePrefab: {fileID: 100100000, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
 --- !u!4 &1366699149 stripped
 Transform:
@@ -4469,6 +4537,33 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8647860152363793372, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
   m_PrefabInstance: {fileID: 1366699148}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1768519610
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810460910}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 5
+  m_AngularDamping: 5
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1779205450
 GameObject:
   m_ObjectHideFlags: 0
@@ -5064,7 +5159,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5eed0011a83ac0c408a8459d4f969dbd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.032
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5523,6 +5618,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4891432142185620554, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.9597168
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891432142185620554, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.5989609
+      objectReference: {fileID: 0}
     - target: {fileID: 6363331439809617227, guid: 6267ac4e7c5cae543bf4509c6015543b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5638,6 +5741,18 @@ PrefabInstance:
     - target: {fileID: 3926332826228217143, guid: ecdb356c36a123b48913e71bc4806933, type: 3}
       propertyPath: m_Name
       value: Resource_Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764623187452315842, guid: ecdb356c36a123b48913e71bc4806933, type: 3}
+      propertyPath: randomRotation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764623187452315842, guid: ecdb356c36a123b48913e71bc4806933, type: 3}
+      propertyPath: maximumLaunchSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764623187452315842, guid: ecdb356c36a123b48913e71bc4806933, type: 3}
+      propertyPath: minimumLaunchSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

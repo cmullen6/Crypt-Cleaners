@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1498600128427300643}
   - component: {fileID: 986203377058521113}
   - component: {fileID: 8764623187452315842}
+  - component: {fileID: 7518760576404069777}
   m_Layer: 0
   m_Name: Resource_Pickup
   m_TagString: Untagged
@@ -145,5 +146,43 @@ MonoBehaviour:
   resourceType: 0
   amount: 100
   destination: 1
+  spriteRenderer: {fileID: 1498600128427300643}
+  goldSprite: {fileID: -6301429047446442448, guid: 5ba5d6fe01d3953418bb3f0bbb6830ec, type: 3}
+  resourceASprite: {fileID: 516811619444123173, guid: ab2cd0b524590514e9283cfaf19f19ed, type: 3}
+  resourceBSprite: {fileID: 7085349508055515250, guid: 14d2685bd737a534f9a90ce59061e5c3, type: 3}
+  resourceCSprite: {fileID: 1575834923750998377, guid: b63de8d98b5aaee47af9799b88ae6e3d, type: 3}
+  resourceDSprite: {fileID: -6197279373627821540, guid: f4eb9ecb27d943544af39557dec15262, type: 3}
+  rb: {fileID: 7518760576404069777}
+  minimumLaunchSpeed: 2
+  maximumLaunchSpeed: 4
+  launchDamping: 5
+  randomRotation: 1
   playerTag: Player
   destroyOnCollect: 1
+--- !u!50 &7518760576404069777
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3926332826228217143}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 5
+  m_AngularDamping: 5
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0

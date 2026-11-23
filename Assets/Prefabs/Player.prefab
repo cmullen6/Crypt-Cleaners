@@ -318,8 +318,8 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   mopVisual: {fileID: 9140357128669638683}
   cleaningTool: {fileID: 3736398936348669313}
-  mopAnimator: {fileID: 0}
-  mopDistance: 1.5
+  mopAnimator: {fileID: 5993672954823930958}
+  mopDistance: 2.5
   rotationOffset: 180
   mouseButton: 0
   cleaningParameter: IsCleaning
