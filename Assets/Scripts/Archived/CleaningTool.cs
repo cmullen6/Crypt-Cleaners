@@ -14,18 +14,21 @@ public class CleaningTool : MonoBehaviour
     [Header("Mop Contact Point")]
     [Tooltip("The point at the mop head that contacts the ground.")]
     [SerializeField] private Transform cleaningOrigin;
+
     [Header("Goo Cleaning")]
+    [Tooltip("All GooSurface objects that this tool can clean.")]
     [SerializeField] private GooSurface[] gooSurfaces;
+
     public float CleaningRadius => cleaningRadius;
     public float CleaningSpeed => cleaningSpeed;
 
     private Vector3 previousPosition;
     private bool hasPreviousPosition;
 
-    private readonly HashSet<CleaningSpot> cleanedThisFrame =
+    private readonly HashSet<CleaningSpot> cleanedThisSample =
         new HashSet<CleaningSpot>();
 
-    private readonly HashSet<DestructableTiles> tilesThisFrame =
+    private readonly HashSet<DestructableTiles> tilesThisSample =
         new HashSet<DestructableTiles>();
 
     private void LateUpdate()
@@ -40,8 +43,7 @@ public class CleaningTool : MonoBehaviour
 
     public void BeginCleaning()
     {
-        // Prevent the mop from sweeping from an old position
-        // when the player initially presses the mouse button.
+        // Start the cleaning sweep at the current mop position.
         previousPosition = GetOriginPosition();
         hasPreviousPosition = true;
     }
@@ -64,17 +66,13 @@ public class CleaningTool : MonoBehaviour
             hasPreviousPosition = true;
         }
 
-        cleanedThisFrame.Clear();
-        tilesThisFrame.Clear();
-
         Vector2 start = previousPosition;
         Vector2 end = currentPosition;
 
-        Vector2 movement = end - start;
-        float distance = movement.magnitude;
+        float distance = Vector2.Distance(start, end);
 
-        // Move in small steps so fast mouse movement
-        // cannot skip over cleaning targets.
+        // Smaller steps help prevent fast mop movement
+        // from skipping over cleaning targets.
         float stepDistance = Mathf.Max(cleaningRadius * 0.5f, 0.05f);
 
         int steps = Mathf.Max(
@@ -82,13 +80,15 @@ public class CleaningTool : MonoBehaviour
             Mathf.CeilToInt(distance / stepDistance)
         );
 
-        for (int i = 0; i <= steps; i++)
+        float sampleInterval = interval / steps;
+
+        for (int i = 1; i <= steps; i++)
         {
             float t = i / (float)steps;
 
             Vector2 samplePosition = Vector2.Lerp(start, end, t);
 
-            CleanAtPosition(samplePosition, interval / steps);
+            CleanAtPosition(samplePosition, sampleInterval);
         }
 
         previousPosition = currentPosition;
@@ -104,15 +104,22 @@ public class CleaningTool : MonoBehaviour
 
     private void CleanAtPosition(Vector2 position, float interval)
     {
+        // Clean every assigned goo surface.
         if (gooSurfaces != null)
         {
             foreach (GooSurface surface in gooSurfaces)
             {
-                if (surface == null) continue;
+                if (surface == null)
+                    continue;
 
                 surface.CleanAtWorldPosition(position, cleaningRadius);
             }
         }
+
+        // Reset these for each sample so the entire sweep
+        // contributes cleaning progress.
+        cleanedThisSample.Clear();
+        tilesThisSample.Clear();
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(
             position,
@@ -124,23 +131,25 @@ public class CleaningTool : MonoBehaviour
             if (hit == null)
                 continue;
 
+            // Check for a CleaningSpot.
             CleaningSpot spot = hit.GetComponent<CleaningSpot>();
 
             if (spot == null)
                 spot = hit.GetComponentInParent<CleaningSpot>();
 
-            if (spot != null && cleanedThisFrame.Add(spot))
+            if (spot != null && cleanedThisSample.Add(spot))
             {
                 spot.Clean(cleaningSpeed * interval);
             }
 
+            // Check for destructible tiles.
             DestructableTiles tiles =
                 hit.GetComponent<DestructableTiles>();
 
             if (tiles == null)
                 tiles = hit.GetComponentInParent<DestructableTiles>();
 
-            if (tiles != null && tilesThisFrame.Add(tiles))
+            if (tiles != null && tilesThisSample.Add(tiles))
             {
                 tiles.EraseTilesAt(position, cleaningRadius);
             }
@@ -163,5 +172,3 @@ public class CleaningTool : MonoBehaviour
         Gizmos.DrawWireSphere(position, cleaningRadius);
     }
 }
-
-

@@ -7,10 +7,11 @@ public class CleaningMopController : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Transform mopVisual;
     [SerializeField] private CleaningTool cleaningTool;
+    [SerializeField] private Animator mopAnimator;
 
-    [Header("Mop Position")]
-    [Tooltip("Distance from the player to the mop.")]
-    [SerializeField] private float mopDistance = 0.8f;
+    [Header("Mop Movement")]
+    [Tooltip("Maximum distance the mop can move from the player.")]
+    [SerializeField, Min(0.1f)] private float mopDistance = 2.5f;
 
     [Tooltip("Rotation offset if the mop sprite points in the wrong direction.")]
     [SerializeField] private float rotationOffset = 0f;
@@ -18,12 +19,32 @@ public class CleaningMopController : MonoBehaviour
     [Header("Input")]
     [SerializeField] private int mouseButton = 0;
 
+    [Header("Animation")]
+    [Tooltip("Animator bool parameter used to control the cleaning animation.")]
+    [SerializeField] private string cleaningParameter = "IsCleaning";
+
+    private int cleaningParameterHash;
     private bool isCleaning;
+
+    public bool IsCleaning => isCleaning;
 
     private void Awake()
     {
         if (mainCamera == null)
             mainCamera = Camera.main;
+
+        // Automatically find the Animator if one wasn't assigned.
+        if (mopAnimator == null && mopVisual != null)
+        {
+            mopAnimator = mopVisual.GetComponent<Animator>();
+
+            if (mopAnimator == null)
+            {
+                mopAnimator = mopVisual.GetComponentInChildren<Animator>(true);
+            }
+        }
+
+        cleaningParameterHash = Animator.StringToHash(cleaningParameter);
 
         if (mopVisual != null)
             mopVisual.gameObject.SetActive(false);
@@ -38,13 +59,13 @@ public class CleaningMopController : MonoBehaviour
             return;
         }
 
-        // Start cleaning.
+        // Start cleaning when the mouse button is pressed.
         if (Input.GetMouseButtonDown(mouseButton))
         {
             StartCleaning();
         }
 
-        // Continue cleaning while the mouse is held.
+        // Move the mop and clean while the button is held.
         if (Input.GetMouseButton(mouseButton) && isCleaning)
         {
             UpdateMopPosition();
@@ -55,7 +76,7 @@ public class CleaningMopController : MonoBehaviour
             );
         }
 
-        // Stop cleaning when the mouse is released.
+        // Stop cleaning when the mouse button is released.
         if (Input.GetMouseButtonUp(mouseButton))
         {
             StopCleaning();
@@ -64,18 +85,32 @@ public class CleaningMopController : MonoBehaviour
 
     private void StartCleaning()
     {
+        if (isCleaning)
+            return;
+
         isCleaning = true;
+
+        // Set the animation parameter before activating the visual.
+        if (mopAnimator != null)
+            mopAnimator.SetBool(cleaningParameterHash, true);
 
         mopVisual.gameObject.SetActive(true);
 
         UpdateMopPosition();
 
+        // Reset the cleaning sweep at the mop's current position.
         cleaningTool.BeginCleaning();
     }
 
     private void StopCleaning()
     {
+        if (!isCleaning)
+            return;
+
         isCleaning = false;
+
+        if (mopAnimator != null)
+            mopAnimator.SetBool(cleaningParameterHash, false);
 
         mopVisual.gameObject.SetActive(false);
 
@@ -86,31 +121,66 @@ public class CleaningMopController : MonoBehaviour
     {
         Vector3 mouseScreenPosition = Input.mousePosition;
 
-        mouseScreenPosition.z =
-            Mathf.Abs(mainCamera.transform.position.z);
+        // Find the distance from the camera to the player's Z plane.
+        mouseScreenPosition.z = Mathf.Abs(
+            transform.position.z - mainCamera.transform.position.z
+        );
 
         Vector3 mouseWorldPosition =
             mainCamera.ScreenToWorldPoint(mouseScreenPosition);
 
         mouseWorldPosition.z = transform.position.z;
 
+        // Find the direction from the player toward the cursor.
         Vector2 direction =
-            (mouseWorldPosition - transform.position).normalized;
+            (Vector2)(mouseWorldPosition - transform.position);
 
-        if (direction.sqrMagnitude < 0.001f)
-            return;
+        float distanceToMouse = direction.magnitude;
 
-        // Place the mop around the player in the mouse direction.
-        mopVisual.position =
-            transform.position + (Vector3)(direction * mopDistance);
+        // Prevent division by zero when the cursor is exactly on the player.
+        if (distanceToMouse > 0.001f)
+            direction /= distanceToMouse;
+        else
+            direction = Vector2.zero;
 
-        // Rotate the mop toward the mouse.
-        float angle =
-            Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        // Clamp the mop's position to its maximum reach.
+        float clampedDistance = Mathf.Min(distanceToMouse, mopDistance);
 
-        mopVisual.rotation =
-            Quaternion.Euler(0f, 0f, angle + rotationOffset);
+        Vector3 targetPosition =
+            transform.position + (Vector3)(direction * clampedDistance);
+
+        targetPosition.z = transform.position.z;
+
+        mopVisual.position = targetPosition;
+
+        // Rotate the mop toward the cursor.
+        if (direction.sqrMagnitude > 0.001f)
+        {
+            float angle =
+                Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            mopVisual.rotation =
+                Quaternion.Euler(0f, 0f, angle + rotationOffset);
+        }
     }
 
-    public bool IsCleaning => isCleaning;
+    private void OnDisable()
+    {
+        // Prevent the mop from remaining in a cleaning state
+        // if this controller gets disabled.
+        if (isCleaning)
+        {
+            isCleaning = false;
+
+            if (mopAnimator != null)
+                mopAnimator.SetBool(cleaningParameterHash, false);
+
+            if (cleaningTool != null)
+                cleaningTool.StopCleaning();
+
+            if (mopVisual != null)
+                mopVisual.gameObject.SetActive(false);
+        }
+    }
 }
+

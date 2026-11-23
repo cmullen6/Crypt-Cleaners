@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 8702486505399285521}
   - component: {fileID: 1590079787921394740}
   - component: {fileID: 2884992726650465142}
-  - component: {fileID: 7300551710160048491}
   - component: {fileID: 5833541651950451658}
   - component: {fileID: 8748485819662902607}
   - component: {fileID: 1492462964167188383}
@@ -175,33 +174,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   respawnDelay: 1
-  resurrectMe: 3
-  zoomTimer: 5
-  camera: {fileID: 0}
+  resurrectMe: 0
   resurrectText: {fileID: 0}
   losePanel: {fileID: 0}
   trash: {fileID: 3648651094384953174, guid: fdb42ff069d3edc4cb14d1ee1d9dd767, type: 3}
+  respawnButton: {fileID: 0}
   hurtHitstop: 0.08
-  deathZoomSize: 3
-  normalZoomSize: 10
---- !u!114 &7300551710160048491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3916632240326318327}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0116d3d1d1d233444a1d88e688c4380c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mopDamage: 20
-  attackRange: 1.2
-  attackRadius: 0.6
-  attackCooldown: 0.4
-  mainCamera: {fileID: 0}
-  cleaningMoveMultiplier: 0.35
 --- !u!50 &5833541651950451658
 Rigidbody2D:
   serializedVersion: 5
@@ -340,9 +318,11 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   mopVisual: {fileID: 9140357128669638683}
   cleaningTool: {fileID: 3736398936348669313}
+  mopAnimator: {fileID: 0}
   mopDistance: 1.5
   rotationOffset: 180
   mouseButton: 0
+  cleaningParameter: IsCleaning
 --- !u!1 &5618628496300127127
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,6 +507,7 @@ GameObject:
   - component: {fileID: 9140357128669638683}
   - component: {fileID: 6125228748412685270}
   - component: {fileID: 3736398936348669313}
+  - component: {fileID: 5993672954823930958}
   m_Layer: 0
   m_Name: Mop
   m_TagString: Untagged
@@ -625,7 +606,30 @@ MonoBehaviour:
   cleaningRadius: 1.2
   cleaningSpeed: 50
   cleaningOrigin: {fileID: 4917647319429993109}
-  gooSurfaces: []
+  gooSurfaces:
+  - {fileID: 0}
+--- !u!95 &5993672954823930958
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6929195377102872887}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0173ef009f9f63d41831c3a2ede63c54, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9056995790737240752
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,11 +736,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2067964220448516191, guid: 5e2707d57ba4aeb4795b467a79a6cdd1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.50502
+      value: 0.2848818
       objectReference: {fileID: 0}
     - target: {fileID: 2067964220448516191, guid: 5e2707d57ba4aeb4795b467a79a6cdd1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.50502
+      value: 0.26892316
       objectReference: {fileID: 0}
     - target: {fileID: 2067964220448516191, guid: 5e2707d57ba4aeb4795b467a79a6cdd1, type: 3}
       propertyPath: m_LocalScale.z
@@ -744,11 +748,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2067964220448516191, guid: 5e2707d57ba4aeb4795b467a79a6cdd1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.25390005
+      value: -0.4685
       objectReference: {fileID: 0}
     - target: {fileID: 2067964220448516191, guid: 5e2707d57ba4aeb4795b467a79a6cdd1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3876
+      value: 3.1515
       objectReference: {fileID: 0}
     - target: {fileID: 2067964220448516191, guid: 5e2707d57ba4aeb4795b467a79a6cdd1, type: 3}
       propertyPath: m_LocalPosition.z
