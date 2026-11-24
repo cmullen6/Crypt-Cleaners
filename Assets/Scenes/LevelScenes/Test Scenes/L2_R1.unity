@@ -420,7 +420,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -604,7 +604,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1805,6 +1805,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 5797365903034605104, guid: 809d6c73de84143478891be661984713, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797365903034605104, guid: 809d6c73de84143478891be661984713, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797365903034605104, guid: 809d6c73de84143478891be661984713, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8647628146778285128, guid: 809d6c73de84143478891be661984713, type: 3}
       propertyPath: m_Name
       value: JailSlideDoor70Pixel_0 (4)
@@ -2985,6 +2997,18 @@ PrefabInstance:
     - target: {fileID: 2992115276845636076, guid: 3d5a722610e3cd4419287341493a53de, type: 3}
       propertyPath: m_Name
       value: JailCellDoorTop_0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946334337323242518, guid: 3d5a722610e3cd4419287341493a53de, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946334337323242518, guid: 3d5a722610e3cd4419287341493a53de, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946334337323242518, guid: 3d5a722610e3cd4419287341493a53de, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5644,7 +5668,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5920,7 +5944,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5941,6 +5965,18 @@ PrefabInstance:
     - target: {fileID: 1373880901399955225, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
       propertyPath: m_Name
       value: JailSlideDoor70Pixel_0 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152104726069500149, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152104726069500149, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152104726069500149, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2624691167951643732, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
       propertyPath: m_LocalScale.x
@@ -6656,7 +6692,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7208,7 +7244,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7392,7 +7428,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8037,6 +8073,18 @@ PrefabInstance:
     - target: {fileID: 2552159689601542306, guid: 809d6c73de84143478891be661984713, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797365903034605104, guid: 809d6c73de84143478891be661984713, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797365903034605104, guid: 809d6c73de84143478891be661984713, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797365903034605104, guid: 809d6c73de84143478891be661984713, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8647628146778285128, guid: 809d6c73de84143478891be661984713, type: 3}
       propertyPath: m_Name
@@ -8746,7 +8794,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9881,7 +9929,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11760,6 +11808,18 @@ PrefabInstance:
     - target: {fileID: 2992115276845636076, guid: 3d5a722610e3cd4419287341493a53de, type: 3}
       propertyPath: m_Name
       value: JailCellDoorTop_0 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946334337323242518, guid: 3d5a722610e3cd4419287341493a53de, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946334337323242518, guid: 3d5a722610e3cd4419287341493a53de, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946334337323242518, guid: 3d5a722610e3cd4419287341493a53de, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14537,7 +14597,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15108,7 +15168,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18711,7 +18771,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -22108,7 +22168,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -23565,7 +23625,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -26411,7 +26471,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -28766,7 +28826,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -29042,7 +29102,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -29777,7 +29837,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -33137,7 +33197,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -33597,7 +33657,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -39016,7 +39076,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -42619,6 +42679,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: JailSlideDoor70Pixel_0 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2152104726069500149, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152104726069500149, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152104726069500149, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2624691167951643732, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.2579756
@@ -43215,7 +43287,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -43399,7 +43471,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -45114,7 +45186,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -45206,7 +45278,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -46381,6 +46453,18 @@ PrefabInstance:
     - target: {fileID: 7253898557650013287, guid: d89abe508a029844eb631736aa3879e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648759642968885297, guid: d89abe508a029844eb631736aa3879e0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648759642968885297, guid: d89abe508a029844eb631736aa3879e0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648759642968885297, guid: d89abe508a029844eb631736aa3879e0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47695,7 +47779,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -48155,7 +48239,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -52022,7 +52106,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5587526311134504302, guid: b5e14c903c3ad1b489f11d2d45bc6813, type: 3}
-  m_Color: {r: 0.56216127, g: 0.8280914, b: 0.8553459, a: 1}
+  m_Color: {r: 0.84276724, g: 0.71820724, b: 0.8236038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -52164,6 +52248,18 @@ PrefabInstance:
     - target: {fileID: 7253898557650013287, guid: d89abe508a029844eb631736aa3879e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648759642968885297, guid: d89abe508a029844eb631736aa3879e0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648759642968885297, guid: d89abe508a029844eb631736aa3879e0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648759642968885297, guid: d89abe508a029844eb631736aa3879e0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -52558,6 +52654,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 5797365903034605104, guid: 809d6c73de84143478891be661984713, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797365903034605104, guid: 809d6c73de84143478891be661984713, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5797365903034605104, guid: 809d6c73de84143478891be661984713, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8647628146778285128, guid: 809d6c73de84143478891be661984713, type: 3}
       propertyPath: m_Name
       value: JailSlideDoor70Pixel_0
@@ -52639,6 +52747,18 @@ PrefabInstance:
     - target: {fileID: 1373880901399955225, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
       propertyPath: m_Name
       value: JailSlideDoor70Pixel_0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152104726069500149, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152104726069500149, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152104726069500149, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2624691167951643732, guid: c3605a6c8a869e84b95fad69c1301450, type: 3}
       propertyPath: m_LocalScale.x
@@ -52859,6 +52979,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: JailCellDoorTop_0
       objectReference: {fileID: 0}
+    - target: {fileID: 5946334337323242518, guid: 3d5a722610e3cd4419287341493a53de, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946334337323242518, guid: 3d5a722610e3cd4419287341493a53de, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946334337323242518, guid: 3d5a722610e3cd4419287341493a53de, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52915,6 +53047,18 @@ PrefabInstance:
     - target: {fileID: 7253898557650013287, guid: d89abe508a029844eb631736aa3879e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648759642968885297, guid: d89abe508a029844eb631736aa3879e0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648759642968885297, guid: d89abe508a029844eb631736aa3879e0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648759642968885297, guid: d89abe508a029844eb631736aa3879e0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
