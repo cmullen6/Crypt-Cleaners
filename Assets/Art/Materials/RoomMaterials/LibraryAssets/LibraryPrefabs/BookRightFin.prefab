@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.46003264, b: 0, a: 1}
+  m_Color: {r: 0.7372549, g: 0, b: 0.7294118, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -302,9 +302,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4877760215289572368}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: -0.16, y: -7.5107727, z: 0}
-  m_LocalScale: {x: 0.91, y: 0.91, z: 0.91}
+  m_LocalScale: {x: 0.42, y: 0.42, z: 0.42}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3135228098301027836}
@@ -389,6 +389,12 @@ MonoBehaviour:
   cleanSprite: {fileID: 8129540724952249189, guid: 060a5c4153284c24ca6c5d8c2add5a1f, type: 3}
   sparklePrefab: {fileID: 6919787392753569328, guid: e0ee2707f5f94ca4ca0ed5663e7b5b25, type: 3}
   progressBar: {fileID: 2766618518634171211}
+  dropChance: 100
+  minResourceTypes: 1
+  maxResourceTypes: 2
+  rewardDestination: 1
+  dropRadius: 0.5
+  possibleDrops: []
 --- !u!58 &7364542828186896502
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -518,6 +524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CleaningZone
   cleaningCanvas: {fileID: 6045734383476505360}
   cleaningSlider: {fileID: 2766618518634171211}
+  assetSprite: {fileID: 0}
 --- !u!1 &6045734383476505360
 GameObject:
   m_ObjectHideFlags: 0

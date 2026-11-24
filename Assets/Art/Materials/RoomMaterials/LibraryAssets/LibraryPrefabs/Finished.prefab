@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 7535436930830212814}
   - component: {fileID: 6925591530873479552}
   m_Layer: 0
-  m_Name: FINISHED
+  m_Name: Finished
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2520505428475483832}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 93.16155, y: 6.9504504, z: 0}
   m_LocalScale: {x: 1.9312, y: 1.2991056, z: 1}
   m_ConstrainProportionsScale: 0
@@ -253,6 +253,12 @@ MonoBehaviour:
   cleanSprite: {fileID: 8129540724952249189, guid: 060a5c4153284c24ca6c5d8c2add5a1f, type: 3}
   sparklePrefab: {fileID: 6919787392753569328, guid: e0ee2707f5f94ca4ca0ed5663e7b5b25, type: 3}
   progressBar: {fileID: 8437137534817823651}
+  dropChance: 100
+  minResourceTypes: 1
+  maxResourceTypes: 2
+  rewardDestination: 1
+  dropRadius: 0.5
+  possibleDrops: []
 --- !u!1 &3332993764880224574
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,6 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CleaningZone
   cleaningCanvas: {fileID: 2321351468346141434}
   cleaningSlider: {fileID: 8437137534817823651}
+  assetSprite: {fileID: 0}
 --- !u!1 &4639162212351052019
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.46003264, b: 0, a: 1}
+  m_Color: {r: 0.7372549, g: 0, b: 0.7294118, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

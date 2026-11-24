@@ -27342,22 +27342,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1706834972}
     m_Modifications:
-    - target: {fileID: 1492462964167188383, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
-      propertyPath: flashOpacity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1492462964167188383, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
-      propertyPath: targetSpriteRenderer
-      value: 
-      objectReference: {fileID: 1519294112}
-    - target: {fileID: 1590079787921394740, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
-      propertyPath: crosshair
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1590079787921394740, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
-      propertyPath: moveSpeed
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 1590079787921394740, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: mainCamera
       value: 
@@ -27366,22 +27350,10 @@ PrefabInstance:
       propertyPath: cooldownImage
       value: 
       objectReference: {fileID: 1803241750}
-    - target: {fileID: 1590079787921394740, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
-      propertyPath: damageIFramesDuration
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2884992726650465142, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 324141394}
     - target: {fileID: 2884992726650465142, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: losePanel
       value: 
       objectReference: {fileID: 1803241757}
-    - target: {fileID: 2884992726650465142, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
-      propertyPath: resurrectMe
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2884992726650465142, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: respawnButton
       value: 
@@ -27431,14 +27403,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3736398936348669313, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
-      propertyPath: gooSurface
-      value: 
-      objectReference: {fileID: 107039346}
-    - target: {fileID: 3736398936348669313, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
-      propertyPath: gooSurfaces.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3736398936348669313, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
       propertyPath: 'gooSurfaces.Array.data[0]'
       value: 
       objectReference: {fileID: 107039346}
@@ -27467,8 +27431,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 324141394}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3488358620826782669, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
@@ -41224,11 +41187,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7691063555398813392, guid: 69d248598b763894588fc6c697922249, type: 3}
   m_PrefabInstance: {fileID: 13536458}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1519294112 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6944968176365312268, guid: fa7465f609d16994eb8d283cfb651dcc, type: 3}
-  m_PrefabInstance: {fileID: 964362210}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1532427103
 GameObject:
