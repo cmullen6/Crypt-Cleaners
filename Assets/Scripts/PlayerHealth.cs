@@ -85,6 +85,9 @@ public class PlayerHealth : MonoBehaviour
             return;
         }
 
+        if (playerController != null)
+            playerController.TriggerDamageInvulnerability();
+
         if (HitStopManager.Instance != null)
             HitStopManager.Instance.StopTime(hurtHitstop);
     }

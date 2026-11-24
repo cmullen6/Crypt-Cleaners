@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float dodgeCooldown = 0.75f;
     [SerializeField] private Image cooldownImage;
 
+    [Header("Damage Invulnerability")]
+    [SerializeField] private float damageIFramesDuration = 1.5f;
+
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 aimDirection = Vector2.right;
@@ -55,7 +58,7 @@ public class PlayerController : MonoBehaviour
             animator = GetComponentInChildren<Animator>();
 
         if (spriteFlasher == null)
-            spriteFlasher = GetComponent<SpriteFlasher>();
+            spriteFlasher = GetComponentInChildren<SpriteFlasher>();
     }
 
     private void Start()
@@ -238,5 +241,17 @@ public class PlayerController : MonoBehaviour
         //cooldownImage.fillAmount = dodgeCooldown <= 0f
          //   ? 1f
           //  : 1f - Mathf.Clamp01(dodgeCooldownTimer / dodgeCooldown);
+    }
+
+    public void TriggerDamageInvulnerability(float duration = -1f)
+    {
+        float activeDuration = duration > 0f ? duration : damageIFramesDuration;
+        if (activeDuration <= 0f)
+            return;
+
+        iFramesTimer = Mathf.Max(iFramesTimer, activeDuration);
+
+        if (spriteFlasher != null)
+            spriteFlasher.FlashWhite(activeDuration);
     }
 }
